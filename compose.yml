@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: verd_dev
+      POSTGRES_USER: verd_dev
+      POSTGRES_DB: verd_dev
