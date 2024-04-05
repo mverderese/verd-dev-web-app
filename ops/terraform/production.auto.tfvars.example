@@ -1,0 +1,2 @@
+project = "verderese-development"
+credentials_file = "<PATH_TO_YOUR_CREDENTIALS_FILE>"
