@@ -21,11 +21,6 @@ resource "google_compute_network" "vpc_network" {
   name = "verd-dev-web-services-vpc"
 }
 
-import {
-  to = google_dns_managed_zone.dns_managed_zone
-  id = "4938687215069021110"
-}
-
 resource "google_dns_managed_zone" "dns_managed_zone" {
   dns_name    = "verderesedevelopment.com."
   name        = "verderesedevelopment-com"
