@@ -5,13 +5,16 @@ terraform {
       version = "5.23.0"
     }
   }
+  backend "gcs" {
+    bucket = "verderese-development-bucket-tfstate"
+    prefix = "terraform/state"
+  }
 }
 
 provider "google" {
-  project     = var.project
-  credentials = file(var.credentials_file)
-  region      = var.region
-  zone        = var.zone
+  project = var.project
+  region  = var.region
+  zone    = var.zone
   default_labels = {
     management  = "terraform"
     environment = var.environment
@@ -36,17 +39,6 @@ resource "google_project_service" "project_services" {
     "storage-component.googleapis.com",
   ])
   service = each.key
-}
-
-data "google_billing_account" "billing_account" {
-  display_name = "Verderese Development Billing Account"
-  open         = true
-}
-
-resource "google_project" "verderese_development_project" {
-  name            = "Verderese Development"
-  project_id      = "verderese-development"
-  billing_account = data.google_billing_account.billing_account.id
 }
 
 resource "google_service_account" "verd_dev_web_app_sa" {

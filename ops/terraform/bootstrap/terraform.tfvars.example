@@ -1,2 +1,2 @@
 project            = "verderese-development"
-environment        = "production"
+billing_account_id = "<BILLING_ACCOUNT_ID>"

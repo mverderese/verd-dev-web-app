@@ -9,7 +9,10 @@
     "lint": "concurrently \"prettier --check .\" \"next lint\" \"tsc --noEmit\" \"terraform fmt -check\"",
     "git:install-hooks": "npx --yes husky",
     "docker:local": "docker compose up -d",
-    "prettify": "prettier --write . && eslint --fix . && terraform fmt"
+    "prettify": "prettier --write . && eslint --fix . && terraform fmt",
+    "terraform:bootstrap": "terraform -chdir=ops/terraform/bootstrap init && terraform -chdir=ops/terraform/bootstrap apply",
+    "terraform:plan": "terraform -chdir=ops/terraform init && terraform -chdir=ops/terraform plan",
+    "terraform:apply": "terraform -chdir=ops/terraform init && terraform -chdir=ops/terraform apply"
   },
   "dependencies": {
     "graphql": "^16.8.1",
