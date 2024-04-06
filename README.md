@@ -112,7 +112,7 @@ Wherever possible, try to keep your pull requests small, and keep distinct chang
 
 ## Infrastructure
 
-The infrastructure for this project is managed via [Terraform](https://www.terraform.io/).
+The infrastructure for this project is managed via [Terraform](https://www.terraform.io/). A single project is used to host dev, staging, and production with a shared DB instance in order to reduce costs. In an enterprise environment, it would be best to separate these environments into their own projects.
 
 ### First Time Setup
 

@@ -14,6 +14,8 @@
     <option name="PROGRAM_PARAMETERS" value="apply" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/ops/terraform" />
     <option name="PASS_PARENT_ENVS" value="true" />
-    <method v="2" />
+    <method v="2">
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Terraform Init" run_configuration_type="#org.intellij.plugins.hcl.terraform.run.TerraformConfigurationType" />
+    </method>
   </configuration>
 </component>

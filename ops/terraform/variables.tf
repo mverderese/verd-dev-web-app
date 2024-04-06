@@ -8,4 +8,7 @@ variable "zone" {
   default = "us-central1-a"
 }
 
-variable "environment" {}
+variable "environments" {
+  default = ["dev", "stg", "prod"]
+}
+

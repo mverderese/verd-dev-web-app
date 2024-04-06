@@ -16,8 +16,7 @@ provider "google" {
   region  = var.region
   zone    = var.zone
   default_labels = {
-    management  = "terraform"
-    environment = var.environment
+    management = "terraform"
   }
 }
 
@@ -41,21 +40,9 @@ resource "google_project_service" "project_services" {
   service = each.key
 }
 
-resource "google_service_account" "verd_dev_web_app_sa" {
-  account_id   = "verd-dev-web-app-${var.environment}"
-  display_name = "Verd Dev Web App ${title(var.environment)} service account"
-}
-
-resource "google_project_iam_member" "verd_dev_web_app_sa_iam_member" {
-  for_each = toset(["roles/cloudsql.client", "roles/secretmanager.secretAccessor"])
-  project  = var.project
-  role     = each.key
-  member   = "serviceAccount:${google_service_account.verd_dev_web_app_sa.email}"
-}
-
 resource "google_service_account" "github_actions_sa" {
-  account_id   = "github-actions-${var.environment}"
-  display_name = "GitHub Actions ${title(var.environment)} service account"
+  account_id   = "github-actions"
+  display_name = "GitHub Actions service account"
 }
 
 resource "google_project_iam_member" "github_actions_sa_iam_member" {
@@ -63,10 +50,6 @@ resource "google_project_iam_member" "github_actions_sa_iam_member" {
   project  = var.project
   role     = each.key
   member   = "serviceAccount:${google_service_account.github_actions_sa.email}"
-}
-
-resource "google_compute_network" "vpc_network" {
-  name = "verd-dev-web-services-vpc"
 }
 
 resource "google_dns_managed_zone" "dns_managed_zone" {
@@ -131,7 +114,7 @@ resource "google_sql_database_instance" "postgres_db_instance" {
     activation_policy           = "ALWAYS"
     availability_type           = "ZONAL"
     connector_enforcement       = "NOT_REQUIRED"
-    deletion_protection_enabled = true
+    deletion_protection_enabled = false
     disk_autoresize             = true
     disk_autoresize_limit       = 0
     disk_size                   = 10
@@ -181,29 +164,10 @@ resource "google_sql_database_instance" "postgres_db_instance" {
   }
 }
 
-resource "google_sql_database" "postgres_database" {
-  instance = google_sql_database_instance.postgres_db_instance.name
-  name     = "verd_dev_${var.environment}"
-}
-
-resource "google_secret_manager_secret" "web_app_db_user_password_secret" {
-  secret_id = "verd-dev-web-app-db-user-password"
-  replication {
-    auto {}
-  }
-}
-
-resource "random_password" "web_app_db_user_password_value" {
-  length = 32
-}
-
-resource "google_secret_manager_secret_version" "web_app_db_user_password_secret_version" {
-  secret      = google_secret_manager_secret.web_app_db_user_password_secret.id
-  secret_data = random_password.web_app_db_user_password_value.result
-}
-
-resource "google_sql_user" "web_app_db_user" {
-  instance = google_sql_database_instance.postgres_db_instance.name
-  name     = "verd_dev_web_app_${var.environment}"
-  password = google_secret_manager_secret_version.web_app_db_user_password_secret_version.secret_data
+module "web_application" {
+  for_each    = toset(var.environments)
+  source      = "./modules/webApplication"
+  db_instance = google_sql_database_instance.postgres_db_instance
+  environment = each.key
+  project     = var.project
 }
