@@ -6,16 +6,20 @@ on:
   push:
     branches:
       - develop
+      - main
+  release:
+    types:
+      - released
 
 env:
   PROJECT_ID: verderese-development
   GAR_LOCATION: us-central1
   REPOSITORY: verd-dev-web-app
-  SERVICE: verd-dev-web-app-dev # TODO: make environment specific
+  SERVICE: verd-dev-web-app
   REGION: us-central1
 
 jobs:
-  deploy:
+  deploy-to-cloud-run:
     # Add 'id-token' with the intended permissions for workload identity federation
     permissions:
       contents: "read"
@@ -23,6 +27,16 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      - name: Set environment for branch
+        run: |
+          if [[ $GITHUB_REF_NAME == 'main' ]]; then
+              echo "APP_ENV=stg" >> "$GITHUB_ENV"
+          elif [[ $GITHUB_REF_NAME == 'develop' ]]; then
+              echo "APP_ENV=dev" >> "$GITHUB_ENV"
+          elif [[ $GITHUB_REF_NAME =~ 'refs/tags/' ]]; then
+              echo "APP_ENV=prod" >> "$GITHUB_ENV"
+          fi
+
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -44,8 +58,12 @@ jobs:
 
       - name: Build and Push Container
         run: |-
-          docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}" ./
+          docker build  \
+            -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}" \
+            -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ env.APP_ENV }}" \
+            ./
           docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}"
+          docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ env.APP_ENV }}"
 
       # END - Docker auth and build
 
@@ -53,17 +71,16 @@ jobs:
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v2
         with:
-          service: ${{ env.SERVICE }}
+          service: ${{ env.SERVICE }}-${{ env.APP_ENV }}
           region: ${{ env.REGION }}
           image: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}
-          # TODO: set env vars based on environment
-          env_vars: |
-            NODE_ENV=production
+          env_vars_file: ops/env/dotenv.${{ env.APP_ENV }}
           secrets: |
-            DATABASE_URL=verd-dev-web-app-db-url-dev:latest
-          flags: --allow-unauthenticated
+            DATABASE_URL=verd-dev-web-app-db-url-${{ env.APP_ENV }}:latest
+          flags: |-
+            --allow-unauthenticated
             --set-cloudsql-instances=verderese-development:us-central1:verderese-development-db
-            --min-instances=0
+            --min-instances=${{ env.APP_ENV == 'prod' && 1 || 0 }}
             --max-instances=1
             --port=3000
 
