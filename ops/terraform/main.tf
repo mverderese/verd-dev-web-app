@@ -18,12 +18,6 @@ provider "google" {
   }
 }
 
-resource "google_project" "verderese_development_project" {
-  name            = "Verderese Development"
-  project_id      = "verderese-development"
-  billing_account = "01F4FF-081A6A-AE3441"
-}
-
 resource "google_project_service" "project_services" {
   for_each = toset([
     "cloudresourcemanager.googleapis.com",
@@ -32,6 +26,7 @@ resource "google_project_service" "project_services" {
     "artifactregistry.googleapis.com",
     "dns.googleapis.com",
     "iam.googleapis.com",
+    "billingbudgets.googleapis.com",
     "iamcredentials.googleapis.com",
     "secretmanager.googleapis.com",
     "servicenetworking.googleapis.com",
@@ -41,6 +36,17 @@ resource "google_project_service" "project_services" {
     "storage-component.googleapis.com",
   ])
   service = each.key
+}
+
+data "google_billing_account" "billing_account" {
+  display_name = "Verderese Development Billing Account"
+  open         = true
+}
+
+resource "google_project" "verderese_development_project" {
+  name            = "Verderese Development"
+  project_id      = "verderese-development"
+  billing_account = data.google_billing_account.billing_account.id
 }
 
 resource "google_service_account" "verd_dev_web_app_sa" {
@@ -101,3 +107,61 @@ resource "google_artifact_registry_repository" "verd_dev_web_app_repo" {
   format        = "DOCKER"
 }
 
+resource "google_sql_database_instance" "postgres_db_instance" {
+  database_version    = "POSTGRES_15"
+  deletion_protection = true
+  instance_type       = "CLOUD_SQL_INSTANCE"
+  name                = "verderese-development-db"
+  project             = "verderese-development"
+  region              = var.region
+
+  settings {
+    activation_policy           = "ALWAYS"
+    availability_type           = "ZONAL"
+    connector_enforcement       = "NOT_REQUIRED"
+    deletion_protection_enabled = true
+    disk_autoresize             = true
+    disk_autoresize_limit       = 0
+    disk_size                   = 10
+    disk_type                   = "PD_SSD"
+    edition                     = "ENTERPRISE"
+    pricing_plan                = "PER_USE"
+    tier                        = "db-f1-micro"
+
+    backup_configuration {
+      binary_log_enabled             = false
+      enabled                        = true
+      location                       = "us"
+      point_in_time_recovery_enabled = true
+      start_time                     = "02:00"
+      transaction_log_retention_days = 7
+
+      backup_retention_settings {
+        retained_backups = 7
+        retention_unit   = "COUNT"
+      }
+    }
+
+    insights_config {
+      query_insights_enabled  = false
+      record_application_tags = false
+      record_client_address   = false
+    }
+
+    ip_configuration {
+      enable_private_path_for_google_cloud_services = false
+      ipv4_enabled                                  = true
+      require_ssl                                   = false
+    }
+
+    location_preference {
+      zone = var.zone
+    }
+
+    maintenance_window {
+      day          = 7
+      hour         = 8
+      update_track = "stable"
+    }
+  }
+}
