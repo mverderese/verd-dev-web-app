@@ -1,5 +1,5 @@
 locals {
-  domain_prefix              = var.environment == "prod" ? "www" : var.environment
+  domain                     = var.environment == "prod" ? var.dns_managed_zone.dns_name : "${var.environment}.${var.dns_managed_zone.dns_name}"
   needs_root_domain_redirect = var.environment == "prod"
 }
 
@@ -62,8 +62,17 @@ resource "google_secret_manager_secret_version" "web_app_db_url_secret_version" 
   secret_data = "postgresql://${google_sql_user.web_app_db_user.name}:${google_secret_manager_secret_version.web_app_db_user_password_secret_version.secret_data}@localhost/${google_sql_database.postgres_database.name}?schema=public&host=/cloudsql/${var.db_instance.connection_name}"
 }
 
+
 resource "google_cloud_run_service" "verd_dev_web_app" {
   name = "verd-dev-web-app-${var.environment}"
+
+  # Don't overwrite service deployments from GitHub Actions on subsequent Terraform runs.
+  lifecycle {
+    ignore_changes = [
+      template
+    ]
+  }
+
   metadata {
     labels = {
       environment = var.environment
@@ -92,16 +101,7 @@ resource "google_cloud_run_service" "verd_dev_web_app" {
 
 
 resource "google_dns_record_set" "verd_dev_web_app_lb_dns" {
-  name         = "${local.domain_prefix}.${var.dns_managed_zone.dns_name}"
-  type         = "A"
-  ttl          = 300
-  managed_zone = var.dns_managed_zone.name
-  rrdatas      = [module.lb-http.external_ip]
-}
-
-resource "google_dns_record_set" "verd_dev_web_app_lb_dns_root_redirect" {
-  count        = local.needs_root_domain_redirect ? 1 : 0
-  name         = var.dns_managed_zone.dns_name
+  name         = local.domain
   type         = "A"
   ttl          = 300
   managed_zone = var.dns_managed_zone.name
@@ -125,7 +125,7 @@ module "lb-http" {
   project                         = var.project
   name                            = "verd-dev-web-app-lb-${var.environment}"
   ssl                             = true
-  managed_ssl_certificate_domains = ["${local.domain_prefix}.${var.dns_managed_zone.dns_name}"]
+  managed_ssl_certificate_domains = [local.domain]
   https_redirect                  = true
 
   backends = {
