@@ -24,16 +24,35 @@ resource "google_project" "verderese_development_project" {
   billing_account = "01F4FF-081A6A-AE3441"
 }
 
+resource "google_project_service" "project_services" {
+  for_each = toset([
+    "cloudresourcemanager.googleapis.com",
+    "compute.googleapis.com",
+    "container.googleapis.com",
+    "artifactregistry.googleapis.com",
+    "dns.googleapis.com",
+    "iam.googleapis.com",
+    "iamcredentials.googleapis.com",
+    "secretmanager.googleapis.com",
+    "servicenetworking.googleapis.com",
+    "sql-component.googleapis.com",
+    "sqladmin.googleapis.com",
+    "storage-api.googleapis.com",
+    "storage-component.googleapis.com",
+  ])
+  service = each.key
+}
+
 resource "google_service_account" "verd_dev_web_app_sa" {
   account_id   = "verd-dev-web-app-${var.environment}"
   display_name = "Verd Dev Web App ${title(var.environment)} service account"
 }
 
-resource "google_project_iam_binding" "verd_dev_web_app_sa_iam_binding" {
+resource "google_project_iam_member" "verd_dev_web_app_sa_iam_member" {
   for_each = toset(["roles/cloudsql.client", "roles/secretmanager.secretAccessor"])
   project  = var.project
   role     = each.key
-  members  = ["serviceAccount:${google_service_account.verd_dev_web_app_sa.email}"]
+  member   = "serviceAccount:${google_service_account.verd_dev_web_app_sa.email}"
 }
 
 resource "google_service_account" "github_actions_sa" {
@@ -41,11 +60,11 @@ resource "google_service_account" "github_actions_sa" {
   display_name = "GitHub Actions ${title(var.environment)} service account"
 }
 
-resource "google_project_iam_binding" "github_actions_sa_iam_binding" {
+resource "google_project_iam_member" "github_actions_sa_iam_member" {
   for_each = toset(["roles/artifactregistry.writer", "roles/run.admin", "roles/secretmanager.viewer", "roles/secretmanager.secretAccessor"])
   project  = var.project
   role     = each.key
-  members  = ["serviceAccount:${google_service_account.github_actions_sa.email}"]
+  member   = "serviceAccount:${google_service_account.github_actions_sa.email}"
 }
 
 resource "google_compute_network" "vpc_network" {
@@ -74,5 +93,11 @@ resource "google_dns_managed_zone" "dns_managed_zone" {
       kind       = "dns#dnsKeySpec"
     }
   }
+}
+
+resource "google_artifact_registry_repository" "verd_dev_web_app_repo" {
+  repository_id = "verd-dev-web-app"
+  location      = var.region
+  format        = "DOCKER"
 }
 
