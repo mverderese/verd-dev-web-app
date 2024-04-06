@@ -1,0 +1,38 @@
+{
+  "name": "verd-dev-web-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "concurrently \"prettier --check .\" \"next lint\" \"tsc --noEmit\" \"terraform fmt -check\"",
+    "git:install-hooks": "npx --yes husky",
+    "docker:local": "docker compose up -d",
+    "prettify": "prettier --write . && eslint --fix . && terraform fmt",
+    "terraform:bootstrap": "terraform -chdir=ops/terraform/bootstrap init && terraform -chdir=ops/terraform/bootstrap apply",
+    "terraform:plan": "terraform -chdir=ops/terraform init && terraform -chdir=ops/terraform plan",
+    "terraform:apply": "terraform -chdir=ops/terraform init && terraform -chdir=ops/terraform apply"
+  },
+  "dependencies": {
+    "graphql": "^16.8.1",
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6",
+    "autoprefixer": "^10.0.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
