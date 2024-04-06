@@ -36,6 +36,9 @@ resource "google_project_service" "project_services" {
     "sqladmin.googleapis.com",
     "storage-api.googleapis.com",
     "storage-component.googleapis.com",
+    "certificatemanager.googleapis.com",
+    "publicca.googleapis.com",
+    "privateca.googleapis.com",
   ])
   service = each.key
 }
@@ -171,4 +174,9 @@ module "web_application" {
   environment = each.key
   project     = var.project
   region      = var.region
+  dns_managed_zone = {
+    name     = google_dns_managed_zone.dns_managed_zone.name
+    id       = google_dns_managed_zone.dns_managed_zone.id
+    dns_name = google_dns_managed_zone.dns_managed_zone.dns_name
+  }
 }

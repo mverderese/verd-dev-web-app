@@ -1,3 +1,8 @@
+locals {
+  domain_prefix              = var.environment == "prod" ? "www" : var.environment
+  needs_root_domain_redirect = var.environment == "prod"
+}
+
 resource "google_service_account" "verd_dev_web_app_sa" {
   account_id   = "verd-dev-web-app-${var.environment}"
   display_name = "Verd Dev Web App ${title(var.environment)} service account"
@@ -9,7 +14,6 @@ resource "google_project_iam_member" "verd_dev_web_app_sa_iam_member" {
   role     = each.key
   member   = "serviceAccount:${google_service_account.verd_dev_web_app_sa.email}"
 }
-
 
 resource "google_sql_database" "postgres_database" {
   instance = var.db_instance.name
@@ -83,5 +87,68 @@ resource "google_cloud_run_service" "verd_dev_web_app" {
   traffic {
     percent         = 100
     latest_revision = true
+  }
+}
+
+resource "google_compute_global_address" "verd_dev_web_app_lb_ip" {
+  name    = "verd-dev-web-app-lb-ip-${var.environment}"
+  project = var.project
+}
+
+resource "google_dns_record_set" "verd_dev_web_app_lb_dns" {
+  name         = "${local.domain_prefix}.${var.dns_managed_zone.dns_name}"
+  type         = "A"
+  ttl          = 300
+  managed_zone = var.dns_managed_zone.name
+  rrdatas      = [google_compute_global_address.verd_dev_web_app_lb_ip.address]
+}
+
+resource "google_dns_record_set" "verd_dev_web_app_lb_dns_root_redirect" {
+  count        = local.needs_root_domain_redirect ? 1 : 0
+  name         = var.dns_managed_zone.dns_name
+  type         = "A"
+  ttl          = 300
+  managed_zone = var.dns_managed_zone.name
+  rrdatas      = [google_compute_global_address.verd_dev_web_app_lb_ip.address]
+}
+
+resource "google_compute_region_network_endpoint_group" "serverless_neg" {
+  name                  = "verd-dev-web-app-lb-neg-${var.environment}"
+  network_endpoint_type = "SERVERLESS"
+  region                = var.region
+  cloud_run {
+    service = google_cloud_run_service.verd_dev_web_app.name
+  }
+}
+
+# https://github.com/terraform-google-modules/terraform-google-lb-http/blob/v10.2.0/examples/cloudrun/main.tf
+module "lb-http" {
+  source  = "terraform-google-modules/lb-http/google//modules/serverless_negs"
+  version = "~> 10.0"
+
+  project                         = var.project
+  name                            = "verd-dev-web-app-lb-${var.environment}"
+  ssl                             = true
+  managed_ssl_certificate_domains = [google_dns_record_set.verd_dev_web_app_lb_dns.name]
+  address                         = google_compute_global_address.verd_dev_web_app_lb_ip.address
+  https_redirect                  = true
+
+  backends = {
+    default = {
+      description = null
+      groups = [
+        {
+          group = google_compute_region_network_endpoint_group.serverless_neg.id
+        }
+      ]
+      enable_cdn = false
+
+      iap_config = {
+        enable = false
+      }
+      log_config = {
+        enable = false
+      }
+    }
   }
 }
