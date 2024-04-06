@@ -49,10 +49,17 @@ resource "google_service_account" "github_actions_sa" {
 }
 
 resource "google_project_iam_member" "github_actions_sa_iam_member" {
-  for_each = toset(["roles/artifactregistry.writer", "roles/run.admin", "roles/secretmanager.viewer", "roles/secretmanager.secretAccessor"])
-  project  = var.project
-  role     = each.key
-  member   = "serviceAccount:${google_service_account.github_actions_sa.email}"
+  for_each = toset([
+    "roles/artifactregistry.writer",
+    "roles/run.admin",
+    "roles/secretmanager.viewer",
+    "roles/secretmanager.secretAccessor",
+    "roles/iam.serviceAccountTokenCreator",
+    "roles/iam.serviceAccountUser",
+  ])
+  project = var.project
+  role    = each.key
+  member  = "serviceAccount:${google_service_account.github_actions_sa.email}"
 }
 
 resource "google_dns_managed_zone" "dns_managed_zone" {

@@ -90,17 +90,13 @@ resource "google_cloud_run_service" "verd_dev_web_app" {
   }
 }
 
-resource "google_compute_global_address" "verd_dev_web_app_lb_ip" {
-  name    = "verd-dev-web-app-lb-ip-${var.environment}"
-  project = var.project
-}
 
 resource "google_dns_record_set" "verd_dev_web_app_lb_dns" {
   name         = "${local.domain_prefix}.${var.dns_managed_zone.dns_name}"
   type         = "A"
   ttl          = 300
   managed_zone = var.dns_managed_zone.name
-  rrdatas      = [google_compute_global_address.verd_dev_web_app_lb_ip.address]
+  rrdatas      = [module.lb-http.external_ip]
 }
 
 resource "google_dns_record_set" "verd_dev_web_app_lb_dns_root_redirect" {
@@ -109,7 +105,7 @@ resource "google_dns_record_set" "verd_dev_web_app_lb_dns_root_redirect" {
   type         = "A"
   ttl          = 300
   managed_zone = var.dns_managed_zone.name
-  rrdatas      = [google_compute_global_address.verd_dev_web_app_lb_ip.address]
+  rrdatas      = [module.lb-http.external_ip]
 }
 
 resource "google_compute_region_network_endpoint_group" "serverless_neg" {
@@ -129,8 +125,7 @@ module "lb-http" {
   project                         = var.project
   name                            = "verd-dev-web-app-lb-${var.environment}"
   ssl                             = true
-  managed_ssl_certificate_domains = [google_dns_record_set.verd_dev_web_app_lb_dns.name]
-  address                         = google_compute_global_address.verd_dev_web_app_lb_ip.address
+  managed_ssl_certificate_domains = ["${local.domain_prefix}.${var.dns_managed_zone.dns_name}"]
   https_redirect                  = true
 
   backends = {
