@@ -41,3 +41,47 @@ resource "google_sql_user" "web_app_db_user" {
   name     = "verd_dev_web_app_${var.environment}"
   password = google_secret_manager_secret_version.web_app_db_user_password_secret_version.secret_data
 }
+
+resource "google_secret_manager_secret" "web_app_db_url_secret" {
+  secret_id = "verd-dev-web-app-db-url-${var.environment}"
+  labels = {
+    environment = var.environment
+    management  = "terraform"
+  }
+  replication {
+    auto {}
+  }
+}
+
+resource "google_secret_manager_secret_version" "web_app_db_url_secret_version" {
+  secret      = google_secret_manager_secret.web_app_db_url_secret.id
+  secret_data = "postgresql://${google_sql_user.web_app_db_user.name}:${google_secret_manager_secret_version.web_app_db_user_password_secret_version.secret_data}@localhost/${google_sql_database.postgres_database.name}?schema=public&host=/cloudsql/${var.db_instance.connection_name}"
+}
+
+resource "google_cloud_run_service" "verd_dev_web_app" {
+  name = "verd-dev-web-app-${var.environment}"
+  metadata {
+    labels = {
+      environment = var.environment
+      management  = "terraform"
+      deployment  = "github-actions"
+    }
+  }
+  location = var.region
+  project  = var.project
+
+  template {
+    spec {
+      service_account_name = google_service_account.verd_dev_web_app_sa.email
+      containers {
+        # Sample container used for initialization of the Cloud Run service. Deployments will be managed by GitHub Actions.
+        image = "us-docker.pkg.dev/cloudrun/container/hello"
+      }
+    }
+  }
+
+  traffic {
+    percent         = 100
+    latest_revision = true
+  }
+}

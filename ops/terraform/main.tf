@@ -170,4 +170,5 @@ module "web_application" {
   db_instance = google_sql_database_instance.postgres_db_instance
   environment = each.key
   project     = var.project
+  region      = var.region
 }
