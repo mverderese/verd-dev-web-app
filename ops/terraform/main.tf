@@ -107,6 +107,25 @@ resource "google_artifact_registry_repository" "verd_dev_web_app_repo" {
   format        = "DOCKER"
 }
 
+resource "google_secret_manager_secret" "db_root_password_secret" {
+  secret_id = "verderese-development-db-root-password"
+  replication {
+    auto {}
+  }
+  labels = {
+    management = "terraform"
+  }
+}
+
+resource "random_password" "db_root_password_value" {
+  length = 32
+}
+
+resource "google_secret_manager_secret_version" "db_root_password_secret_version" {
+  secret      = google_secret_manager_secret.db_root_password_secret.id
+  secret_data = random_password.db_root_password_value.result
+}
+
 resource "google_sql_database_instance" "postgres_db_instance" {
   database_version    = "POSTGRES_15"
   deletion_protection = true
@@ -114,6 +133,7 @@ resource "google_sql_database_instance" "postgres_db_instance" {
   name                = "verderese-development-db"
   project             = "verderese-development"
   region              = var.region
+  root_password       = google_secret_manager_secret_version.db_root_password_secret_version.secret_data
 
   settings {
     activation_policy           = "ALWAYS"
@@ -127,6 +147,9 @@ resource "google_sql_database_instance" "postgres_db_instance" {
     edition                     = "ENTERPRISE"
     pricing_plan                = "PER_USE"
     tier                        = "db-f1-micro"
+    user_labels = {
+      management = "terraform"
+    }
 
     backup_configuration {
       binary_log_enabled             = false
@@ -164,4 +187,31 @@ resource "google_sql_database_instance" "postgres_db_instance" {
       update_track = "stable"
     }
   }
+}
+
+resource "google_sql_database" "postgres_database" {
+  instance = google_sql_database_instance.postgres_db_instance.name
+  name     = "verd_dev_${var.environment}"
+}
+
+resource "google_secret_manager_secret" "web_app_db_user_password_secret" {
+  secret_id = "verd-dev-web-app-db-user-password"
+  replication {
+    auto {}
+  }
+}
+
+resource "random_password" "web_app_db_user_password_value" {
+  length = 32
+}
+
+resource "google_secret_manager_secret_version" "web_app_db_user_password_secret_version" {
+  secret      = google_secret_manager_secret.web_app_db_user_password_secret.id
+  secret_data = random_password.web_app_db_user_password_value.result
+}
+
+resource "google_sql_user" "web_app_db_user" {
+  instance = google_sql_database_instance.postgres_db_instance.name
+  name     = "verd_dev_web_app_${var.environment}"
+  password = google_secret_manager_secret_version.web_app_db_user_password_secret_version.secret_data
 }
