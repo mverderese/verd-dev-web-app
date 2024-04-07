@@ -1,4 +1,4 @@
-name: Lint
+name: Validate build
 
 on:
   push:
@@ -11,8 +11,8 @@ on:
       - develop
 
 jobs:
-  run-linters:
-    name: Run linters
+  validate-build:
+    name: Validate build
     runs-on: ubuntu-latest
 
     steps:
@@ -29,3 +29,6 @@ jobs:
 
       - name: Run linters
         run: npm run lint
+
+      - name: Run build
+        run: npm run build
