@@ -6,7 +6,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 const isProdNodeEnv = process.env.NODE_ENV === "production";
-const gtmMeasurementId = process.env.GTM_MEASUREMENT_ID;
+const gtmMeasurementId = process.env.NEXT_PUBLIC_GTM_MEASUREMENT_ID;
 
 export const metadata: Metadata = {
   title: "Create Next App",
