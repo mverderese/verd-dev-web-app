@@ -19,6 +19,10 @@ export default function Home() {
       <h3>
         Current environment: <code>{process.env.NEXT_PUBLIC_APP_ENV}</code>
       </h3>
+
+      <a target="_blank" href="https://github.com/mverderese/verd-dev-web-app">
+        View this project on GitHub
+      </a>
     </main>
   );
 }
