@@ -1,29 +1,40 @@
-import Image from "next/image";
+import HeroTitle from "@/app/components/HeroTitle";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Verderese Development</h1>
-      <h2>Innovation Through Custom Solutions</h2>
+    <main className="">
+      <div className="bg-gradient-to-b from-violet-600/[.15] via-transparent">
+        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
+          <HeroTitle>Verderese Development</HeroTitle>
 
-      <div className="relative flex place-items-center ">
-        <Image
-          className="relative"
-          src="/verderese_development_logo.png"
-          alt="Verderese Development Logo"
-          width={428}
-          height={200}
-          priority
-        />
+          <div className="max-w-3xl text-center mx-auto">
+            <p className="text-lg text-gray-400">Innovation through custom solutions</p>
+          </div>
+
+          <div className="text-center">
+            <a
+              className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-6 dark:focus:ring-offset-gray-800"
+              href="/about"
+            >
+              Learn More
+              <svg
+                className="flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-
-      <h3>
-        Current environment: <code>{process.env.NEXT_PUBLIC_APP_ENV}</code>
-      </h3>
-
-      <a target="_blank" href="https://github.com/mverderese/verd-dev-web-app">
-        View this project on GitHub
-      </a>
     </main>
   );
 }

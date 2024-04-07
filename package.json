@@ -15,7 +15,9 @@
     "terraform:apply": "terraform -chdir=ops/terraform init && terraform -chdir=ops/terraform apply"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "next": "14.1.4",
+    "preline": "^2.1.0",
     "react": "^18",
     "react-dom": "^18"
   },
