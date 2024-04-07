@@ -15,7 +15,6 @@
     "terraform:apply": "terraform -chdir=ops/terraform init && terraform -chdir=ops/terraform apply"
   },
   "dependencies": {
-    "graphql": "^16.8.1",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18"

@@ -11,17 +11,17 @@ Portfolio website for Verderese Development. This project is meant to serve two 
 
 1. Ensure [Docker](https://www.docker.com/) is installed on your machine.
 2. Ensure [nodenv](https://github.com/nodenv/nodenv) is installed on your machine.
-4. Copy `.env.local.example` to `.env.local` and fill in the required values.
-5. Install the correct version of Node and upgrade NPM
+3. Copy `.env.local.example` to `.env.local` and fill in the required values.
+4. Install the correct version of Node and upgrade NPM
    ```bash
    nodenv install -s
    npm install -g npm
    ```
-6. Run the dependency containers.
+5. Run the dependency containers.
    ```bash
    npm run docker:local
    ```
-7. Run the web application. As an alternative, you can run the "Next Dev" WebStorm run configuration.
+6. Run the web application. As an alternative, you can run the "Next Dev" WebStorm run configuration.
    ```bash
    npm run dev
    ```
