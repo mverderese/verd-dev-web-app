@@ -11,7 +11,6 @@ Portfolio website for Verderese Development. This project is meant to serve two 
 
 1. Ensure [Docker](https://www.docker.com/) is installed on your machine.
 2. Ensure [nodenv](https://github.com/nodenv/nodenv) is installed on your machine.
-3. Ensure [Terraform](https://developer.hashicorp.com/terraform/install) is installed on your machine.
 4. Copy `.env.local.example` to `.env.local` and fill in the required values.
 5. Install the correct version of Node and upgrade NPM
    ```bash
