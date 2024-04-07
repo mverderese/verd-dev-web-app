@@ -39,7 +39,7 @@ jobs:
               echo "Unknown GitHub ref name"
               exit 1
           fi
-          
+
       - name: Checkout
         uses: actions/checkout@v2
 
