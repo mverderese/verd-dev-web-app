@@ -12,8 +12,8 @@ const hotjarSiteId = process.env.NEXT_PUBLIC_HOTJAR_SITE_ID
   : undefined;
 
 export const metadata: Metadata = {
-  title: "Verderese Development",
-  description: "Making your software dreams a reality",
+  title: "Verderese Development | Innovation through custom solutions",
+  description: "Innovation through custom solutions",
   robots: {
     index: false,
     follow: false,
