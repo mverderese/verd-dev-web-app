@@ -1,4 +1,4 @@
-import HeroTitle from "@/app/components/HeroTitle";
+import HeroTitle from "@/app/_components/HeroTitle";
 
 export default function Home() {
   return (
