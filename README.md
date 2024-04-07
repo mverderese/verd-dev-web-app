@@ -126,7 +126,7 @@ If you have cloned this project and are setting up a new GCP project to host the
    gcloud auth login
    gcloud auth application-default login
    ```
-5. Copy `ops/terraform/production.auto.tfvars.example` to `ops/terraform/production.auto.tfvars` and fill in the required values.
+5. Copy `ops/terraform/terraform.tfvars.example` to `ops/terraform/terraform.tfvars` and fill in the required values.
 6. Copy `ops/terraform/bootstrap/terraform.tfvars.example` to `ops/terraform/bootstrap/terraform.tfvars` and fill in the required values.
 7. Update the bucket name at `ops/terraform/main.tf:9` to be `{project}-bucket-tfstate`. The provider block of terraform does not support variables.
 8. Run the bootstrap terraform script to create the GCP project and enable the required APIs. **The state file for this script should be force checked into the repository.** _TODO_: See if there is a better way to handle this.
