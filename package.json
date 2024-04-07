@@ -15,7 +15,6 @@
     "terraform:apply": "terraform -chdir=ops/terraform init && terraform -chdir=ops/terraform apply"
   },
   "dependencies": {
-    "@hotjar/browser": "^1.0.9",
     "graphql": "^16.8.1",
     "next": "14.1.4",
     "react": "^18",
