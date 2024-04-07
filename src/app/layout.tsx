@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import Hotjar from "@hotjar/browser";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const isProdNodeEnv = process.env.NODE_ENV === "production";
 const gtmMeasurementId = process.env.NEXT_PUBLIC_GTM_MEASUREMENT_ID;
+const hotjarSiteId = process.env.NEXT_PUBLIC_HOTJAR_SITE_ID
+  ? parseInt(process.env.NEXT_PUBLIC_HOTJAR_SITE_ID)
+  : undefined;
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,6 +30,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  if (isProdNodeEnv && hotjarSiteId) {
+    Hotjar.init(hotjarSiteId, 6);
+  }
+
   return (
     <html lang="en">
       {isProdNodeEnv && gtmMeasurementId && (
@@ -37,7 +45,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', ${gtmMeasurementId});
+              gtag('config', '${gtmMeasurementId}');
             </script>
           `}
         </Script>
