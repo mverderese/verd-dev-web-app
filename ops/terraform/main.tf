@@ -39,6 +39,7 @@ resource "google_project_service" "project_services" {
     "certificatemanager.googleapis.com",
     "publicca.googleapis.com",
     "privateca.googleapis.com",
+    "iap.googleapis.com",
   ])
   service = each.key
 }
@@ -63,9 +64,9 @@ resource "google_project_iam_member" "github_actions_sa_iam_member" {
 }
 
 resource "google_dns_managed_zone" "dns_managed_zone" {
-  dns_name    = "verderesedevelopment.com."
-  name        = "verderesedevelopment-com"
-  description = "DNS zone for domain: verderesedevelopment.com"
+  dns_name    = "mikeverderese.com."
+  name        = "mikeverderese-com"
+  description = "DNS zone for domain: mikeverderese.com"
   visibility  = "public"
   dnssec_config {
     state         = "on"
@@ -186,4 +187,5 @@ module "web_application" {
     id       = google_dns_managed_zone.dns_managed_zone.id
     dns_name = google_dns_managed_zone.dns_managed_zone.dns_name
   }
+  oauth_client_ids = var.oauth_client_ids
 }

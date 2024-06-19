@@ -99,7 +99,6 @@ resource "google_cloud_run_service" "verd_dev_web_app" {
   }
 }
 
-
 resource "google_dns_record_set" "verd_dev_web_app_lb_dns" {
   name         = local.domain
   type         = "A"
@@ -115,6 +114,11 @@ resource "google_compute_region_network_endpoint_group" "serverless_neg" {
   cloud_run {
     service = google_cloud_run_service.verd_dev_web_app.name
   }
+}
+
+data "google_secret_manager_secret_version" "oauth_client_secret" {
+  secret = "verd-dev-web-app-oauth-client-secret-${var.environment}"
+  count  = var.environment == "prod" ? 0 : 1
 }
 
 # https://github.com/terraform-google-modules/terraform-google-lb-http/blob/v10.2.0/examples/cloudrun/main.tf
@@ -139,11 +143,16 @@ module "lb-http" {
       enable_cdn = false
 
       iap_config = {
-        enable = false
+        enable               = false
+        enable               = var.environment == "prod" ? false : true
+        oauth2_client_id     = var.oauth_client_ids[var.environment]
+        oauth2_client_secret = length(data.google_secret_manager_secret_version.oauth_client_secret) > 0 ? data.google_secret_manager_secret_version.oauth_client_secret[0].secret_data : ""
       }
       log_config = {
         enable = false
       }
     }
   }
+
+
 }

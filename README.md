@@ -1,9 +1,19 @@
 # Verd Dev Web App
 
-Portfolio website for Verderese Development. This project is meant to serve two main purposes:
+Portfolio website for Mike Verderese / Verderese Development. This project is meant to serve two main purposes:
 
 1. Provide the source code for the Verderese Development web application.
 2. Showcase the development process and best practices for a modern web application.
+
+This web application can be viewed in three different environments. Private environments require a Google Login, which is managed by the Google Cloud OAuth Consent and Identity-Aware Proxy services.
+
+**Note:** Because IAP and OAuth are not fully supported by Terraform outside a Google Cloud organization, The OAuth Consent and IAP permissions are managed manually through the console.
+
+| Environment | URL                            | Public? |
+| ----------- | ------------------------------ | ------- |
+| Development | https://dev.mikeverderese.com/ | ❌      |
+| Staging     | https://stg.mikeverderese.com/ | ❌      |
+| Production  | https://mikeverderese.com/     | ✅      |
 
 ## Local Development
 
@@ -11,18 +21,17 @@ Portfolio website for Verderese Development. This project is meant to serve two 
 
 1. Ensure [Docker](https://www.docker.com/) is installed on your machine.
 2. Ensure [nodenv](https://github.com/nodenv/nodenv) is installed on your machine.
-3. Ensure [Terraform](https://developer.hashicorp.com/terraform/install) is installed on your machine.
-4. Copy `.env.local.example` to `.env.local` and fill in the required values.
-5. Install the correct version of Node and upgrade NPM
+3. Copy `.env.local.example` to `.env.local` and fill in the required values.
+4. Install the correct version of Node and upgrade NPM
    ```bash
    nodenv install -s
    npm install -g npm
    ```
-6. Run the dependency containers.
+5. Run the dependency containers.
    ```bash
    npm run docker:local
    ```
-7. Run the web application. As an alternative, you can run the "Next Dev" WebStorm run configuration.
+6. Run the web application. As an alternative, you can run the "Next Dev" WebStorm run configuration.
    ```bash
    npm run dev
    ```
@@ -127,7 +136,7 @@ If you have cloned this project and are setting up a new GCP project to host the
    gcloud auth login
    gcloud auth application-default login
    ```
-5. Copy `ops/terraform/production.auto.tfvars.example` to `ops/terraform/production.auto.tfvars` and fill in the required values.
+5. Copy `ops/terraform/terraform.tfvars.example` to `ops/terraform/terraform.tfvars` and fill in the required values.
 6. Copy `ops/terraform/bootstrap/terraform.tfvars.example` to `ops/terraform/bootstrap/terraform.tfvars` and fill in the required values.
 7. Update the bucket name at `ops/terraform/main.tf:9` to be `{project}-bucket-tfstate`. The provider block of terraform does not support variables.
 8. Run the bootstrap terraform script to create the GCP project and enable the required APIs. **The state file for this script should be force checked into the repository.** _TODO_: See if there is a better way to handle this.

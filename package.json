@@ -1,6 +1,6 @@
 {
   "name": "verd-dev-web-app",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,8 +15,10 @@
     "terraform:apply": "terraform -chdir=ops/terraform init && terraform -chdir=ops/terraform apply"
   },
   "dependencies": {
-    "graphql": "^16.8.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "classnames": "^2.5.1",
     "next": "14.1.4",
+    "preline": "^2.1.0",
     "react": "^18",
     "react-dom": "^18"
   },

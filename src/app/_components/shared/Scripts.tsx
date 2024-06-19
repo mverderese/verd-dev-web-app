@@ -1,9 +1,5 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 import Script from "next/script";
-
-const inter = Inter({ subsets: ["latin"] });
+import React from "react";
 
 const isProdNodeEnv = process.env.NODE_ENV === "production";
 const gtmMeasurementId = process.env.NEXT_PUBLIC_GTM_MEASUREMENT_ID;
@@ -11,26 +7,9 @@ const hotjarSiteId = process.env.NEXT_PUBLIC_HOTJAR_SITE_ID
   ? parseInt(process.env.NEXT_PUBLIC_HOTJAR_SITE_ID)
   : undefined;
 
-export const metadata: Metadata = {
-  title: "Verderese Development",
-  description: "Making your software dreams a reality",
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: {
-      index: false,
-      follow: false,
-    },
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Scripts() {
   return (
-    <html lang="en">
+    <>
       {isProdNodeEnv && gtmMeasurementId && (
         <>
           <Script async src="https://www.googletagmanager.com/gtag/js?id=${gtmMeasurementId}"></Script>
@@ -60,7 +39,6 @@ export default function RootLayout({
           `}
         </Script>
       )}
-      <body className={inter.className}>{children}</body>
-    </html>
+    </>
   );
 }
