@@ -3,10 +3,11 @@ import React from "react";
 import "../globals.css";
 import PrelineScript from "@/app/_components/shared/PrelineScript";
 import MarketingNavbar from "@/app/_components/marketing/MarketingNavbar";
+import { JOB_TITLE, MY_NAME, TAGLINE } from "@/app/_components/shared/constants";
 
 export const metadata: Metadata = {
-  title: "Mike Verderese | Software Engineer and Leader",
-  description: "I make a vision of software reality.",
+  title: `${MY_NAME} | ${JOB_TITLE}`,
+  description: TAGLINE,
   robots: {
     index: false,
     follow: false,
@@ -24,7 +25,7 @@ export default function MarketingLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gray-100">
         <MarketingNavbar />
         {children}
       </body>
