@@ -4,7 +4,7 @@ export default function AppHeader() {
       <nav className="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8" aria-label="Global">
         <div className="me-5 lg:me-0 lg:hidden">
           <a className="flex-none text-xl font-semibold dark:text-white" href="/" aria-label="Brand">
-            Verderese Development
+            Sample App
           </a>
         </div>
 

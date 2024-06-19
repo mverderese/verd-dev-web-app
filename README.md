@@ -1,9 +1,19 @@
 # Verd Dev Web App
 
-Portfolio website for Verderese Development. This project is meant to serve two main purposes:
+Portfolio website for Mike Verderese / Verderese Development. This project is meant to serve two main purposes:
 
 1. Provide the source code for the Verderese Development web application.
 2. Showcase the development process and best practices for a modern web application.
+
+This web application can be viewed in three different environments. Private environments require a Google Login, which is managed by the Google Cloud OAuth Consent and Identity-Aware Proxy services.
+
+**Note:** Because IAP and OAuth are not fully supported by Terraform outside a Google Cloud organization, The OAuth Consent and IAP permissions are managed manually through the console.
+
+| Environment | URL                            | Public? |
+| ----------- | ------------------------------ | ------- |
+| Development | https://dev.mikeverderese.com/ | ❌      |
+| Staging     | https://stg.mikeverderese.com/ | ❌      |
+| Production  | https://mikeverderese.com/     | ✅      |
 
 ## Local Development
 

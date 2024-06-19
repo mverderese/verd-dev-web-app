@@ -1,14 +1,15 @@
-import HeroTitle from "@/app/_components/HeroTitle";
+import HeroTitle from "@/app/_components/shared/HeroTitle";
+import GithubButton from "@/app/_components/shared/GithubButton";
 
 export default function Home() {
   return (
     <main className="">
       <div className="bg-gradient-to-b from-violet-600/[.15] via-transparent">
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
-          <HeroTitle>Verderese Development</HeroTitle>
+          <HeroTitle>Mike Verderese</HeroTitle>
 
           <div className="max-w-3xl text-center mx-auto">
-            <p className="text-lg text-gray-400">Innovation through custom solutions</p>
+            <p className="text-lg text-gray-400">I make a vision of software reality.</p>
           </div>
 
           <div className="text-center">
@@ -32,6 +33,9 @@ export default function Home() {
                 <path d="m9 18 6-6-6-6" />
               </svg>
             </a>
+          </div>
+          <div className="text-center">
+            <GithubButton />
           </div>
         </div>
       </div>

@@ -20,3 +20,6 @@ variable "db_instance" {
     connection_name = string
   })
 }
+variable "oauth_client_ids" {
+  type = map(string)
+}

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import React from "react";
 import "../globals.css";
-import PrelineScript from "@/app/_components/PrelineScript";
-import AppHeader from "@/app/_components/AppHeader";
-import AppSidebar from "@/app/_components/AppSidebar";
+import PrelineScript from "@/app/_components/shared/PrelineScript";
+import AppHeader from "@/app/_components/app/AppHeader";
+import AppSidebar from "@/app/_components/app/AppSidebar";
+import { APP_TITLE } from "@/app/_components/shared/constants";
 
 export const metadata: Metadata = {
-  title: "Awesome App",
+  title: APP_TITLE,
   description: "You know how sweet it is!",
   robots: {
     index: false,

@@ -1,16 +1,16 @@
 import React from "react";
+import { APP_TITLE, SITE_TITLE } from "@/app/_components/shared/constants";
 
 export default function MarketingNavbar() {
   return (
     <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-blue-600 text-sm py-3 sm:py-0">
-      {/*TODO : Fix clickable area of home logo*/}
       <nav
         className="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
           <a className="flex-none text-xl font-semibold text-white" href="/" aria-label="Brand">
-            Verderese Development
+            {SITE_TITLE}
           </a>
           <div className="sm:hidden">
             <button
@@ -62,14 +62,11 @@ export default function MarketingNavbar() {
             <a className="font-medium text-white/[.8] hover:text-white sm:py-6" href="/about">
               About
             </a>
-            <a className="font-medium text-white/[.8] hover:text-white sm:py-6" href="/services">
-              Services
-            </a>
             <a className="font-medium text-white/[.8] hover:text-white sm:py-6" href="/portfolio">
               Portfolio
             </a>
             <a className="font-medium text-white/[.8] hover:text-white sm:py-6" href="/app">
-              Demo App
+              {APP_TITLE}
             </a>
           </div>
         </div>
