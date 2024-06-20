@@ -35,7 +35,7 @@ export default function Home() {
                   image={project.image}
                   title={project.title}
                   key={project.title}
-                  link={`/portfolio/${project.slug}`}
+                  link={`/portfolio/project/${project.slug}`}
                 >
                   {project.description}
                 </Card>

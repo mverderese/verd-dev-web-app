@@ -12,7 +12,12 @@ export default function PortfolioPage() {
         <Subtitle>These are some of my best projects.</Subtitle>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioProjects.map((project) => (
-            <Card image={project.image} title={project.title} key={project.title} link={`/portfolio/${project.slug}`}>
+            <Card
+              image={project.image}
+              title={project.title}
+              key={project.title}
+              link={`/portfolio/project/${project.slug}`}
+            >
               {project.description}
             </Card>
           ))}
