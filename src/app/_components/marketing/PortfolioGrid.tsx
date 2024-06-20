@@ -23,7 +23,7 @@ export default function PortfolioGrid({ onlyHighlighted }: PortfolioGridProps) {
       </div>
       {onlyHighlighted ? (
         <div className="text-center">
-          <div className="flex justify-center pt-16">
+          <div className="flex justify-center pt-12">
             <CtaButton link={"/portfolio"}>See all</CtaButton>
           </div>
         </div>
