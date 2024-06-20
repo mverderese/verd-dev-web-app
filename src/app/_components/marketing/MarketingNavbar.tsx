@@ -1,5 +1,5 @@
 import React from "react";
-import { MY_NAME } from "@/app/_components/shared/constants";
+import { MY_NAME } from "@/app/constants";
 import GithubButton from "@/app/_components/shared/GithubButton";
 
 export default function MarketingNavbar() {

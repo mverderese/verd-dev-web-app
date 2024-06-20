@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GITHUB_REPO_URL } from "@/app/_components/shared/constants";
+import { GITHUB_REPO_URL } from "@/app/constants";
 
 export default function GithubButton() {
   return (

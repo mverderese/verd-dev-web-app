@@ -1,4 +1,4 @@
-import { MY_NAME, RESUME_URL, TAGLINE } from "@/app/_components/shared/constants";
+import { MY_NAME, RESUME_URL, TAGLINE } from "@/app/constants";
 import Image from "next/image";
 
 export default function Home() {

@@ -3,17 +3,17 @@ import React from "react";
 import "../globals.css";
 import PrelineScript from "@/app/_components/shared/PrelineScript";
 import MarketingNavbar from "@/app/_components/marketing/MarketingNavbar";
-import { JOB_TITLE, MY_NAME, TAGLINE } from "@/app/_components/shared/constants";
+import { IS_INDEXABLE, JOB_TITLE, MY_NAME, TAGLINE } from "@/app/constants";
 
 export const metadata: Metadata = {
   title: `${MY_NAME} | ${JOB_TITLE}`,
   description: TAGLINE,
   robots: {
-    index: false,
-    follow: false,
+    index: IS_INDEXABLE,
+    follow: IS_INDEXABLE,
     googleBot: {
-      index: false,
-      follow: false,
+      index: IS_INDEXABLE,
+      follow: IS_INDEXABLE,
     },
   },
 };
