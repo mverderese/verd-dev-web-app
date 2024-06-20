@@ -8,10 +8,11 @@ export type CardProps = {
   title: string;
   children: ReactNode;
   link?: string;
+  newTab?: boolean;
 };
-export default function Card({ image, title, children, link }: CardProps) {
+export default function Card({ image, title, children, link, newTab }: CardProps) {
   return (
-    <a href={link}>
+    <a href={link} target={newTab ? "_blank" : ""}>
       <div className="bg-gray-50 px-8 py-10 rounded-md hover:bg-gray-100">
         <div className="w-20 py-6 flex justify-center mb-4">
           <Image src={image} height={100} width={100} alt={`Card icon for ${title}`} />

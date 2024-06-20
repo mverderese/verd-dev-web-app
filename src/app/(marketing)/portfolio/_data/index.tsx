@@ -7,8 +7,7 @@ import GleameryContent from "@/app/(marketing)/portfolio/project/_components/Gle
 export const portfolioProjects: PortfolioProject[] = [
   {
     title: "Odin",
-    subtitle: "Construction Workforce Management and Visibility",
-    description: "Construction workforce management platform",
+    subtitle: "Construction Workforce Management",
     image: "/icons/odin-app-icon.png",
     slug: "odin",
     externalLink: "https://www.useodin.com/",
@@ -18,7 +17,6 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     title: "Starbucks",
     subtitle: "Starbucks Ecommerce Website",
-    description: "eCommerce website for world-renowned coffee brand",
     image: "/icons/starbucks-logo-icon.webp",
     slug: "starbucks",
     highlighted: true,
@@ -27,7 +25,6 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     title: "Great Many",
     subtitle: "Your Home for Hair Growth",
-    description: "Hair loss treatment company for men and women",
     image: "/icons/great-many-icon.png",
     slug: "great-many",
     externalLink: "https://www.greatmany.com/",
@@ -36,8 +33,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     title: "The Gleamery",
-    subtitle: "Professional Grade Teeth Whitening and Cleaning",
-    description: "Innovative, gentle teeth cleaning and whitening treatments",
+    subtitle: "Professional Teeth Whitening and Cleaning",
     image: "/icons/gleamery-logo-icon.svg",
     slug: "the-gleamery",
     externalLink: "https://www.thegleamery.com/",

@@ -1,12 +1,12 @@
-import { JOB_TITLE, MY_NAME, TAGLINE } from "@/app/constants";
+import { GITHUB_REPO_URL, JOB_TITLE, MY_NAME, RESUME_URL, TAGLINE } from "@/app/constants";
 import Image from "next/image";
 import Section from "@/app/_components/marketing/Section";
 import H1 from "@/app/_components/marketing/H1";
-import Card from "@/app/_components/marketing/Card";
 import H2 from "@/app/_components/marketing/H2";
 import Subtitle from "@/app/_components/marketing/Subtitle";
-import { portfolioProjects } from "@/app/(marketing)/portfolio/_data";
 import CtaButton from "@/app/_components/marketing/CtaButton";
+import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
+import Card from "@/app/_components/marketing/Card";
 
 export default function Home() {
   return (
@@ -24,28 +24,20 @@ export default function Home() {
         </div>
       </Section>
       <Section darkBg>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:px-32 gap-6">
+          <Card image="/icons/feather/list.svg" title="Resume" link={RESUME_URL} newTab>
+            Lear more about my work experience.
+          </Card>
+          <Card image="/icons/feather/github.svg" title="Github" link={GITHUB_REPO_URL} newTab>
+            See the source code of this project.
+          </Card>
+        </div>
+      </Section>
+      <Section>
         <div className="container max-w-screen-xl mx-auto px-4">
           <H2>Portfolio</H2>
           <Subtitle>These are some of my best projects.</Subtitle>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolioProjects
-              .filter((p) => p.highlighted)
-              .map((project) => (
-                <Card
-                  image={project.image}
-                  title={project.title}
-                  key={project.title}
-                  link={`/portfolio/project/${project.slug}`}
-                >
-                  {project.description}
-                </Card>
-              ))}
-          </div>
-        </div>
-        <div className="text-center">
-          <div className="flex justify-center pt-16">
-            <CtaButton link={"/portfolio"}>See all</CtaButton>
-          </div>
+          <PortfolioGrid onlyHighlighted />
         </div>
       </Section>
       <Section>
