@@ -62,7 +62,7 @@ export default function MarketingNavbar() {
         >
           <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
             <MenuItem title={"About"} link="/about" />
-            {/*<MenuItem title={"Portfolio"} link="/portfolio" />*/}
+            <MenuItem title={"Portfolio"} link="/portfolio" />
             {/*<MenuItem title={APP_TITLE} link="/app" />*/}
             <MenuItem title="Resume" link={RESUME_URL} newTab />
             <GithubButton />

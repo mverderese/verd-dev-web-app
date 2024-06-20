@@ -1,10 +1,11 @@
-import { MY_NAME, TAGLINE } from "@/app/constants";
+import { JOB_TITLE, MY_NAME, TAGLINE } from "@/app/constants";
 import Image from "next/image";
 import Section from "@/app/_components/marketing/Section";
 import H1 from "@/app/_components/marketing/H1";
 import Card from "@/app/_components/marketing/Card";
 import H2 from "@/app/_components/marketing/H2";
 import Subtitle from "@/app/_components/marketing/Subtitle";
+import { portfolioProjects } from "@/app/(marketing)/portfolio/_data";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
 
           <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">{MY_NAME}</h6>
 
-          <H1>Software Engineering Leader</H1>
+          <H1>{JOB_TITLE}</H1>
 
           <p className="font-normal text-gray-600 text-md md:text-xl mb-16">{TAGLINE}</p>
 
@@ -34,18 +35,18 @@ export default function Home() {
           <H2>Portfolio</H2>
           <Subtitle>These are some of my best projects.</Subtitle>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card icon={"/icons/odin-app-icon.png"} title={"Odin"}>
-              Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut
-              labore et dolore magna aliqua.
-            </Card>
-            <Card icon={"/icons/starbucks-logo-icon.webp"} title={"Starbucks"}>
-              Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut
-              labore et dolore magna aliqua.
-            </Card>
-            <Card icon={"/icons/great-many-icon.png"} title={"Great Many"}>
-              Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut
-              labore et dolore magna aliqua.
-            </Card>
+            {portfolioProjects
+              .filter((p) => p.highlighted)
+              .map((project) => (
+                <Card
+                  image={project.image}
+                  title={project.title}
+                  key={project.title}
+                  link={`/portfolio/${project.slug}`}
+                >
+                  {project.description}
+                </Card>
+              ))}
           </div>
         </div>
         <div className="text-center">
