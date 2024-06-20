@@ -27,7 +27,7 @@ export default function MarketingLayout({
     <html lang="en">
       <body className="bg-gray-100">
         <MarketingNavbar />
-        {children}
+        <main className="gb-gray-100">{children}</main>
       </body>
       <PrelineScript />
     </html>

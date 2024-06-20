@@ -1,6 +1,7 @@
 import React from "react";
-import { MY_NAME } from "@/app/constants";
+import { MY_NAME, RESUME_URL } from "@/app/constants";
 import GithubButton from "@/app/_components/shared/GithubButton";
+import MenuItem from "@/app/_components/marketing/MenuItem";
 
 export default function MarketingNavbar() {
   return (
@@ -60,9 +61,10 @@ export default function MarketingNavbar() {
           className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
         >
           <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
-            {/*<MenuItem title={"About"} link="/about" />*/}
+            <MenuItem title={"About"} link="/about" />
             {/*<MenuItem title={"Portfolio"} link="/portfolio" />*/}
             {/*<MenuItem title={APP_TITLE} link="/app" />*/}
+            <MenuItem title="Resume" link={RESUME_URL} newTab />
             <GithubButton />
           </div>
         </div>
