@@ -1,4 +1,5 @@
 import { PortfolioProject } from "@/app/(marketing)/portfolio/_data/types";
+import OdinPage from "@/app/(marketing)/portfolio/_components/OdinPage";
 
 export const portfolioProjects: PortfolioProject[] = [
   {
@@ -8,6 +9,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "odin",
     externalLink: "https://www.useodin.com/",
     highlighted: true,
+    customPage: <OdinPage />,
   },
   {
     title: "Starbucks",
@@ -27,7 +29,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     title: "The Gleamery",
     description: "Innovative, gentle teeth cleaning and whitening treatments",
-    image: "/icons/gleamery-logo-icon.png",
+    image: "/icons/gleamery-logo-icon.svg",
     slug: "the-gleamery",
     externalLink: "https://www.thegleamery.com/",
   },

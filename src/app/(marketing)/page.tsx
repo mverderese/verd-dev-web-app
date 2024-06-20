@@ -6,6 +6,7 @@ import Card from "@/app/_components/marketing/Card";
 import H2 from "@/app/_components/marketing/H2";
 import Subtitle from "@/app/_components/marketing/Subtitle";
 import { portfolioProjects } from "@/app/(marketing)/portfolio/_data";
+import CtaButton from "@/app/_components/marketing/CtaButton";
 
 export default function Home() {
   return (
@@ -17,17 +18,9 @@ export default function Home() {
           </div>
 
           <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">{MY_NAME}</h6>
-
           <H1>{JOB_TITLE}</H1>
-
           <p className="font-normal text-gray-600 text-md md:text-xl mb-16">{TAGLINE}</p>
-
-          <a
-            href="/about"
-            className="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500"
-          >
-            Learn more
-          </a>
+          <CtaButton link={"/about"}>Learn more</CtaButton>
         </div>
       </Section>
       <Section darkBg>
@@ -51,12 +44,7 @@ export default function Home() {
         </div>
         <div className="text-center">
           <div className="flex justify-center pt-16">
-            <a
-              href="/portfolio"
-              className="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500"
-            >
-              See all
-            </a>
+            <CtaButton link={"/portfolio"}>See all</CtaButton>
           </div>
         </div>
       </Section>
