@@ -8,10 +8,10 @@ export default function AboutPage() {
   return (
     <Section>
       <div className="flex flex-wrap">
-        <div className="basis-full md:basis-1/3 pb-6 md:pb-0 md:pt-3 md:pr-6">
+        <div className="basis-full lg:basis-1/3 pb-6 lg:pb-0 lg:pt-3 lg:pr-6 ">
           <Image src="/mike-headshot-2.jpg" alt="Image" height={500} width={500} />
         </div>
-        <div className="basis-full md:basis-2/3">
+        <div className="basis-full lg:basis-2/3 ">
           <H1>Hey, I&apos;m Mike</H1>
           <BodyText>
             <BodyParagraph>
