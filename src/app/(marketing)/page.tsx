@@ -21,7 +21,7 @@ export default function Home() {
           <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">{MY_NAME}</h6>
           <H1>{JOB_TITLE}</H1>
           <p className="font-normal text-gray-600 text-md md:text-xl mb-16">{TAGLINE}</p>
-          <CtaButton link={"/about"}>Learn more</CtaButton>
+          <CtaButton link={"/about"}>About me</CtaButton>
         </div>
       </Section>
       <Section darkBg>

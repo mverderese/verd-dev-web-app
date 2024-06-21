@@ -41,7 +41,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section>
+      <Section narrow>
         <div className="text-center">
           <H2>
             Over 10 Years of Software <br />
