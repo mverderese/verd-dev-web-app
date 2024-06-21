@@ -24,7 +24,7 @@ export default function TagContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <Section narrow>
+      <Section narrowTop narrowBottom>
         <H2>Living and Breathing My First Startup</H2>
         <BodyText>
           <BodyParagraph>

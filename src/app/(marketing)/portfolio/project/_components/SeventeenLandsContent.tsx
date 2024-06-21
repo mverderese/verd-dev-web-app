@@ -24,7 +24,7 @@ export default function SeventeenLandsContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <Section narrow>
+      <Section narrowTop narrowBottom>
         <H2>Empowering a Growing Development Team</H2>
         <BodyText>
           <BodyParagraph>
@@ -42,7 +42,7 @@ export default function SeventeenLandsContent() {
           </BodyParagraph>
         </BodyText>
       </Section>
-      <Section />
+      <Section narrowTop />
     </>
   );
 }

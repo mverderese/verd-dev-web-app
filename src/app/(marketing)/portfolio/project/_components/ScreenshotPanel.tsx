@@ -6,12 +6,20 @@ export type ScreenshotPanelProps = {
   children: React.ReactNode;
   image: string;
   reverse?: boolean;
-  narrow?: boolean;
+  narrowTop?: boolean;
+  narrowBottom?: boolean;
   mobile?: boolean;
 };
-export default function ScreenshotPanel({ children, image, reverse, narrow, mobile }: ScreenshotPanelProps) {
+export default function ScreenshotPanel({
+  children,
+  image,
+  reverse,
+  narrowTop,
+  narrowBottom,
+  mobile,
+}: ScreenshotPanelProps) {
   return (
-    <Section narrow={narrow}>
+    <Section narrowTop={narrowTop} narrowBottom={narrowBottom}>
       <div
         className={classNames(
           "flex",

@@ -24,7 +24,7 @@ export default function StarbucksContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <Section narrow>
+      <Section narrowTop narrowBottom>
         <H2>Navigating a Legacy Tech Stack</H2>
         <BodyText>
           <BodyParagraph>

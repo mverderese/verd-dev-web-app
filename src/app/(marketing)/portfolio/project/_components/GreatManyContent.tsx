@@ -24,7 +24,7 @@ export default function GreatManyContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <Section narrow>
+      <Section narrowTop narrowBottom>
         <H2>Enabling Highly-Targeting Marketing</H2>
         <BodyText>
           <BodyParagraph>

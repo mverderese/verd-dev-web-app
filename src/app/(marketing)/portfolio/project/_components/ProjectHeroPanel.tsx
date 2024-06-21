@@ -18,7 +18,7 @@ export default function ProjectHeroPanel({ children, project }: ProjectPageConta
             <Image src={project.image} height={90} width={258} alt={`${project.title} logo`} />
           </div>
           <H1>{project.title}</H1>
-          <H2>
+          <H2 narrowBottom>
             {project.subtitle} ({project.year})
           </H2>
 

@@ -24,7 +24,7 @@ export default function ShotsIGotContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <Section narrow>
+      <Section narrowTop narrowBottom>
         <H2>The Start of My Entrepreneurial Spirit</H2>
         <BodyText>
           <BodyParagraph>

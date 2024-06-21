@@ -41,7 +41,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section narrow>
+      <Section narrowTop narrowBottom>
         <div className="">
           <H2>10+ Years of Software Engineering Leadership</H2>
           <BodyText>
@@ -99,7 +99,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section narrow>
+      <Section narrowTop narrowBottom>
         <H2>Life is an Ongoing Adventure</H2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
           <Image src="/hiking.jpeg" alt="Hiking" height={500} width={500} />

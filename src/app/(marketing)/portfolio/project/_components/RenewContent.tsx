@@ -24,7 +24,7 @@ export default function RenewContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <Section narrow>
+      <Section narrowTop narrowBottom>
         <H2>Helping an Often-Forgotten Demographic</H2>
         <BodyText>
           <BodyParagraph>
