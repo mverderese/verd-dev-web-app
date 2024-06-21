@@ -1,6 +1,6 @@
 import React from "react";
-import { ChevronLeft } from "react-feather";
 import CtaButton from "@/app/_components/marketing/CtaButton";
+import Image from "next/image";
 
 export type PortfolioProjectLayoutProps = Readonly<{
   children: React.ReactNode;
@@ -11,7 +11,13 @@ export default function PortfolioProjectLayout({ children }: PortfolioProjectLay
     <>
       <div className="container flex max-w-screen-xl mx-auto px-4 pt-6">
         <a href="/portfolio">
-          <ChevronLeft color="rgb(107, 114, 128)" className="inline align-text-top" height={20} width={20} />
+          <Image
+            src="/icons/feather/chevron-left.svg"
+            className="inline align-text-top fill-gray-200"
+            height={20}
+            width={20}
+            alt="chevron-left"
+          />
           <span className="inline pt">All Projects</span>
         </a>
       </div>

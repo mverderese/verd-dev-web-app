@@ -7,7 +7,6 @@ import Subtitle from "@/app/_components/marketing/Subtitle";
 import CtaButton from "@/app/_components/marketing/CtaButton";
 import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
 import Card from "@/app/_components/marketing/Card";
-import { GitHub, List } from "react-feather";
 
 export default function Home() {
   return (
@@ -26,11 +25,11 @@ export default function Home() {
       </Section>
       <Section darkBg>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:px-40 gap-6">
-          <Card icon={<List height={60} width={60} className="mb-3" />} title="Resume" link={RESUME_URL} newTab>
+          <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL} newTab>
             Learn more about my work experience.
           </Card>
-          <Card icon={<GitHub height={60} width={60} className="mb-3" />} title="Github" link={GITHUB_REPO_URL} newTab>
-            See the source code of this project.
+          <Card image="/icons/feather/github.svg" title="Github" link={GITHUB_REPO_URL} newTab>
+            See the source code of this website.
           </Card>
         </div>
       </Section>
