@@ -2,6 +2,7 @@ import Image from "next/image";
 import H2 from "@/app/_components/marketing/H2";
 import { PortfolioProject } from "@/app/(marketing)/portfolio/_data/types";
 import classNames from "classnames";
+import H1 from "@/app/_components/marketing/H1";
 
 export type ProjectPageContainerProps = {
   children?: React.ReactNode;
@@ -16,6 +17,7 @@ export default function ProjectHeroPanel({ children, project }: ProjectPageConta
           <div className="flex justify-center mb-9 ">
             <Image src={project.image} height={90} width={258} alt={`${project.title} logo`} />
           </div>
+          <H1>{project.title}</H1>
           <H2>{project.subtitle}</H2>
 
           {children}

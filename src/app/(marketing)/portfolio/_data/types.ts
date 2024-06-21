@@ -4,8 +4,8 @@ export type PortfolioProject = {
   title: string;
   subtitle: string;
   image: string;
-  slug: string;
+  slug?: string;
   externalLink?: string;
   highlighted?: boolean;
-  content: ReactElement;
+  content?: ReactElement;
 };

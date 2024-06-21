@@ -17,7 +17,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     title: "Starbucks",
-    subtitle: "Starbucks Ecommerce Website",
+    subtitle: "Ecommerce Website",
     image: "/icons/starbucks-logo-icon.webp",
     slug: "starbucks",
     highlighted: true,
@@ -53,7 +53,6 @@ export const portfolioProjects: PortfolioProject[] = [
     image: "/icons/mtg-logo.png",
     slug: "17-lands",
     externalLink: "https://www.17lands.com/",
-    highlighted: true,
     content: <SeventeenLandsContent />,
   },
 ];
