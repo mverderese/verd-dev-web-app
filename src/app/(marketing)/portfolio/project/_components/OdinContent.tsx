@@ -25,7 +25,7 @@ export default function OdinContent() {
         </BodyText>
       </ScreenshotPanel>
       <Section narrow>
-        <H2>Bringing Tech to and Old-School Industry</H2>
+        <H2>Bringing Tech to an Old-School Industry</H2>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et

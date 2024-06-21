@@ -41,12 +41,9 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section narrow>
-        <div className="text-center">
-          <H2>
-            Over 10 Years of Software <br />
-            Engineering Leadership
-          </H2>
+      <Section>
+        <div className="">
+          <H2>10+ Years of Software Engineering Leadership</H2>
           <BodyText>
             <BodyParagraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et

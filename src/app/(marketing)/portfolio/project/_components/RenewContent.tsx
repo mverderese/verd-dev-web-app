@@ -25,7 +25,7 @@ export default function RenewContent() {
         </BodyText>
       </ScreenshotPanel>
       <Section narrow>
-        <H2>Making sense of a complicated system</H2>
+        <H2>Helping an Often-Forgotten Demographic</H2>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -43,6 +43,7 @@ export default function RenewContent() {
         </BodyText>
       </Section>
       <ScreenshotPanel image={"/screenshots/renew-plan-comparison.png"} reverse>
+        <H2>Making Sense of a Complicated System</H2>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et

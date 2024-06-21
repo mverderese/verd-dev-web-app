@@ -42,7 +42,7 @@ export const portfolioProjects: PortfolioProject[] = [
   // },
   {
     title: "Renew",
-    subtitle: "Retirement with a :)",
+    subtitle: "Retirement With a Smile",
     image: "/icons/renew-logo.png",
     slug: "renew",
     content: <RenewContent />,
