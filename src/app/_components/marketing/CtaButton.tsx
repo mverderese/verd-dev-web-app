@@ -3,9 +3,10 @@ export type CtaButtonProps = {
   link?: string;
   children: React.ReactNode;
   inverted?: boolean;
+  additionalClassNames?: classNames.Argument | classNames.ArgumentArray;
 };
 
-export default function CtaButton({ link, children, inverted }: CtaButtonProps) {
+export default function CtaButton({ link, children, inverted, additionalClassNames }: CtaButtonProps) {
   return (
     <a
       href={link}
@@ -17,6 +18,7 @@ export default function CtaButton({ link, children, inverted }: CtaButtonProps) 
         "md:py-4",
         "font-medium",
         "md:font-semibold",
+        "w-[200px]",
         { "bg-gray-700": !inverted },
         { "bg-gray-50": inverted },
         { "text-gray-50": !inverted },
@@ -32,6 +34,7 @@ export default function CtaButton({ link, children, inverted }: CtaButtonProps) 
         "transition",
         "ease-linear",
         "duration-200",
+        additionalClassNames,
       )}
     >
       {children}

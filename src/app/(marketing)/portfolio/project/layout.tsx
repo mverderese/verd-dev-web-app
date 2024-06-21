@@ -1,6 +1,6 @@
 import React from "react";
-import CtaButton from "@/app/_components/marketing/CtaButton";
 import Image from "next/image";
+import { PrimarySecondaryCta } from "@/app/_components/marketing/PrimarySecondaryCta";
 
 export type PortfolioProjectLayoutProps = Readonly<{
   children: React.ReactNode;
@@ -24,10 +24,12 @@ export default function PortfolioProjectLayout({ children }: PortfolioProjectLay
       {children}
       <div className="text-center">
         <div className="flex justify-center mb-16">
-          <CtaButton link={"/portfolio"}>All projects</CtaButton>
-          <CtaButton inverted link={"/about"}>
-            About me
-          </CtaButton>
+          <PrimarySecondaryCta
+            primaryText="All projects"
+            primaryLink="/portfolio"
+            secondaryText="About me"
+            secondaryLink="/about"
+          />
         </div>
       </div>
     </>

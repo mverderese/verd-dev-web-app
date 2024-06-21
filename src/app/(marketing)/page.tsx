@@ -3,24 +3,29 @@ import Image from "next/image";
 import Section from "@/app/_components/marketing/Section";
 import H1 from "@/app/_components/marketing/H1";
 import H2 from "@/app/_components/marketing/H2";
-import Subtitle from "@/app/_components/marketing/Subtitle";
-import CtaButton from "@/app/_components/marketing/CtaButton";
 import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
 import Card from "@/app/_components/marketing/Card";
+import React from "react";
+import { PrimarySecondaryCta } from "@/app/_components/marketing/PrimarySecondaryCta";
 
 export default function Home() {
   return (
     <>
       <Section>
         <div className="text-center">
-          <div className="flex justify-center mb-16">
+          <div className="flex justify-center mb-12">
             <Image src="/mike-headshot.jpg" alt="Image" className="rounded-full" height={200} width={200} />
           </div>
 
           <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">{MY_NAME}</h6>
           <H1>{JOB_TITLE}</H1>
-          <p className="font-normal text-gray-600 text-md md:text-xl mb-16">{TAGLINE}</p>
-          <CtaButton link={"/about"}>About me</CtaButton>
+          <p className="font-normal text-gray-600 text-md md:text-xl mb-12">{TAGLINE}</p>
+          <PrimarySecondaryCta
+            primaryText="About me"
+            primaryLink="/about"
+            secondaryText="Book a meeting"
+            secondaryLink="https://app.reclaim.ai/m/mike-verderese"
+          />
         </div>
       </Section>
       <Section darkBg>
@@ -34,14 +39,10 @@ export default function Home() {
         </div>
       </Section>
       <Section>
-        <div className="container max-w-screen-xl mx-auto px-4">
-          <H2>Portfolio</H2>
-          <Subtitle>These are some of my best projects.</Subtitle>
+        <div className="container max-w-screen-xl mx-auto px-4 text-center">
+          <H2 marginOverride="mb-7 lg:mb-12">Portfolio</H2>
           <PortfolioGrid onlyHighlighted />
         </div>
-      </Section>
-      <Section>
-        <div className="container max-w-screen-xl mx-auto px-4"></div>
       </Section>
     </>
   );
