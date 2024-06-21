@@ -3,11 +3,11 @@ import React from "react";
 import "../globals.css";
 import PrelineScript from "@/app/_components/shared/PrelineScript";
 import MarketingNavbar from "@/app/_components/marketing/MarketingNavbar";
-import { IS_INDEXABLE, JOB_TITLE, MY_NAME, TAGLINE } from "@/app/constants";
+import { IS_INDEXABLE, JOB_TITLE, MY_NAME, SITE_DESCRIPTION } from "@/app/constants";
 
 export const metadata: Metadata = {
   title: `${MY_NAME} | ${JOB_TITLE}`,
-  description: TAGLINE,
+  description: SITE_DESCRIPTION,
   robots: {
     index: IS_INDEXABLE,
     follow: IS_INDEXABLE,
@@ -15,6 +15,11 @@ export const metadata: Metadata = {
       index: IS_INDEXABLE,
       follow: IS_INDEXABLE,
     },
+  },
+  openGraph: {
+    title: `${MY_NAME} | ${JOB_TITLE}`,
+    description: SITE_DESCRIPTION,
+    images: "/mike-headshot.jpg",
   },
 };
 
