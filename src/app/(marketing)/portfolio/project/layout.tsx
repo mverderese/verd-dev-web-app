@@ -25,6 +25,9 @@ export default function PortfolioProjectLayout({ children }: PortfolioProjectLay
       <div className="text-center">
         <div className="flex justify-center mb-16">
           <CtaButton link={"/portfolio"}>All projects</CtaButton>
+          <CtaButton inverted link={"/about"}>
+            About me
+          </CtaButton>
         </div>
       </div>
     </>

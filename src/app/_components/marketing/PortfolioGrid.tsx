@@ -10,10 +10,11 @@ export default function PortfolioGrid({ onlyHighlighted }: PortfolioGridProps) {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {portfolioProjects
           .filter((p) => (onlyHighlighted ? p.highlighted : true))
+          .sort((p1, p2) => (onlyHighlighted ? 0 : p2.year - p1.year))
           .map((project) => (
             <Card
               image={project.image}
-              title={project.title}
+              title={onlyHighlighted ? project.title : `${project.title} (${project.year})`}
               key={project.title}
               link={`/portfolio/project/${project.slug}`}
             >

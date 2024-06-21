@@ -4,10 +4,13 @@ import StarbucksContent from "@/app/(marketing)/portfolio/project/_components/St
 import GreatManyContent from "@/app/(marketing)/portfolio/project/_components/GreatManyContent";
 import RenewContent from "@/app/(marketing)/portfolio/project/_components/RenewContent";
 import SeventeenLandsContent from "@/app/(marketing)/portfolio/project/_components/SeventeenLandsContent";
+import ShotsIGotContent from "@/app/(marketing)/portfolio/project/_components/ShotsIGotContent";
+import TagContent from "@/app/(marketing)/portfolio/project/_components/TagContent";
 
 export const portfolioProjects: PortfolioProject[] = [
   {
     title: "Odin",
+    year: 2020,
     subtitle: "Construction Workforce Management",
     image: "/icons/odin-app-icon.png",
     slug: "odin",
@@ -17,6 +20,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     title: "Starbucks",
+    year: 2016,
     subtitle: "Ecommerce Website",
     image: "/icons/starbucks-logo-icon.webp",
     slug: "starbucks",
@@ -25,6 +29,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     title: "Great Many",
+    year: 2024,
     subtitle: "Your Home for Hair Growth",
     image: "/icons/great-many-icon.png",
     slug: "great-many",
@@ -42,6 +47,7 @@ export const portfolioProjects: PortfolioProject[] = [
   // },
   {
     title: "Renew",
+    year: 2017,
     subtitle: "Retirement With a Smile",
     image: "/icons/renew-logo.png",
     slug: "renew",
@@ -49,10 +55,27 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     title: "17Lands",
-    subtitle: "Unlock Your MTG Arena Data",
+    year: 2023,
+    subtitle: "Unlock Your Magic: The Gathering Data",
     image: "/icons/mtg-logo.png",
     slug: "17-lands",
     externalLink: "https://www.17lands.com/",
     content: <SeventeenLandsContent />,
+  },
+  {
+    title: "Shots iGot",
+    year: 2012,
+    subtitle: "Responsible Drinking App",
+    image: "/icons/shots-igot-logo.jpeg",
+    slug: "shots-igot",
+    content: <ShotsIGotContent />,
+  },
+  {
+    title: "Tag",
+    year: 2013,
+    subtitle: "Meet up With Friends",
+    image: "/icons/tag-logo.png",
+    slug: "tag",
+    content: <TagContent />,
   },
 ];

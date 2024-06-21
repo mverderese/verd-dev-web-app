@@ -41,7 +41,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section>
+      <Section narrow>
         <div className="">
           <H2>10+ Years of Software Engineering Leadership</H2>
           <BodyText>
@@ -98,6 +98,35 @@ export default function AboutPage() {
             <Image src="/icons/rutgers-logo.png" alt="Image" height={500} width={500} />
           </div>
         </div>
+      </Section>
+      <Section narrow>
+        <H2>Life is an Ongoing Adventure</H2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+          <Image src="/hiking.jpeg" alt="Hiking" height={500} width={500} />
+          <Image src="/zoey2.png" alt="Zoey" height={500} width={500} />
+          <Image src="/drumming.jpeg" alt="Drumming" height={500} width={500} />
+        </div>
+        <BodyText>
+          <BodyParagraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ornare lectus sit amet est placerat in. Cursus risus at ultrices mi tempus. Faucibus
+            pulvinar elementum integer enim neque volutpat ac tincidunt. Tincidunt lobortis feugiat vivamus at augue. Ac
+            auctor augue mauris augue neque gravida.
+          </BodyParagraph>
+          <BodyParagraph>
+            Diam vulputate ut pharetra sit. Id eu nisl nunc mi ipsum. Cursus risus at ultrices mi tempus imperdiet.
+            Gravida arcu ac tortor dignissim convallis aenean et. Eros donec ac odio tempor orci dapibus. Vestibulum
+            lorem sed risus ultricies tristique nulla aliquet enim tortor. Dis parturient montes nascetur ridiculus mus
+            mauris vitae ultricies. Purus gravida quis blandit turpis cursus in.
+          </BodyParagraph>
+          <BodyParagraph>
+            Dignissim cras tincidunt lobortis feugiat vivamus at augue. Nibh venenatis cras sed felis eget. Nunc
+            scelerisque viverra mauris in aliquam sem fringilla. Et sollicitudin ac orci phasellus egestas tellus. Non
+            pulvinar neque laoreet suspendisse interdum. Morbi tincidunt ornare massa eget egestas. Mi sit amet mauris
+            commodo quis imperdiet massa tincidunt nunc. Et magnis dis parturient montes nascetur ridiculus. Eros donec
+            ac odio tempor.
+          </BodyParagraph>
+        </BodyText>
       </Section>
       <Section>
         <H2>Want to see some of my work?</H2>
