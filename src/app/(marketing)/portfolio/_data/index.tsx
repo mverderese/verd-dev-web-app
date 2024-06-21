@@ -1,11 +1,11 @@
 import { PortfolioProject } from "@/app/(marketing)/portfolio/_data/types";
-import OdinContent from "@/app/(marketing)/portfolio/project/_components/OdinContent";
-import StarbucksContent from "@/app/(marketing)/portfolio/project/_components/StarbucksContent";
-import GreatManyContent from "@/app/(marketing)/portfolio/project/_components/GreatManyContent";
-import RenewContent from "@/app/(marketing)/portfolio/project/_components/RenewContent";
-import SeventeenLandsContent from "@/app/(marketing)/portfolio/project/_components/SeventeenLandsContent";
-import ShotsIGotContent from "@/app/(marketing)/portfolio/project/_components/ShotsIGotContent";
-import TagContent from "@/app/(marketing)/portfolio/project/_components/TagContent";
+import OdinContent from "@/app/(marketing)/portfolio/projects/_components/OdinContent";
+import StarbucksContent from "@/app/(marketing)/portfolio/projects/_components/StarbucksContent";
+import GreatManyContent from "@/app/(marketing)/portfolio/projects/_components/GreatManyContent";
+import RenewContent from "@/app/(marketing)/portfolio/projects/_components/RenewContent";
+import SeventeenLandsContent from "@/app/(marketing)/portfolio/projects/_components/SeventeenLandsContent";
+import ShotsIGotContent from "@/app/(marketing)/portfolio/projects/_components/ShotsIGotContent";
+import TagContent from "@/app/(marketing)/portfolio/projects/_components/TagContent";
 
 export const portfolioProjects: PortfolioProject[] = [
   {
@@ -21,7 +21,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     title: "Starbucks",
     year: 2016,
-    subtitle: "Ecommerce Website",
+    subtitle: "Ecommerce Store",
     image: "/icons/starbucks-logo-icon.webp",
     slug: "starbucks",
     highlighted: true,

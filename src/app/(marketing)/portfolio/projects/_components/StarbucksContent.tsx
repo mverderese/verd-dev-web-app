@@ -1,13 +1,13 @@
-import Section from "@/app/_components/marketing/Section";
+import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/ScreenshotPanel";
 import BodyText from "@/app/_components/marketing/BodyText";
 import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
-import ScreenshotPanel from "@/app/(marketing)/portfolio/project/_components/ScreenshotPanel";
 import H2 from "@/app/_components/marketing/H2";
+import Section from "@/app/_components/marketing/Section";
 
-export default function OdinContent() {
+export default function StarbucksContent() {
   return (
     <>
-      <ScreenshotPanel image={"/screenshots/odin-worker-profile.png"}>
+      <ScreenshotPanel image={"/screenshots/starbucks-coffee-grid-desktop.jpg"}>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -25,7 +25,7 @@ export default function OdinContent() {
         </BodyText>
       </ScreenshotPanel>
       <Section narrowTop narrowBottom>
-        <H2>Bringing Tech to an Old-School Industry</H2>
+        <H2>Navigating a Legacy Tech Stack</H2>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -42,8 +42,8 @@ export default function OdinContent() {
           </BodyParagraph>
         </BodyText>
       </Section>
-      <ScreenshotPanel image={"/mac-2t-turnstile.png"} reverse>
-        <H2>Automated Access Control and Compliance</H2>
+      <ScreenshotPanel image={"/screenshots/starbucks-coffee-grid-mobile.jpg"} mobile reverse>
+        <H2>A Mobile-first Experience</H2>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -60,18 +60,6 @@ export default function OdinContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <Section narrowBottom>
-        <div className="flex justify-center mb-16">
-          <iframe
-            className="aspect-video w-full lg:max-w-screen-lg"
-            src="https://www.youtube.com/embed/hTFARRzFJ9o?si=2IGubaqSdbr2k0Np"
-            title="YouTube video player - Workforce Visibility with Odin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-      </Section>
     </>
   );
 }

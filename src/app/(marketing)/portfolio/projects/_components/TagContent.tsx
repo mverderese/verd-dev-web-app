@@ -1,13 +1,13 @@
 import Section from "@/app/_components/marketing/Section";
-import ScreenshotPanel from "@/app/(marketing)/portfolio/project/_components/ScreenshotPanel";
+import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/ScreenshotPanel";
 import BodyText from "@/app/_components/marketing/BodyText";
 import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
 import H2 from "@/app/_components/marketing/H2";
 
-export default function RenewContent() {
+export default function TagContent() {
   return (
     <>
-      <ScreenshotPanel image={"/screenshots/renew-medicare-plan-finder.png"}>
+      <ScreenshotPanel image={"/screenshots/tag-marketing.jpeg"}>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -25,7 +25,7 @@ export default function RenewContent() {
         </BodyText>
       </ScreenshotPanel>
       <Section narrowTop narrowBottom>
-        <H2>Helping an Often-Forgotten Demographic</H2>
+        <H2>Living and Breathing My First Startup</H2>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -42,10 +42,13 @@ export default function RenewContent() {
           </BodyParagraph>
         </BodyText>
       </Section>
-      <ScreenshotPanel image={"/screenshots/renew-plan-comparison.png"} reverse>
-        <H2>Making Sense of a Complicated System</H2>
+      <ScreenshotPanel image={"/screenshots/tag-feed.jpg"} reverse mobile>
+        <H2>Disrupting the Social App Landscape</H2>
         <BodyText>
           <BodyParagraph>
+            <a href="https://thenextweb.com/news/tag-iphone-lets-selectively-share-location-photos-video-friends">
+              News coverage
+            </a>{" "}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ornare lectus sit amet est placerat in. Cursus risus at ultrices mi tempus. Faucibus
             pulvinar elementum integer enim neque volutpat ac tincidunt. Tincidunt lobortis feugiat vivamus at augue. Ac

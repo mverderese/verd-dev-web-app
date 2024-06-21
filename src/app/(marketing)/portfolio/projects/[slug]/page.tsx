@@ -1,6 +1,6 @@
 import { portfolioProjects } from "@/app/(marketing)/portfolio/_data";
 import H1 from "@/app/_components/marketing/H1";
-import ProjectHeroPanel from "@/app/(marketing)/portfolio/project/_components/ProjectHeroPanel";
+import ProjectHeroPanel from "@/app/(marketing)/portfolio/projects/_components/ProjectHeroPanel";
 
 export type ProjectPageProps = {
   params: { slug: string };

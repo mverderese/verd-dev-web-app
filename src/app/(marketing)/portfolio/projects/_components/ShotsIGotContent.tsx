@@ -1,13 +1,13 @@
 import Section from "@/app/_components/marketing/Section";
-import ScreenshotPanel from "@/app/(marketing)/portfolio/project/_components/ScreenshotPanel";
+import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/ScreenshotPanel";
 import BodyText from "@/app/_components/marketing/BodyText";
 import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
 import H2 from "@/app/_components/marketing/H2";
 
-export default function GreatManyContent() {
+export default function ShotsIGotContent() {
   return (
     <>
-      <ScreenshotPanel image={"/screenshots/great-many-appointment-selection.png"}>
+      <ScreenshotPanel image={"/screenshots/shots-igot-sample-usage.png"}>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -25,7 +25,7 @@ export default function GreatManyContent() {
         </BodyText>
       </ScreenshotPanel>
       <Section narrowTop narrowBottom>
-        <H2>Enabling Highly-Targeting Marketing</H2>
+        <H2>The Start of My Entrepreneurial Spirit</H2>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -42,8 +42,8 @@ export default function GreatManyContent() {
           </BodyParagraph>
         </BodyText>
       </Section>
-      <ScreenshotPanel image={"/screenshots/great-many-rx-pdp.png"} reverse>
-        <H2>A Seamless Telehealth Experience</H2>
+      <ScreenshotPanel image={"/screenshots/shots-igot-news.jpg"} reverse>
+        <H2>A Viral Sensation Across Campuses</H2>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
