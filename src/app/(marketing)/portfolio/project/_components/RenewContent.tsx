@@ -4,10 +4,10 @@ import BodyText from "@/app/_components/marketing/BodyText";
 import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
 import H2 from "@/app/_components/marketing/H2";
 
-export default function GreatManyContent() {
+export default function RenewContent() {
   return (
     <>
-      <ScreenshotPanel image={"/screenshots/great-many-appointment-selection.png"}>
+      <ScreenshotPanel image={"/screenshots/renew-medicare-plan-finder.png"}>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -25,7 +25,7 @@ export default function GreatManyContent() {
         </BodyText>
       </ScreenshotPanel>
       <Section narrow>
-        <H2>Enabling Highly-Targeting Marketing</H2>
+        <H2>Making sense of a complicated system</H2>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -42,8 +42,7 @@ export default function GreatManyContent() {
           </BodyParagraph>
         </BodyText>
       </Section>
-      <ScreenshotPanel image={"/screenshots/great-many-rx-pdp.png"} reverse>
-        <H2>A Seamless Telehealth Experience</H2>
+      <ScreenshotPanel image={"/screenshots/renew-plan-comparison.png"} reverse>
         <BodyText>
           <BodyParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et

@@ -2,7 +2,8 @@ import { PortfolioProject } from "@/app/(marketing)/portfolio/_data/types";
 import OdinContent from "@/app/(marketing)/portfolio/project/_components/OdinContent";
 import StarbucksContent from "@/app/(marketing)/portfolio/project/_components/StarbucksContent";
 import GreatManyContent from "@/app/(marketing)/portfolio/project/_components/GreatManyContent";
-import GleameryContent from "@/app/(marketing)/portfolio/project/_components/GleameryContent";
+import RenewContent from "@/app/(marketing)/portfolio/project/_components/RenewContent";
+import SeventeenLandsContent from "@/app/(marketing)/portfolio/project/_components/SeventeenLandsContent";
 
 export const portfolioProjects: PortfolioProject[] = [
   {
@@ -31,12 +32,28 @@ export const portfolioProjects: PortfolioProject[] = [
     highlighted: true,
     content: <GreatManyContent />,
   },
+  // {
+  //   title: "The Gleamery",
+  //   subtitle: "Professional Teeth Whitening and Cleaning",
+  //   image: "/icons/gleamery-logo-icon.svg",
+  //   slug: "the-gleamery",
+  //   externalLink: "https://www.thegleamery.com/",
+  //   content: <GleameryContent />,
+  // },
   {
-    title: "The Gleamery",
-    subtitle: "Professional Teeth Whitening and Cleaning",
-    image: "/icons/gleamery-logo-icon.svg",
-    slug: "the-gleamery",
-    externalLink: "https://www.thegleamery.com/",
-    content: <GleameryContent />,
+    title: "Renew",
+    subtitle: "Retirement with a :)",
+    image: "/icons/renew-logo.png",
+    slug: "renew",
+    content: <RenewContent />,
+  },
+  {
+    title: "17Lands",
+    subtitle: "Unlock Your MTG Arena Data",
+    image: "/icons/mtg-logo.png",
+    slug: "17-lands",
+    externalLink: "https://www.17lands.com/",
+    highlighted: true,
+    content: <SeventeenLandsContent />,
   },
 ];
