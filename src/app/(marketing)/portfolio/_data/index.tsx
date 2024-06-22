@@ -17,7 +17,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "odin",
     externalLink: "https://www.useodin.com/",
     highlighted: true,
-    content: <OdinContent />,
+    contentFactory: (props) => <OdinContent {...props} />,
   },
   {
     title: "Starbucks",
@@ -27,7 +27,7 @@ export const portfolioProjects: PortfolioProject[] = [
     image: "/icons/starbucks-logo-icon.webp",
     slug: "starbucks",
     highlighted: true,
-    content: <StarbucksContent />,
+    contentFactory: (props) => <StarbucksContent {...props} />,
   },
   {
     title: "Great Many",
@@ -38,7 +38,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "great-many",
     externalLink: "https://www.greatmany.com/",
     highlighted: true,
-    content: <GreatManyContent />,
+    contentFactory: (props) => <GreatManyContent {...props} />,
   },
   {
     title: "Renew",
@@ -47,7 +47,7 @@ export const portfolioProjects: PortfolioProject[] = [
     jobTitle: "Senior Software Engineer",
     image: "/icons/renew-logo.png",
     slug: "renew",
-    content: <RenewContent />,
+    contentFactory: (props) => <RenewContent {...props} />,
   },
   {
     title: "17Lands",
@@ -57,7 +57,7 @@ export const portfolioProjects: PortfolioProject[] = [
     image: "/icons/mtg-logo.png",
     slug: "17-lands",
     externalLink: "https://www.17lands.com/",
-    content: <SeventeenLandsContent />,
+    contentFactory: (props) => <SeventeenLandsContent {...props} />,
   },
   {
     title: "Shots iGot",
@@ -66,7 +66,7 @@ export const portfolioProjects: PortfolioProject[] = [
     jobTitle: "Co-Founder & CTO",
     image: "/icons/shots-igot-logo.jpeg",
     slug: "shots-igot",
-    content: <ShotsIGotContent />,
+    contentFactory: (props) => <ShotsIGotContent {...props} />,
   },
   {
     title: "Tag",
@@ -75,6 +75,6 @@ export const portfolioProjects: PortfolioProject[] = [
     jobTitle: "Co-Founder & CTO",
     image: "/icons/tag-logo.png",
     slug: "tag",
-    content: <TagContent />,
+    contentFactory: (props) => <TagContent {...props} />,
   },
 ];

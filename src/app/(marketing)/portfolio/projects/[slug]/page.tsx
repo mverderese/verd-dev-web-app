@@ -22,10 +22,11 @@ export default function ProjectPage({ params: { slug } }: ProjectPageProps) {
     );
   }
 
+  const contentFactory = project.contentFactory({ project });
   return (
     <>
       <ProjectHeroPanel project={project} />
-      {project.content}
+      {contentFactory}
     </>
   );
 }

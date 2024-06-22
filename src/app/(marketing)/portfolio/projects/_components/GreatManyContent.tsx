@@ -4,8 +4,9 @@ import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
 import H2 from "@/app/_components/marketing/H2";
 import UL from "@/app/_components/marketing/UL";
 import LI from "@/app/_components/marketing/LI";
+import { ProjectContentProps } from "@/app/(marketing)/portfolio/projects/types";
 
-export default function GreatManyContent() {
+export default function GreatManyContent({ project }: ProjectContentProps) {
   return (
     <>
       <ScreenshotPanel image={"/screenshots/great-many-appointment-selection.png"}>

@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { ProjectContentProps } from "@/app/(marketing)/portfolio/projects/types";
 
 export type PortfolioProject = {
   title: string;
@@ -9,5 +10,5 @@ export type PortfolioProject = {
   slug?: string;
   externalLink?: string;
   highlighted?: boolean;
-  content?: ReactElement;
+  contentFactory: (props: ProjectContentProps) => ReactElement;
 };

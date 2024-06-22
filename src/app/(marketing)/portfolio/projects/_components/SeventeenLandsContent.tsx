@@ -3,8 +3,9 @@ import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/Sc
 import BodyText from "@/app/_components/marketing/BodyText";
 import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
 import H2 from "@/app/_components/marketing/H2";
+import { ProjectContentProps } from "@/app/(marketing)/portfolio/projects/types";
 
-export default function SeventeenLandsContent() {
+export default function SeventeenLandsContent({ project }: ProjectContentProps) {
   return (
     <>
       <ScreenshotPanel image={"/screenshots/17lands-draft-log.png"}>

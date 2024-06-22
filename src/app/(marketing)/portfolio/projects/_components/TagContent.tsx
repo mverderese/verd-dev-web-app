@@ -2,8 +2,9 @@ import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/Sc
 import BodyText from "@/app/_components/marketing/BodyText";
 import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
 import H2 from "@/app/_components/marketing/H2";
+import { ProjectContentProps } from "@/app/(marketing)/portfolio/projects/types";
 
-export default function TagContent() {
+export default function TagContent({ project }: ProjectContentProps) {
   return (
     <>
       <ScreenshotPanel image={"/screenshots/tag-marketing.jpeg"}>

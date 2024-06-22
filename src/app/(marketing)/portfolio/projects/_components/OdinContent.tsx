@@ -3,8 +3,9 @@ import BodyText from "@/app/_components/marketing/BodyText";
 import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
 import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/ScreenshotPanel";
 import H2 from "@/app/_components/marketing/H2";
+import { ProjectContentProps } from "@/app/(marketing)/portfolio/projects/types";
 
-export default function OdinContent() {
+export default function OdinContent({ project }: ProjectContentProps) {
   return (
     <>
       <ScreenshotPanel image={"/screenshots/odin-worker-profile.png"}>
@@ -19,6 +20,7 @@ export default function OdinContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
+      {/*<ExternalWebsitePanel siteUrl={proj}*/}
       <Section darkBg>
         <H2>Bringing Tech to an Old-School Industry</H2>
         <BodyText>
