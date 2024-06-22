@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AppHeader() {
   return (
     <header className="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full bg-white border-b text-sm py-2.5 sm:py-4 lg:ps-64 dark:bg-gray-800 dark:border-gray-700">
@@ -110,10 +112,12 @@ export default function AppHeader() {
                 type="button"
                 className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700"
               >
-                <img
+                <Image
                   className="inline-block size-[38px] rounded-full ring-2 ring-white dark:ring-gray-800"
                   src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
                   alt="Image Description"
+                  height={320}
+                  width={320}
                 />
               </button>
 

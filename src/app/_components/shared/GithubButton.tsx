@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { GITHUB_REPO_URL } from "@/app/_components/shared/constants";
+import { GITHUB_REPO_URL } from "@/app/constants";
 
 export default function GithubButton() {
   return (
-    <a className="font-medium text-white hover:text-gray-300 sm:py-6 " href={GITHUB_REPO_URL} target="_blank">
+    <a className="font-medium text-white hover:text-gray-300 sm:py-6 " href={GITHUB_REPO_URL}>
       <span className="inline"> View on GitHub </span>
       <Image
         src="/icons/github-mark-white.svg"

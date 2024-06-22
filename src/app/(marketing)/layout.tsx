@@ -3,18 +3,29 @@ import React from "react";
 import "../globals.css";
 import PrelineScript from "@/app/_components/shared/PrelineScript";
 import MarketingNavbar from "@/app/_components/marketing/MarketingNavbar";
-import { JOB_TITLE, MY_NAME, TAGLINE } from "@/app/_components/shared/constants";
+import { IS_INDEXABLE, JOB_TITLE, MY_NAME, SITE_DESCRIPTION } from "@/app/constants";
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const metadata: Metadata = {
+  metadataBase: baseUrl ? new URL(baseUrl) : null,
+  alternates: {
+    canonical: "/",
+  },
   title: `${MY_NAME} | ${JOB_TITLE}`,
-  description: TAGLINE,
+  description: SITE_DESCRIPTION,
   robots: {
-    index: false,
-    follow: false,
+    index: IS_INDEXABLE,
+    follow: IS_INDEXABLE,
     googleBot: {
-      index: false,
-      follow: false,
+      index: IS_INDEXABLE,
+      follow: IS_INDEXABLE,
     },
+  },
+  openGraph: {
+    title: `${MY_NAME} | ${JOB_TITLE}`,
+    description: SITE_DESCRIPTION,
+    images: `${baseUrl}mike-headshot.jpg`,
   },
 };
 
@@ -27,7 +38,7 @@ export default function MarketingLayout({
     <html lang="en">
       <body className="bg-gray-100">
         <MarketingNavbar />
-        {children}
+        <main>{children}</main>
       </body>
       <PrelineScript />
     </html>

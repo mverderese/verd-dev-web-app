@@ -6,6 +6,8 @@
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/ops/terraform/.terraform/providers" />
+      <excludeFolder url="file://$MODULE_DIR$/ops/terraform/.terraform" />
+      <excludeFolder url="file://$MODULE_DIR$/ops/terraform/modules/webApplication/.terraform" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,5 +1,5 @@
 import React from "react";
-import { APP_TITLE } from "@/app/_components/shared/constants";
+import { APP_TITLE } from "@/app/constants";
 
 export default function AppSidebar() {
   return (
