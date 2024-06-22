@@ -10,10 +10,12 @@ export default function OdinContent() {
       <ScreenshotPanel image={"/screenshots/odin-worker-profile.png"}>
         <BodyText>
           <BodyParagraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ornare lectus sit amet est placerat in. Cursus risus at ultrices mi tempus. Faucibus
-            pulvinar elementum integer enim neque volutpat ac tincidunt. Tincidunt lobortis feugiat vivamus at augue. Ac
-            auctor augue mauris augue neque gravida.
+            Construction is one of the most dangerous professions globally, with over 1,000 workers killed on the job
+            annually in the US alone. A strong safety culture, proper training, and adherence to government
+            certifications are key to reducing incidents and injuries on construction sites. When we founded Odin, our
+            goal was to develop software that replaces manual, paper-based processes for tracking training and
+            certifications. This ensures that every worker on site is properly trained and certified, enhancing overall
+            safety.
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>

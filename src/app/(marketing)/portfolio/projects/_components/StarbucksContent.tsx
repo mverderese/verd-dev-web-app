@@ -16,7 +16,7 @@ export default function StarbucksContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <ScreenshotPanel image={"/screenshots/starbucks-coffee-grid-mobile.jpg"} mobile reverse darkBg>
+      <ScreenshotPanel image={"/screenshots/starbucks-coffee-grid-mobile.jpg"} mobileScreenshot reverse darkBg>
         <H2>A Mobile-first Experience</H2>
         <BodyText>
           <BodyParagraph>

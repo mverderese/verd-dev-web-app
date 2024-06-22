@@ -1,5 +1,11 @@
 import { ReactNode } from "react";
+import classNames from "classnames";
 
-export default function H4({ children }: { children: ReactNode }) {
-  return <h4 className="font-medium text-gray-700 text-xl mb-4">{children}</h4>;
+export type H4Props = {
+  children: ReactNode;
+  narrowBottom?: boolean;
+};
+
+export default function H4({ children, narrowBottom }: H4Props) {
+  return <h4 className={classNames("font-medium text-gray-700 text-xl", { "mb-4": !narrowBottom })}>{children}</h4>;
 }

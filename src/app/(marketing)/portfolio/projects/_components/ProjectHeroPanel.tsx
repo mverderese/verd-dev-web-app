@@ -3,6 +3,7 @@ import H2 from "@/app/_components/marketing/H2";
 import { PortfolioProject } from "@/app/(marketing)/portfolio/_data/types";
 import classNames from "classnames";
 import H1 from "@/app/_components/marketing/H1";
+import H4 from "@/app/_components/marketing/H4";
 
 export type ProjectPageContainerProps = {
   children?: React.ReactNode;
@@ -18,9 +19,10 @@ export default function ProjectHeroPanel({ children, project }: ProjectPageConta
             <Image src={project.image} height={90} width={258} alt={`${project.title} logo`} />
           </div>
           <H1>{project.title}</H1>
-          <H2 narrowBottom>
-            {project.subtitle} ({project.year})
-          </H2>
+          <H2>{project.subtitle}</H2>
+          <H4 narrowBottom>
+            {project.jobTitle} ({project.year})
+          </H4>
 
           {children}
         </div>

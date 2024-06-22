@@ -8,7 +8,7 @@ export type ScreenshotPanelProps = {
   reverse?: boolean;
   narrowTop?: boolean;
   narrowBottom?: boolean;
-  mobile?: boolean;
+  mobileScreenshot?: boolean;
   darkBg?: boolean;
 };
 export default function ScreenshotPanel({
@@ -17,7 +17,7 @@ export default function ScreenshotPanel({
   reverse,
   narrowTop,
   narrowBottom,
-  mobile,
+  mobileScreenshot,
   darkBg,
 }: ScreenshotPanelProps) {
   return (
@@ -30,20 +30,20 @@ export default function ScreenshotPanel({
       >
         <div
           className={classNames(
-            mobile ? "lg:basis-1/3" : "lg:basis-1/2",
+            mobileScreenshot ? "lg:basis-1/3" : "lg:basis-1/2",
             "pb-6 lg:pt-1.5 lg:pb-0 lg:align-top mx-auto",
-            reverse ? "lg:pl-6" : "lg:pr-6",
+            reverse ? "lg:pl-12" : "lg:pr-12",
           )}
         >
           <Image
-            className={classNames("object-contain", { "max-h-[600px]": mobile })}
+            className={classNames("object-contain", { "max-h-[600px]": mobileScreenshot })}
             src={image}
             alt="Screenshot"
             height={800}
             width={800}
           />
         </div>
-        <div className={classNames(mobile ? "lg:basis-2/3" : "lg:basis-1/2")}>{children}</div>
+        <div className={classNames(mobileScreenshot ? "lg:basis-2/3" : "lg:basis-1/2")}>{children}</div>
       </div>
     </Section>
   );
