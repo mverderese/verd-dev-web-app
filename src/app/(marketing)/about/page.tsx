@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <Section narrowBottom>
         <div className="flex flex-wrap">
-          <div className="basis-full lg:basis-1/3 pb-6 lg:pb-0 lg:pt-3 lg:pr-6 ">
+          <div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-6 ">
             <Image src="/mike-headshot-2.jpg" alt="Image" height={500} width={500} />
           </div>
           <div className="basis-full lg:basis-2/3 ">
@@ -26,7 +26,7 @@ export default function AboutPage() {
                 to deployment and growth, and my strong communication skills help bridge gaps between engineers,
                 designers, product managers, stakeholders, and customers.
               </BodyParagraph>
-              <H2>Technical Skills</H2>
+              <H2 marginOverride="mt-2 mb-4">Technical Skills</H2>
               <ul>
                 <li>
                   <span className="font-bold">Languages:</span> TypeScript/Javascript, Python, PostgreSQL, GraphQL,
@@ -131,7 +131,7 @@ export default function AboutPage() {
       </Section>
       <Section narrowTop narrowBottom></Section>
       <Section>
-        <H2>Want to see some of my work?</H2>
+        <H2 marginOverride="mb-8">Some of My Work</H2>
         <PortfolioGrid onlyHighlighted />
       </Section>
     </>
