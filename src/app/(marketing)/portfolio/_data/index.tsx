@@ -73,7 +73,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     title: "Tag",
     year: 2013,
-    subtitle: "Meet up With Friends",
+    subtitle: "Meet Up With Friends",
     image: "/icons/tag-logo.png",
     slug: "tag",
     content: <TagContent />,

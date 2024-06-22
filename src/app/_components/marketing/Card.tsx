@@ -18,7 +18,7 @@ export default function Card({ image, title, children, link, newTab }: CardProps
           <Image src={image} height={100} width={100} alt={`Card icon for ${title}`} />
         </div>
         <H4>{title}</H4>
-        <BodyText>{children}</BodyText>
+        <BodyText additionalClassNames="text-lg md:text-lg">{children}</BodyText>
       </div>
     </a>
   );

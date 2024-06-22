@@ -16,7 +16,7 @@ export default function PortfolioGrid({ onlyHighlighted }: PortfolioGridProps) {
               image={project.image}
               title={onlyHighlighted ? project.title : `${project.title} (${project.year})`}
               key={project.title}
-              link={`/portfolio/project/${project.slug}`}
+              link={`/portfolio/projects/${project.slug}`}
             >
               {project.subtitle}
             </Card>

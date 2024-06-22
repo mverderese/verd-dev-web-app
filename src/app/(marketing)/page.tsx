@@ -13,13 +13,13 @@ export default function Home() {
     <>
       <Section>
         <div className="text-center">
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-8">
             <Image src="/mike-headshot.jpg" alt="Image" className="rounded-full" height={200} width={200} />
           </div>
 
-          <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">{MY_NAME}</h6>
+          <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-4">{MY_NAME}</h6>
           <H1>{JOB_TITLE}</H1>
-          <p className="font-normal text-gray-600 text-md md:text-xl mb-12">{TAGLINE}</p>
+          <p className="font-normal text-gray-600 text-md md:text-xl mb-8">{TAGLINE}</p>
           <PrimarySecondaryCta
             primaryText="About me"
             primaryLink="/about"
@@ -30,10 +30,10 @@ export default function Home() {
       </Section>
       <Section darkBg>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:px-40 gap-6">
-          <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL} newTab>
+          <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL}>
             Learn more about my work experience.
           </Card>
-          <Card image="/icons/feather/github.svg" title="Github" link={GITHUB_REPO_URL} newTab>
+          <Card image="/icons/feather/github.svg" title="Github" link={GITHUB_REPO_URL}>
             See the source code of this website.
           </Card>
         </div>

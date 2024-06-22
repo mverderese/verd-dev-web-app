@@ -64,7 +64,7 @@ export default function MarketingNavbar() {
             <MenuItem title={"About"} link="/about" />
             <MenuItem title={"Portfolio"} link="/portfolio" />
             {/*<MenuItem title={APP_TITLE} link="/app" />*/}
-            <MenuItem title="Resume" link={RESUME_URL} newTab />
+            <MenuItem title="Resume" link={RESUME_URL} />
             <GithubButton />
           </div>
         </div>

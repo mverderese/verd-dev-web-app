@@ -15,13 +15,6 @@ export default function ShotsIGotContent() {
             pulvinar elementum integer enim neque volutpat ac tincidunt. Tincidunt lobortis feugiat vivamus at augue. Ac
             auctor augue mauris augue neque gravida.
           </BodyParagraph>
-          <BodyParagraph>
-            Dignissim cras tincidunt lobortis feugiat vivamus at augue. Nibh venenatis cras sed felis eget. Nunc
-            scelerisque viverra mauris in aliquam sem fringilla. Et sollicitudin ac orci phasellus egestas tellus. Non
-            pulvinar neque laoreet suspendisse interdum. Morbi tincidunt ornare massa eget egestas. Mi sit amet mauris
-            commodo quis imperdiet massa tincidunt nunc. Et magnis dis parturient montes nascetur ridiculus. Eros donec
-            ac odio tempor.
-          </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
       <Section narrowTop narrowBottom>
@@ -33,13 +26,6 @@ export default function ShotsIGotContent() {
             pulvinar elementum integer enim neque volutpat ac tincidunt. Tincidunt lobortis feugiat vivamus at augue. Ac
             auctor augue mauris augue neque gravida.
           </BodyParagraph>
-          <BodyParagraph>
-            Dignissim cras tincidunt lobortis feugiat vivamus at augue. Nibh venenatis cras sed felis eget. Nunc
-            scelerisque viverra mauris in aliquam sem fringilla. Et sollicitudin ac orci phasellus egestas tellus. Non
-            pulvinar neque laoreet suspendisse interdum. Morbi tincidunt ornare massa eget egestas. Mi sit amet mauris
-            commodo quis imperdiet massa tincidunt nunc. Et magnis dis parturient montes nascetur ridiculus. Eros donec
-            ac odio tempor.
-          </BodyParagraph>
         </BodyText>
       </Section>
       <ScreenshotPanel image={"/screenshots/shots-igot-news.jpg"} reverse>
@@ -50,13 +36,6 @@ export default function ShotsIGotContent() {
             dolore magna aliqua. Ornare lectus sit amet est placerat in. Cursus risus at ultrices mi tempus. Faucibus
             pulvinar elementum integer enim neque volutpat ac tincidunt. Tincidunt lobortis feugiat vivamus at augue. Ac
             auctor augue mauris augue neque gravida.
-          </BodyParagraph>
-          <BodyParagraph>
-            Dignissim cras tincidunt lobortis feugiat vivamus at augue. Nibh venenatis cras sed felis eget. Nunc
-            scelerisque viverra mauris in aliquam sem fringilla. Et sollicitudin ac orci phasellus egestas tellus. Non
-            pulvinar neque laoreet suspendisse interdum. Morbi tincidunt ornare massa eget egestas. Mi sit amet mauris
-            commodo quis imperdiet massa tincidunt nunc. Et magnis dis parturient montes nascetur ridiculus. Eros donec
-            ac odio tempor.
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
