@@ -9,6 +9,7 @@ export type ScreenshotPanelProps = {
   narrowTop?: boolean;
   narrowBottom?: boolean;
   mobile?: boolean;
+  darkBg?: boolean;
 };
 export default function ScreenshotPanel({
   children,
@@ -17,34 +18,25 @@ export default function ScreenshotPanel({
   narrowTop,
   narrowBottom,
   mobile,
+  darkBg,
 }: ScreenshotPanelProps) {
   return (
-    <Section narrowTop={narrowTop} narrowBottom={narrowBottom}>
+    <Section narrowTop={narrowTop} narrowBottom={narrowBottom} darkBg={darkBg}>
       <div
         className={classNames(
-          "flex",
-          "flex-col",
-          "items-center",
-          { "lg:flex-row": !reverse },
-          { "lg:flex-row-reverse": reverse },
-          { "lg:flex-wrap": !reverse },
-          { "lg:flex-wrap-reverse": reverse },
+          "flex flex-col",
+          reverse ? "items-end lg:flex-row-reverse lg:flex-wrap-reverse" : "items-start lg:flex-row lg:flex-wrap",
         )}
       >
         <div
           className={classNames(
-            { "lg:basis-2/3": !mobile },
-            { "lg:basis-1/3": mobile },
-            "pb-6",
-            "lg:pb-0",
-            "lg:pt-3",
-            "lg:pr-6",
-            "lg:align-top",
+            mobile ? "lg:basis-1/3" : "lg:basis-1/2",
+            "pb-6 lg:pt-1.5 lg:pb-0 lg:pr-6 lg:align-top mx-auto",
           )}
         >
-          <Image src={image} alt="Screenshot" height={500} width={800} />
+          <Image className="max-h-[400px] object-contain" src={image} alt="Screenshot" height={400} width={600} />
         </div>
-        <div className={classNames({ "lg:basis-2/3": mobile }, { "lg:basis-1/3": !mobile })}>{children}</div>
+        <div className={classNames(mobile ? "lg:basis-2/3" : "lg:basis-1/2")}>{children}</div>
       </div>
     </Section>
   );

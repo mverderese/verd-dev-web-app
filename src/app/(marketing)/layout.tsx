@@ -6,13 +6,14 @@ import MarketingNavbar from "@/app/_components/marketing/MarketingNavbar";
 import { IS_INDEXABLE, JOB_TITLE, MY_NAME, SITE_DESCRIPTION } from "@/app/constants";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const appEnv = process.env.NEXT_PUBLIC_APP_ENV;
 
 export const metadata: Metadata = {
   metadataBase: baseUrl ? new URL(baseUrl) : null,
   alternates: {
     canonical: "/",
   },
-  title: `${MY_NAME} | ${JOB_TITLE}`,
+  title: `${appEnv !== "prod" ? `[${(appEnv ?? "unknown").toUpperCase()}] ` : ""}${MY_NAME} | ${JOB_TITLE}`,
   description: SITE_DESCRIPTION,
   robots: {
     index: IS_INDEXABLE,

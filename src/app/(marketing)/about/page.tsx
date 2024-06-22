@@ -7,6 +7,8 @@ import H2 from "@/app/_components/marketing/H2";
 import H4 from "@/app/_components/marketing/H4";
 import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
 import TextLink from "@/app/_components/marketing/TextLink";
+import UL from "@/app/_components/marketing/UL";
+import LI from "@/app/_components/marketing/LI";
 
 export default function AboutPage() {
   return (
@@ -27,24 +29,12 @@ export default function AboutPage() {
                 designers, product managers, stakeholders, and customers.
               </BodyParagraph>
               <H2 marginOverride="mt-2 mb-4">Technical Skills</H2>
-              <ul>
-                <li>
-                  <span className="font-bold">Languages:</span> TypeScript/Javascript, Python, PostgreSQL, GraphQL,
-                  Bash, HTML/CSS
-                </li>
-                <li>
-                  <span className="font-bold">Frameworks:</span> Node.js, React, Next.js, Express.js, OpenAPI/Swagger,
-                  Flask, React Native
-                </li>
-                <li>
-                  <span className="font-bold">Platforms:</span> GitHub Actions, Terraform, GCP, AWS, Docker, Datadog,
-                  Looker, Segment, GA4
-                </li>
-                <li>
-                  <span className="font-bold">Team Management & Collaboration:</span> GitHub, Shortcut, Jira, Asana,
-                  Figma
-                </li>
-              </ul>
+              <UL>
+                <LI title={"Languages"}>TypeScript/Javascript, Python, PostgreSQL, GraphQL, Bash, HTML/CSS</LI>
+                <LI title={"Frameworks"}>Node.js, React, Next.js, Express.js, OpenAPI/Swagger, Flask, React Native</LI>
+                <LI title={"Platforms"}>GitHub Actions, Terraform, GCP, AWS, Docker, Datadog, Looker, Segment, GA4</LI>
+                <LI title={"Team Management & Collaboration"}>GitHub, Shortcut, Jira, Asana, Figma</LI>
+              </UL>
             </BodyText>
           </div>
         </div>
@@ -121,8 +111,8 @@ export default function AboutPage() {
           <BodyParagraph>
             While I am proud of my professional accomplishments, my greatest joy comes from my incredible wife,
             Michelle, and our precious Goldendoodle, Zoey. When we&apos;re not exploring coffee shops and vegan
-            restaurants in Philadelphia, I enjoy traveling, hiking, skiing, drumming, and playing
-            Magic:&nbsp;The&nbsp;Gathering. My love for Magic led me to volunteer for a passion project called{" "}
+            restaurants in Philadelphia, I enjoy traveling, hiking, skiing, drumming, spending time with family, and
+            playing Magic:&nbsp;The&nbsp;Gathering. My love for Magic led me to volunteer for a passion project called{" "}
             <TextLink link="/portfolio/projects/17-lands">17Lands</TextLink>. Life is an adventure full of unknowns, but
             based on my experiences so far, I&apos;m confident that the next chapter in both my personal and
             professional life will be exciting!

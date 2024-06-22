@@ -17,7 +17,7 @@ export default function OdinContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <Section narrowTop narrowBottom>
+      <Section darkBg>
         <H2>Bringing Tech to an Old-School Industry</H2>
         <BodyText>
           <BodyParagraph>
@@ -39,8 +39,8 @@ export default function OdinContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <Section narrowBottom>
-        <div className="flex justify-center mb-16">
+      <Section darkBg>
+        <div className="flex justify-center">
           <iframe
             className="aspect-video w-full lg:max-w-screen-lg"
             src="https://www.youtube.com/embed/hTFARRzFJ9o?si=2IGubaqSdbr2k0Np"

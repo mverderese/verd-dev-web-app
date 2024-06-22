@@ -23,7 +23,7 @@ export default function PortfolioProjectLayout({ children }: PortfolioProjectLay
       </div>
       {children}
       <div className="text-center">
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center my-12">
           <PrimarySecondaryCta
             primaryText="All projects"
             primaryLink="/portfolio"
