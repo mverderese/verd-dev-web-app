@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <Section narrowBottom>
         <div className="flex flex-wrap">
-          <div className="basis-full lg:basis-1/3 pb-6 lg:pb-0 lg:pt-3 lg:pr-6 ">
+          <div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-6 ">
             <Image src="/mike-headshot-2.jpg" alt="Image" height={500} width={500} />
           </div>
           <div className="basis-full lg:basis-2/3 ">
@@ -26,6 +26,25 @@ export default function AboutPage() {
                 to deployment and growth, and my strong communication skills help bridge gaps between engineers,
                 designers, product managers, stakeholders, and customers.
               </BodyParagraph>
+              <H2 marginOverride="mt-2 mb-4">Technical Skills</H2>
+              <ul>
+                <li>
+                  <span className="font-bold">Languages:</span> TypeScript/Javascript, Python, PostgreSQL, GraphQL,
+                  Bash, HTML/CSS
+                </li>
+                <li>
+                  <span className="font-bold">Frameworks:</span> Node.js, React, Next.js, Express.js, OpenAPI/Swagger,
+                  Flask, React Native
+                </li>
+                <li>
+                  <span className="font-bold">Platforms:</span> GitHub Actions, Terraform, GCP, AWS, Docker, Datadog,
+                  Looker, Segment, GA4
+                </li>
+                <li>
+                  <span className="font-bold">Team Management & Collaboration:</span> GitHub, Shortcut, Jira, Asana,
+                  Figma
+                </li>
+              </ul>
             </BodyText>
           </div>
         </div>
@@ -47,8 +66,8 @@ export default function AboutPage() {
               </BodyParagraph>
             </BodyText>
           </div>
-          <div className="basis-full lg:basis-1/3 pb-6 lg:pb-0 lg:pt-3 lg:pr-6 ">
-            <Image src="/icons/rutgers-logo.png" alt="Image" height={500} width={500} />
+          <div className="basis-full lg:basis-1/3 pb-6 lg:pb-0 lg:pt-3 lg:pr-6 max-w-80 mx-auto">
+            <Image src="/icons/rutgers-seal.svg" alt="Image" height={500} width={500} />
           </div>
         </div>
       </Section>
@@ -63,13 +82,6 @@ export default function AboutPage() {
               Eduardo Saverin, and Mark Cuban. We expanded our team, launched a campus ambassador program, and quickly
               grew to tens of thousands of users. Eventually, we were acquired by Mark Cuban Companies.
             </BodyParagraph>
-          </BodyText>
-        </div>
-      </Section>
-      <Section narrowTop>
-        <div className="">
-          <H2>Nurturing My Skills for Over 10 Years</H2>
-          <BodyText>
             <BodyParagraph>
               Since my early days of building companies out of dorm rooms and apartments, I’ve brought my passion for
               product development, resourcefulness, and strong work ethic to every role. Over the past decade, I’ve
@@ -119,7 +131,7 @@ export default function AboutPage() {
       </Section>
       <Section narrowTop narrowBottom></Section>
       <Section>
-        <H2>Want to see some of my work?</H2>
+        <H2 marginOverride="mb-8">Some of My Work</H2>
         <PortfolioGrid onlyHighlighted />
       </Section>
     </>
