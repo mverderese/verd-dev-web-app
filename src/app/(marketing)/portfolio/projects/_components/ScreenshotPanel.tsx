@@ -31,10 +31,17 @@ export default function ScreenshotPanel({
         <div
           className={classNames(
             mobile ? "lg:basis-1/3" : "lg:basis-1/2",
-            "pb-6 lg:pt-1.5 lg:pb-0 lg:pr-6 lg:align-top mx-auto",
+            "pb-6 lg:pt-1.5 lg:pb-0 lg:align-top mx-auto",
+            reverse ? "lg:pl-6" : "lg:pr-6",
           )}
         >
-          <Image className="max-h-[400px] object-contain" src={image} alt="Screenshot" height={400} width={600} />
+          <Image
+            className={classNames("object-contain", { "max-h-[600px]": mobile })}
+            src={image}
+            alt="Screenshot"
+            height={800}
+            width={800}
+          />
         </div>
         <div className={classNames(mobile ? "lg:basis-2/3" : "lg:basis-1/2")}>{children}</div>
       </div>
