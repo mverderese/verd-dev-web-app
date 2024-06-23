@@ -13,7 +13,7 @@ import LI from "@/app/_components/marketing/LI";
 export default function AboutPage() {
   return (
     <>
-      <Section narrowBottom>
+      <Section>
         <div className="flex flex-wrap">
           <div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-6 ">
             <Image src="/mike-headshot-2.jpg" alt="Image" height={500} width={500} />
@@ -39,7 +39,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section>
+      <Section darkBg>
         <div className="flex flex-wrap-reverse lg:flex-wrap">
           <div className="basis-full lg:basis-2/3 ">
             <H2>Rutgers University</H2>
@@ -61,7 +61,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section narrowTop>
+      <Section>
         <div className="">
           <H2>Diving Into the Startup World</H2>
           <BodyText>
@@ -100,7 +100,7 @@ export default function AboutPage() {
           </BodyText>
         </div>
       </Section>
-      <Section narrowTop narrowBottom>
+      <Section darkBg>
         <H2>Life is an Ongoing Adventure</H2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-9 mb-12">
           <Image src="/hiking.jpeg" alt="Hiking" height={500} width={500} />
