@@ -77,7 +77,8 @@ export default function OdinContent() {
             and physical hardware, such as turnstiles and cameras, while delivering a user-friendly experience on both
             web and mobile apps. This ensured that only qualified workers were allowed on site, significantly enhancing
             overall project safety. Our tech stack consisted of multiple seamlessly integrated services, providing a
-            robust platform that was easy to develop, test, and deploy:
+            robust platform that was easy to develop, test, and deploy with GitHub Actions to our Kubernetes clusters in
+            Google Cloud:
           </BodyParagraph>
           <UL additionalClassNames="mb-6">
             <LI title={"Web App"}>
