@@ -19,6 +19,8 @@ export default function PortfolioGrid({ onlyHighlighted }: PortfolioGridProps) {
               link={`/portfolio/projects/${project.slug}`}
             >
               {project.subtitle}
+              <br />
+              <span className="italic"> {project.jobTitle} </span>
             </Card>
           ))}
       </div>

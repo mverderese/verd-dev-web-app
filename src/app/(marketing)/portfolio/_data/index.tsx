@@ -20,16 +20,6 @@ export const portfolioProjects: PortfolioProject[] = [
     content: <OdinContent />,
   },
   {
-    title: "Starbucks",
-    year: 2016,
-    subtitle: "Ecommerce Store",
-    jobTitle: "Senior Software Engineer",
-    image: "/icons/starbucks-logo-icon.webp",
-    slug: "starbucks",
-    highlighted: true,
-    content: <StarbucksContent />,
-  },
-  {
     title: "Great Many",
     year: 2024,
     subtitle: "Your Home for Hair Growth",
@@ -39,6 +29,16 @@ export const portfolioProjects: PortfolioProject[] = [
     externalLink: "https://www.greatmany.com/",
     highlighted: true,
     content: <GreatManyContent />,
+  },
+  {
+    title: "Starbucks",
+    year: 2016,
+    subtitle: "Ecommerce Store",
+    jobTitle: "Senior Software Engineer",
+    image: "/icons/starbucks-logo-icon.webp",
+    slug: "starbucks",
+    highlighted: true,
+    content: <StarbucksContent />,
   },
   {
     title: "Renew",
