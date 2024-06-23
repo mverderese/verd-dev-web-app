@@ -30,8 +30,10 @@ export default function AboutPage() {
               </BodyParagraph>
               <H2 marginOverride="mt-2 mb-4">Technical Skills</H2>
               <UL>
-                <LI title={"Languages"}>TypeScript/Javascript, Python, PostgreSQL, GraphQL, Bash, HTML/CSS</LI>
-                <LI title={"Frameworks"}>Node.js, React, Next.js, Express.js, OpenAPI/Swagger, Flask, React Native</LI>
+                <LI title={"Languages"}>TypeScript/Javascript, Python, PostgreSQL, GraphQL, HTML/CSS, Bash</LI>
+                <LI title={"Frameworks"}>
+                  Node.js, React, Next.js, Express, Prisma, OpenAPI/Swagger, Flask, React Native
+                </LI>
                 <LI title={"Platforms"}>GitHub Actions, Terraform, GCP, AWS, Docker, Datadog, Looker, Segment, GA4</LI>
                 <LI title={"Team Management & Collaboration"}>GitHub, Shortcut, Jira, Asana, Figma</LI>
               </UL>

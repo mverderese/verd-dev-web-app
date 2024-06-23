@@ -17,8 +17,9 @@ export default function GreatManyContent() {
           </BodyParagraph>
           <UL>
             <LI title={"Designing a Custom Booking Flow"}>
-              Developed a full-stack booking system for their flagship Plasma Hair Restoration service, integrated with
-              Boulevard, a client experience platform.
+              Developed a full-stack booking system for their flagship Plasma Hair Restoration service, written in
+              TypeScript using Next.js with Apollo Server and Prisma, and integrated with Boulevard, a client experience
+              platform.
             </LI>
             <LI title={"Integrating Telehealth Workflow"}>
               Orchestrated the integration of six vendors to create a seamless prescription drug telehealth process,
