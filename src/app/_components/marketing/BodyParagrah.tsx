@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import classNames from "classnames";
 
 export type BodyParagraphProps = {
-  children: ReactNode;
+  children?: ReactNode;
   narrowBottom?: boolean;
 };
 export default function BodyParagraph({ children, narrowBottom }: BodyParagraphProps) {

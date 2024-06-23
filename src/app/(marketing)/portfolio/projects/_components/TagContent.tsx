@@ -16,7 +16,7 @@ export default function TagContent() {
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>
-      <ScreenshotPanel image={"/screenshots/tag-feed.jpg"} reverse mobileScreenshot darkBg>
+      <ScreenshotPanel image={"/screenshots/tag-feed.jpg"} reverse twoThirdsText darkBg>
         <H2>Disrupting the Social App Landscape</H2>
         <BodyText>
           <BodyParagraph>

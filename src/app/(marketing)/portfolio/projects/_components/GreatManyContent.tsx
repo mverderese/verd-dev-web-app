@@ -48,7 +48,7 @@ export default function GreatManyContent() {
             <LI title={"Shopify"}>Customers subscribed via Shopify to purchase Rx products.</LI>
             <LI title={"Authorize.net"}>Used for checkout since Shopify Pay has limitations on medical products.</LI>
             <LI title={"Embeddables"}>Implemented a mandatory medical intake form for every Rx purchase.</LI>
-            <LI title={"Beluga"}>
+            <LI title={"Beluga Health"}>
               Sent prescription details, patient info, and medical intake forms to Beluga for asynchronous approval from
               a medical provider.
             </LI>
