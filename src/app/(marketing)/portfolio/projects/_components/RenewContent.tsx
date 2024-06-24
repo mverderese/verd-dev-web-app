@@ -42,7 +42,23 @@ export default function RenewContent() {
       </ScreenshotPanel>
       <ScreenshotPanel image={"/screenshots/renew-plan-comparison.png"} reverse darkBg>
         <H2>Growing With Our Customers</H2>
-        <BodyText></BodyText>
+        <BodyText>
+          <BodyParagraph>
+            As our team and customer base grew, so did our need for new customer features and internal platforms.
+            Prospective customers could enter their list of prescription drugs and indicate the benefits that mattered
+            most to them. The site would then provide plan recommendations and offer cost and benefit comparisons across
+            multiple plans. Despite these powerful online features, many people still preferred speaking to a person
+            before making a final decision. To streamline this process, I led a team to build a Customer Success
+            platform that integrated InContact Softphone and Salesforce.
+          </BodyParagraph>
+          <BodyParagraph>
+            When users called in, they would provide a six-digit code, allowing agents to instantly access all the
+            information the customers were viewing, including their drugs, preferred benefits, and the plans they were
+            considering. Agents could make changes to these selections, and users would see the updates in real-time on
+            their screens. This integration allowed agents and Medicare brokers to focus on assisting users and closing
+            sales, rather than juggling multiple platforms.
+          </BodyParagraph>
+        </BodyText>
       </ScreenshotPanel>
     </>
   );
