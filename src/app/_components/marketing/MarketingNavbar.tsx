@@ -11,7 +11,7 @@ export default function MarketingNavbar() {
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
-          <a className="flex-none text-xl font-semibold text-white" href="/" aria-label="Brand">
+          <a className="flex-none text-xl font-semibold text-white min-w-[142px]" href="/" aria-label="Brand">
             {MY_NAME}
           </a>
           <div className="sm:hidden">
@@ -58,7 +58,7 @@ export default function MarketingNavbar() {
         </div>
         <div
           id="navbar-collapse-with-animation"
-          className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
+          className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block sm:transition-none sm:duration-0"
         >
           <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
             <MenuItem title={"About"} link="/about" />
