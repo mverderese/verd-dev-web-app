@@ -8,7 +8,8 @@ export type ScreenshotPanelProps = {
   reverse?: boolean;
   narrowTop?: boolean;
   narrowBottom?: boolean;
-  mobile?: boolean;
+  twoThirdsText?: boolean;
+  darkBg?: boolean;
 };
 export default function ScreenshotPanel({
   children,
@@ -16,35 +17,33 @@ export default function ScreenshotPanel({
   reverse,
   narrowTop,
   narrowBottom,
-  mobile,
+  twoThirdsText,
+  darkBg,
 }: ScreenshotPanelProps) {
   return (
-    <Section narrowTop={narrowTop} narrowBottom={narrowBottom}>
+    <Section narrowTop={narrowTop} narrowBottom={narrowBottom} darkBg={darkBg}>
       <div
         className={classNames(
-          "flex",
-          "flex-col",
-          "items-center",
-          { "lg:flex-row": !reverse },
-          { "lg:flex-row-reverse": reverse },
-          { "lg:flex-wrap": !reverse },
-          { "lg:flex-wrap-reverse": reverse },
+          "flex flex-col",
+          reverse ? "items-end lg:flex-row-reverse lg:flex-wrap-reverse" : "items-start lg:flex-row lg:flex-wrap",
         )}
       >
         <div
           className={classNames(
-            { "lg:basis-2/3": !mobile },
-            { "lg:basis-1/3": mobile },
-            "pb-6",
-            "lg:pb-0",
-            "lg:pt-3",
-            "lg:pr-6",
-            "lg:align-top",
+            twoThirdsText ? "lg:basis-1/3" : "lg:basis-1/2",
+            "pb-6 lg:pt-1.5 lg:pb-0 lg:align-top mx-auto",
+            reverse ? "lg:pl-12" : "lg:pr-12",
           )}
         >
-          <Image src={image} alt="Screenshot" height={500} width={800} />
+          <Image
+            className={classNames("object-contain", { "max-h-[600px]": twoThirdsText })}
+            src={image}
+            alt="Screenshot"
+            height={800}
+            width={800}
+          />
         </div>
-        <div className={classNames({ "lg:basis-2/3": mobile }, { "lg:basis-1/3": !mobile })}>{children}</div>
+        <div className={classNames(twoThirdsText ? "lg:basis-2/3" : "lg:basis-1/2")}>{children}</div>
       </div>
     </Section>
   );

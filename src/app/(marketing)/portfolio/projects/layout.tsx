@@ -9,21 +9,21 @@ export type PortfolioProjectLayoutProps = Readonly<{
 export default function PortfolioProjectLayout({ children }: PortfolioProjectLayoutProps) {
   return (
     <>
-      <div className="container flex max-w-screen-xl mx-auto px-4 pt-6">
+      <div className="container flex max-w-screen-xl mx-auto px-4 pt-6 mb-4">
         <a href="/portfolio">
           <Image
             src="/icons/feather/chevron-left.svg"
-            className="inline align-text-top fill-gray-200"
+            className="inline align-top fill-gray-200 hover:fill-gray-100"
             height={20}
-            width={20}
+            width={28}
             alt="chevron-left"
           />
-          <span className="inline pt">All Projects</span>
+          <span className="inline text-xl hover:text-gray-600">All Projects</span>
         </a>
       </div>
       {children}
       <div className="text-center">
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center my-12">
           <PrimarySecondaryCta
             primaryText="All projects"
             primaryLink="/portfolio"

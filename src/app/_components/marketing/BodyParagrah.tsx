@@ -1,5 +1,10 @@
 import { ReactNode } from "react";
+import classNames from "classnames";
 
-export default function BodyParagraph({ children }: { children: ReactNode }) {
-  return <p className="pb-6 pr-3">{children}</p>;
+export type BodyParagraphProps = {
+  children?: ReactNode;
+  narrowBottom?: boolean;
+};
+export default function BodyParagraph({ children, narrowBottom }: BodyParagraphProps) {
+  return <p className={classNames("pr-3", narrowBottom ? "pb-3" : "pb-6")}>{children}</p>;
 }
