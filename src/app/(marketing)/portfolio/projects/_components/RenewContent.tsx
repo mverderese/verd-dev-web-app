@@ -30,8 +30,8 @@ export default function RenewContent() {
               unified interface for the front-end team to develop the web app.
             </LI>
             <LI title={"Automated Infrastructure Provisioning"}>
-              Utilized Ansible to define AWS infrastructure for all environments, including EC2, S3, ELB, and Route53,
-              using easy-to-read YAML files.
+              Utilized Ansible to define a HIPAA-compliant AWS infrastructure and system architecture for all
+              environments, including EC2, S3, ELB, and Route53, using easy-to-read YAML files.
             </LI>
             <LI title={"Service Deployments"}>
               Employed Ansible to deploy the API and web app to any environment with a single CLI command, ensuring

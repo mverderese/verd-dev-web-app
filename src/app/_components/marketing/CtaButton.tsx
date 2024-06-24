@@ -4,12 +4,14 @@ export type CtaButtonProps = {
   children: React.ReactNode;
   inverted?: boolean;
   additionalClassNames?: classNames.Argument | classNames.ArgumentArray;
+  newTab?: boolean;
 };
 
-export default function CtaButton({ link, children, inverted, additionalClassNames }: CtaButtonProps) {
+export default function CtaButton({ link, children, inverted, additionalClassNames, newTab }: CtaButtonProps) {
   return (
     <a
       href={link}
+      target={newTab ? "_blank" : ""}
       className={classNames(
         "px-7",
         "py-3",

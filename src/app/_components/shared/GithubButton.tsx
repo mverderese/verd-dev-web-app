@@ -3,7 +3,7 @@ import { GITHUB_REPO_URL } from "@/app/constants";
 
 export default function GithubButton() {
   return (
-    <a className="font-medium text-white hover:text-gray-300 sm:py-6 " href={GITHUB_REPO_URL}>
+    <a className="font-medium text-white hover:text-gray-300 sm:py-6 " href={GITHUB_REPO_URL} target="_blank">
       <span className="inline"> View on GitHub </span>
       <Image
         src="/icons/github-mark-white.svg"

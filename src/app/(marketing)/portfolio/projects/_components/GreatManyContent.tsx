@@ -4,6 +4,7 @@ import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
 import H2 from "@/app/_components/marketing/H2";
 import UL from "@/app/_components/marketing/UL";
 import LI from "@/app/_components/marketing/LI";
+import TextLink from "@/app/_components/marketing/TextLink";
 
 export default function GreatManyContent() {
   return (
@@ -11,9 +12,12 @@ export default function GreatManyContent() {
       <ScreenshotPanel image={"/screenshots/great-many-appointment-selection.png"}>
         <BodyText>
           <BodyParagraph narrowBottom>
-            Great Many is a hair growth startup that provides everything you need to grow your hair, all in one place.
-            Red Krypton, our agency, was hired to build their entire technical offering from the ground up. My
-            responsibilities included:
+            <TextLink link="https://www.greatmany.com/" newTab>
+              Great Many
+            </TextLink>{" "}
+            is a hair growth startup that provides everything you need to grow your hair, all in one place. Red Krypton,
+            our agency, was hired to build their entire technical offering from the ground up. My responsibilities
+            included:
           </BodyParagraph>
           <UL>
             <LI title={"Designing a Custom Booking Flow"}>

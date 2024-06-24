@@ -16,9 +16,12 @@ export default function OdinContent() {
             Construction is one of the most dangerous professions globally, with over 1,000 workers killed on the job
             annually in the US alone. A strong safety culture, proper training, and adherence to government
             certifications are key to reducing incidents and injuries on construction sites. When we founded{" "}
-            <TextLink link="https://useodin.com/">Odin</TextLink> in March of 2020, our goal was to develop software
-            that replaces manual, paper-based processes for tracking training and certifications. This ensures that
-            every worker on site is properly trained and certified, enhancing overall safety.
+            <TextLink link="https://useodin.com/" newTab>
+              Odin
+            </TextLink>{" "}
+            in March of 2020, our goal was to develop software that replaces manual, paper-based processes for tracking
+            training and certifications. This ensures that every worker on site is properly trained and certified,
+            enhancing overall safety.
           </BodyParagraph>
           <BodyParagraph>
             Despite the challenges of a global pandemic, economic downturn, and a construction slowdown, we successfully

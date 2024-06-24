@@ -23,17 +23,18 @@ export default function Home() {
           <PrimarySecondaryCta
             primaryText="About me"
             primaryLink="/about"
-            secondaryText="Book a meeting"
+            secondaryText="Get in touch"
             secondaryLink="https://app.reclaim.ai/m/mike-verderese"
+            secondaryLinkNewTab
           />
         </div>
       </Section>
       <Section darkBg>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:px-40 gap-6">
-          <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL}>
+          <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL} newTab>
             Learn more about my work experience.
           </Card>
-          <Card image="/icons/feather/github.svg" title="Github" link={GITHUB_REPO_URL}>
+          <Card image="/icons/feather/github.svg" title="Github" link={GITHUB_REPO_URL} newTab>
             See the source code of this website.
           </Card>
         </div>

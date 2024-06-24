@@ -12,10 +12,12 @@ export default function SeventeenLandsContent() {
             I&apos;ve been playing the card game Magic: The Gathering, both on paper and online, for over 20 years.
             It&apos;s an incredible strategy game with an online version, Magic Arena, played by over 5 million people
             each month. In 2021, a team of volunteer developers and data scientists released{" "}
-            <TextLink link="https://17lands.com">17Lands</TextLink>, a tool that analyzes gameplay for anyone who
-            installs the extension, providing performance data on every card across the player base. Over the past few
-            years, 17Lands has exploded in popularity and become the gold standard for card evaluations among players
-            and content creators.
+            <TextLink link="https://17lands.com" newTab>
+              17Lands
+            </TextLink>
+            , a tool that analyzes gameplay for anyone who installs the extension, providing performance data on every
+            card across the player base. Over the past few years, 17Lands has exploded in popularity and become the gold
+            standard for card evaluations among players and content creators.
           </BodyParagraph>
           <BodyParagraph>
             In April 2023, I joined this volunteer team with a cohort of eight others, more than doubling the number of
