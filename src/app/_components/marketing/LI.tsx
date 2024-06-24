@@ -11,7 +11,7 @@ export default function LI({ children, title }: LIProps) {
   };
 
   return (
-    <li>
+    <li className="mb-1.5">
       <TitleSpan />
       {children}
     </li>
