@@ -13,16 +13,26 @@ export type ProjectPageContainerProps = {
 export default function ProjectHeroPanel({ children, project }: ProjectPageContainerProps) {
   return (
     <>
-      <section>
-        <div className={classNames("container", "max-w-screen-xl", "mx-auto", "px-4")}>
+      <section className="bg-astral">
+        <div className={classNames("container max-w-screen-xl mx-auto px-4  pb-8")}>
           <div className="text-center">
             <div className="flex justify-center mb-9 ">
-              <Image src={project.image} height={90} width={258} alt={`${project.title} logo`} />
+              <Image
+                src={project.image}
+                height={90}
+                width={258}
+                alt={`${project.title} logo`}
+                className="bg-white rounded-full"
+              />
             </div>
             <H1>{project.title}</H1>
-            <H2>{project.subtitle}</H2>
+            <H2>
+              <span className="text-wheatfield"> {project.subtitle}</span>
+            </H2>
             <H4 narrowBottom>
-              {project.jobTitle} ({project.year})
+              <span className="text-wheatfield">
+                {project.jobTitle} ({project.year})
+              </span>
             </H4>
           </div>
         </div>
