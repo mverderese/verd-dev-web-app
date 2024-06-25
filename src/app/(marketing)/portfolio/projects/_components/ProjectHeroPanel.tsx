@@ -20,10 +20,10 @@ export default function ProjectHeroPanel({ children, project }: ProjectPageConta
               <Image src={project.image} height={90} width={258} alt={`${project.title} logo`} />
             </div>
             <H1>{project.title}</H1>
-            <H2>{project.subtitle}</H2>
-            <H4 narrowBottom>
-              {project.jobTitle} ({project.year})
-            </H4>
+            <H2 additionalClassNames="italic">
+              {project.jobTitle} ({project.startYear} - {project.endYear ?? "Present"})
+            </H2>
+            <H4 narrowBottom>{project.summary}</H4>
           </div>
         </div>
       </section>

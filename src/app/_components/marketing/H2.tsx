@@ -5,12 +5,13 @@ export type H2Props = {
   children: ReactNode;
   narrowBottom?: boolean;
   marginOverride?: string;
+  additionalClassNames?: classNames.Argument | classNames.ArgumentArray;
 };
 
-export default function H2({ children, narrowBottom, marginOverride }: H2Props) {
+export default function H2({ children, narrowBottom, marginOverride, additionalClassNames }: H2Props) {
   return (
     <h2
-      className={classNames("font-medium text-gray-700 text-3xl md:text-4xl", {
+      className={classNames("font-medium text-gray-700 text-3xl md:text-4xl", additionalClassNames, {
         [marginOverride ?? "mb-5"]: !narrowBottom,
       })}
     >
