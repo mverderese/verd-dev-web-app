@@ -1,7 +1,6 @@
 import { GITHUB_REPO_URL, JOB_TITLE, MY_NAME, RESUME_URL, TAGLINE } from "@/app/constants";
 import Image from "next/image";
 import Section from "@/app/_components/marketing/Section";
-import H1 from "@/app/_components/marketing/H1";
 import H2 from "@/app/_components/marketing/H2";
 import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
 import Card from "@/app/_components/marketing/Card";
@@ -11,17 +10,23 @@ import { PrimarySecondaryCta } from "@/app/_components/marketing/PrimarySecondar
 export default function Home() {
   return (
     <>
-      <Section>
-        <div className="text-center">
+      <Section additionalClassNames="bg-astral pt-2" narrowTop>
+        <div className="text-left sm:text-center">
           <div className="flex justify-center mb-8">
             <Image src="/mike-headshot.jpg" alt="Image" className="rounded-full" height={200} width={200} />
           </div>
 
-          <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-4">{MY_NAME}</h6>
-          <H1>{JOB_TITLE}</H1>
-          <p className="font-normal text-gray-600 text-md md:text-xl mb-8">{TAGLINE}</p>
+          <h1 className="text-white text-4xl md:text-5xl font-extrabold font-akira leading-10 ">{MY_NAME}</h1>
+          <div className="pt-2 pb-1">
+            <h2 className="text-2xl font-extrabold font-akira  text-astral text-stroke-[.5px] text-stroke-white">
+              {JOB_TITLE}
+            </h2>
+          </div>
+          <div className="pt-3">
+            <div className="text-slate-300 text-md font-normal">{TAGLINE}</div>
+          </div>
           <PrimarySecondaryCta
-            primaryText="About me"
+            primaryText="Learn more"
             primaryLink="/about"
             secondaryText="Get in touch"
             secondaryLink="https://app.reclaim.ai/m/mike-verderese"

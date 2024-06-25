@@ -13,29 +13,9 @@ export default function CtaButton({ link, children, inverted, additionalClassNam
       href={link}
       target={newTab ? "_blank" : ""}
       className={classNames(
-        "px-7",
-        "py-3",
-        "mx-6",
-        "md:px-9",
-        "md:py-4",
-        "font-medium",
-        "md:font-semibold",
-        "w-[200px]",
-        { "bg-gray-700": !inverted },
-        { "bg-gray-50": inverted },
-        { "text-gray-50": !inverted },
-        { "text-gray-700": inverted },
-        { "border-2": inverted },
-        { "border-gray-700": inverted },
-        "text-gray-50",
-        "text-sm",
-        "rounded-md",
-        { "hover:bg-gray-200": !inverted },
-        { "hover:bg-gray-200": inverted },
-        { "hover:text-gray-700": !inverted },
-        "transition",
-        "ease-linear",
-        "duration-200",
+        "px-7 mx-2 font-medium md:font-semibold w-[161px] h-[44px] content-center",
+        "transition ease-linear duration-50 text-[14px] rounded-full hover:opacity-60",
+        inverted ? "bg-astral text-wheatfield border-2 border-wheatfield" : "bg-wheatfield text-astral",
         additionalClassNames,
       )}
     >

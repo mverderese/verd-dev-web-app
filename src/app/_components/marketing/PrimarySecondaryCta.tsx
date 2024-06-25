@@ -18,7 +18,7 @@ export function PrimarySecondaryCta({
 }: PrimarySecondaryCta) {
   const buttonClassNames = "my-2";
   return (
-    <div className="flex flex-col items-center content-between max-h-24 lg:flex-row justify-center">
+    <div className="flex text-center items-center content-between max-h-24 flex-row justify-center mt-6">
       <CtaButton additionalClassNames={buttonClassNames} link={primaryLink}>
         {primaryText}
       </CtaButton>
