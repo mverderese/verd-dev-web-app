@@ -53,7 +53,7 @@ export default function MarketingLayout({
 }>) {
   return (
     <html lang="en" className={classNames(akiraExpandedFont.variable, archivoBlackFont.variable, dmSansFont.className)}>
-      <body className={classNames("bg-gray-100")}>
+      <body className={classNames("bg-astral")}>
         <MarketingNavbar />
         <main>{children}</main>
       </body>

@@ -6,7 +6,7 @@ import BodyText from "@/app/(marketing)/_components/BodyText";
 export default function PortfolioPage() {
   return (
     <>
-      <Section additionalClassNames="bg-astral">
+      <Section bgOverride="bg-astral">
         <div className="container max-w-screen-xl mx-auto px-4">
           <H1>Portfolio</H1>
           <BodyText additionalClassNames="text-wheatfield">

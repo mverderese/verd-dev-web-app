@@ -23,7 +23,7 @@ export default function MarketingNavbar() {
             href="/"
             aria-label="Brand"
           >
-            MV
+            MIKE VERDERESE
           </a>
           <div className="sm:hidden">
             <button

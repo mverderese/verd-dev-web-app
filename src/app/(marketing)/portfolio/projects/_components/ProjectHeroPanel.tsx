@@ -20,19 +20,23 @@ export default function ProjectHeroPanel({ children, project }: ProjectPageConta
             <div className="flex justify-center mb-6 sm:mb-9 max-h-24 sm:max-h-40">
               {/*<Image*/}
               <Image
-                className="object-contain bg-white rounded-full"
+                className="object-contain p-1 max-w-24 sm:max-w-40 bg-white rounded-full"
                 src={project.image}
-                height={90}
+                height={258}
                 width={258}
                 alt={`${project.title} logo`}
               />
             </div>
             <H1>{project.title}</H1>
             <H2 additionalClassNames="italic" marginOverride="mb-3 sm:mb-5">
-              <span className="text-wheatfield">{project.jobTitle}</span>
-              <br className="sm:hidden" /> ({project.startYear} - {project.endYear ?? "Present"})
+              <span className="text-wheatfield">
+                {project.jobTitle}
+                <br className="sm:hidden" /> ({project.startYear} - {project.endYear ?? "Present"})
+              </span>
             </H2>
-            <H4 narrowBottom>{project.summary}</H4>
+            <H4 narrowBottom>
+              <span className="text-wheatfield">{project.summary}</span>
+            </H4>
           </div>
         </div>
       </section>

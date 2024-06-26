@@ -10,7 +10,7 @@ import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecond
 export default function Home() {
   return (
     <>
-      <Section additionalClassNames="bg-astral pt-2" narrowTop>
+      <Section additionalClassNames="pt-2" bgOverride="bg-astral" narrowTop>
         <div className="text-left sm:text-center">
           <div className="flex justify-center mb-8">
             <Image src="/mike-headshot.jpg" alt="Image" className="rounded-full" height={200} width={200} />
@@ -18,7 +18,7 @@ export default function Home() {
 
           <h1 className="text-white text-4xl md:text-5xl font-extrabold font-akira leading-10 ">{MY_NAME}</h1>
           <div className="pt-2 pb-1">
-            <h2 className="text-2xl font-extrabold font-akira  text-astral text-stroke-[.5px] text-stroke-white">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-akira  text-astral text-stroke-[1px] text-stroke-white">
               {JOB_TITLE}
             </h2>
           </div>
