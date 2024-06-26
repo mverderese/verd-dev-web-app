@@ -1,7 +1,14 @@
 import { ReactNode } from "react";
+import classNames from "classnames";
 
-export default function H1({ children }: { children: ReactNode }) {
+export type H1Props = {
+  children: ReactNode;
+  additionalClassNames?: classNames.Argument | classNames.ArgumentArray;
+};
+export default function H1({ children, additionalClassNames }: H1Props) {
   return (
-    <h1 className="font-normal text-white font-akira text-4xl md:text-7xl leading-none mb-6 lg:mb-8">{children}</h1>
+    <h1 className={classNames("font-normal text-5xl md:text-7xl leading-none mb-3 lg:mb-8", additionalClassNames)}>
+      {children}
+    </h1>
   );
 }

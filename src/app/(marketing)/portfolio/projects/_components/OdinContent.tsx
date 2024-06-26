@@ -6,6 +6,7 @@ import H2 from "@/app/(marketing)/_components/H2";
 import TextLink from "@/app/(marketing)/_components/TextLink";
 import LI from "@/app/(marketing)/_components/LI";
 import UL from "@/app/(marketing)/_components/UL";
+import H4 from "@/app/(marketing)/_components/H4";
 
 export default function OdinContent() {
   return (
@@ -13,26 +14,32 @@ export default function OdinContent() {
       <ScreenshotPanel image={"/screenshots/odin-worker-profile.png"}>
         <BodyText>
           <BodyParagraph>
-            Construction is one of the most dangerous professions globally, with over 1,000 workers killed on the job
-            annually in the US alone. A strong safety culture, proper training, and adherence to government
-            certifications are key to reducing incidents and injuries on construction sites. When we founded{" "}
+            When we founded{" "}
             <TextLink link="https://useodin.com/" newTab>
               Odin
             </TextLink>{" "}
             in March of 2020, our goal was to develop software that replaces manual, paper-based processes for tracking
             training and certifications. This ensures that every worker on site is properly trained and certified,
-            enhancing overall safety.
+            enhancing overall safety. Despite the challenges of a global pandemic, economic downturn, and a construction
+            slowdown, we successfully bootstrapped the company, generating over $1 million in revenue in our first year.
+            This growth was led by the usage of Odin at Hudson Yards, the largest privately-funded construction project
+            in the world.
           </BodyParagraph>
-          <BodyParagraph>
-            Despite the challenges of a global pandemic, economic downturn, and a construction slowdown, we successfully
-            bootstrapped the company, generating over $1 million in revenue in our first year. To achieve this, I led a
-            team of three engineers to build the first version of the product in just six months. With this platform, we
-            onboarded our first customer, The Related Companies, managing over a million square feet of construction
-            sites and thousands of workers.
-          </BodyParagraph>
+          <H4 additionalClassNames="font-dm-sans-semibold mb-2" narrowBottom>
+            By the Numbers:
+          </H4>
+          <UL additionalClassNames="mb-6 text-pretty">
+            <LI>12% Q/Q revenue growth</LI>
+            <LI>20,000+ Workers onboarded</LI>
+            <LI>700+ Contractors managed</LI>
+            <LI>6,000,000+ Labor hours tracked</LI>
+          </UL>
         </BodyText>
       </ScreenshotPanel>
       <Section darkBg>
+        <div className="flex justify-center">
+          <H2 additionalClassNames="mb-9">See the Value of Odin</H2>
+        </div>
         <div className="flex justify-center">
           <iframe
             className="aspect-video w-full lg:max-w-screen-lg"
@@ -45,7 +52,12 @@ export default function OdinContent() {
         </div>
       </Section>
       <Section>
-        <H2>C-Level Executive at a Successful Startup</H2>
+        <H2>CTO at a High-Growth Startup</H2>
+        <H4 additionalClassNames="italic ">
+          <span className="text-red-600">
+            This section needs to be condensed and focus more on leadership and engineering{" "}
+          </span>
+        </H4>
         <BodyText>
           <BodyParagraph>
             Over the course of four years, my role as Co-Founder & CTO was constantly evolving. In the early days,
@@ -83,13 +95,13 @@ export default function OdinContent() {
         </BodyText>
       </Section>
       <ScreenshotPanel image={"/turnstile-and-wall-reader.png"} reverse twoThirdsText darkBg>
-        <H2>Automated Access Control and Compliance</H2>
+        <H2>A Highly-Sophisticated Easy-to-Use Platform</H2>
         <BodyText>
           <BodyParagraph>
-            While I take pride in my ability to juggle various responsibilities, my true passion at Odin and throughout
-            my career has always been building products. The Odin platform required integration with external vendors
-            and physical hardware, such as turnstiles and cameras, while delivering a user-friendly experience on both
-            web and mobile apps. This ensured that only qualified workers were allowed on site, significantly enhancing
+            My responsibilities as CTO spanned a wide range of areas, but my true passion at Odin and throughout my
+            career has always been building products. The Odin platform required integration with external vendors and
+            physical hardware, such as turnstiles and cameras, while delivering a user-friendly experience on both web
+            and mobile apps. This ensured that only qualified workers were allowed on site, significantly enhancing
             overall project safety. Our tech stack consisted of multiple seamlessly integrated services, providing a
             robust platform that was easy to develop, test, and deploy with GitHub Actions to our Kubernetes clusters in
             Google Cloud:

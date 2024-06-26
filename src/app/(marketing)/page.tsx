@@ -1,9 +1,8 @@
-import { GITHUB_REPO_URL, JOB_TITLE, MY_NAME, RESUME_URL, TAGLINE } from "@/app/constants";
+import { JOB_TITLE, MY_NAME, TAGLINE } from "@/app/constants";
 import Image from "next/image";
 import Section from "@/app/(marketing)/_components/Section";
 import H2 from "@/app/(marketing)/_components/H2";
 import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
-import Card from "@/app/(marketing)/_components/Card";
 import React from "react";
 import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecondaryCta";
 
@@ -35,19 +34,21 @@ export default function Home() {
           />
         </div>
       </Section>
-      <Section darkBg>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:px-40 gap-6">
-          <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL} newTab>
-            Learn more about my work experience.
-          </Card>
-          <Card image="/icons/feather/github.svg" title="Github" link={GITHUB_REPO_URL} newTab>
-            See the source code of this website.
-          </Card>
-        </div>
-      </Section>
-      <Section>
+      {/*<Section darkBg>*/}
+      {/*  <div className="grid grid-cols-1 md:grid-cols-2 lg:px-40 gap-6">*/}
+      {/*    <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL} newTab>*/}
+      {/*      Learn more about my work experience.*/}
+      {/*    </Card>*/}
+      {/*    <Card image="/icons/feather/github.svg" title="Github" link={GITHUB_REPO_URL} newTab>*/}
+      {/*      See the source code of this website.*/}
+      {/*    </Card>*/}
+      {/*  </div>*/}
+      {/*</Section>*/}
+      <Section bgOverride="bg-calypso">
         <div className="container max-w-screen-xl mx-auto px-4 text-center">
-          <H2 marginOverride="mb-7 lg:mb-12">Portfolio</H2>
+          <H2 marginOverride="mb-7 lg:mb-12" additionalClassNames="text-white">
+            Portfolio
+          </H2>
           <PortfolioGrid onlyHighlighted />
         </div>
       </Section>

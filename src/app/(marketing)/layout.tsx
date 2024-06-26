@@ -46,13 +46,27 @@ const dmSansFont = DM_Sans({
   weight: "400",
 });
 
+const dmSansSemiBoldFont = DM_Sans({
+  subsets: ["latin"],
+  weight: "600",
+  variable: "--font-dm-sans-semibold",
+});
+
 export default function MarketingLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={classNames(akiraExpandedFont.variable, archivoBlackFont.variable, dmSansFont.className)}>
+    <html
+      lang="en"
+      className={classNames(
+        akiraExpandedFont.variable,
+        archivoBlackFont.variable,
+        dmSansFont.className,
+        dmSansSemiBoldFont.variable,
+      )}
+    >
       <body className={classNames("bg-astral")}>
         <MarketingNavbar />
         <main>{children}</main>

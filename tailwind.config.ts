@@ -24,11 +24,13 @@ const config: Config = {
       gray: colors.gray,
       white: colors.white,
       slate: colors.slate,
+      red: colors.red,
     },
     extend: {
       fontFamily: {
         akira: ["var(--font-akira-expanded)"],
         archivo: ["var(--font-archivo-black)"],
+        "dm-sans-semibold": ["var(--font-dm-sans-semibold)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

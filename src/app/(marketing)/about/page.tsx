@@ -19,10 +19,10 @@ export default function AboutPage() {
             <Image src="/mike-headshot-2.jpg" alt="Image" height={500} width={500} />
           </div>
           <div className="basis-full lg:basis-2/3 ">
-            <H1>Hey, I&apos;m Mike</H1>
+            <H1 additionalClassNames="text-white">Hey, I&apos;m Mike</H1>
             <BodyText>
-              <BodyParagraph>
-                <span className="text-wheatfield">
+              <BodyParagraph additionalClassNames="text-white">
+                <span>
                   Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about
                   developing products that enhance global well-being. My experience spans healthcare, construction,
                   ecommerce, and social industries. I excel in leading every phase of product development, from ideation
@@ -30,10 +30,10 @@ export default function AboutPage() {
                   designers, product managers, stakeholders, and customers.
                 </span>
               </BodyParagraph>
-              <H2 marginOverride="mt-2 mb-4" additionalClassNames="text-wheatfield">
+              <H2 marginOverride="mt-2 mb-4" additionalClassNames="text-white">
                 Technical Skills
               </H2>
-              <UL additionalClassNames="text-wheatfield">
+              <UL additionalClassNames="text-white">
                 <LI title={"Languages"}>TypeScript/Javascript, Python, PostgreSQL, GraphQL, HTML/CSS, Bash</LI>
                 <LI title={"Frameworks"}>
                   Node.js, React, Next.js, Express, Prisma, OpenAPI/Swagger, Flask, React Native
@@ -49,7 +49,7 @@ export default function AboutPage() {
         <div className="flex flex-wrap-reverse lg:flex-wrap">
           <div className="basis-full lg:basis-2/3 ">
             <H2>Rutgers University</H2>
-            <H4>Bachelor of Science, Computer Science</H4>
+            <H4 additionalClassNames="font-dm-sans-semibold">Bachelor of Science, Computer Science</H4>
             <BodyText>
               <BodyParagraph>
                 After discovering my passion for programming in high school, I pursued a Computer&nbsp;Science degree at
@@ -126,8 +126,10 @@ export default function AboutPage() {
         </BodyText>
       </Section>
       <Section narrowTop narrowBottom></Section>
-      <Section>
-        <H2 marginOverride="mb-8">Some of My Work</H2>
+      <Section bgOverride="bg-astral">
+        <H2 marginOverride="mb-8" additionalClassNames="text-white">
+          Some of My Work
+        </H2>
         <PortfolioGrid onlyHighlighted />
       </Section>
     </>

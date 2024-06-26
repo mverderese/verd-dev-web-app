@@ -21,7 +21,7 @@ export default function PortfolioGrid({ onlyHighlighted }: PortfolioGridProps) {
               >
                 {project.subtitle}
                 <br />
-                <span className="italic">
+                <span className="italic text-base">
                   {project.jobTitle} ({project.startYear} - {project.endYear ?? "Present"})
                 </span>
               </Card>
