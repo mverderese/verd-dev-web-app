@@ -15,7 +15,7 @@ export default function Section({ children, darkBg, narrowTop, narrowBottom }: S
         { "md:pt-16": !narrowTop },
         { "pb-10": !narrowBottom },
         { "md:pb-16": !narrowBottom },
-        { "bg-gray-200": darkBg },
+        { "bg-pampas": darkBg },
       )}
     >
       <div className={classNames("container", "max-w-screen-xl", "mx-auto", "px-4")}>{children}</div>

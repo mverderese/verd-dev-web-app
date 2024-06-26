@@ -1,6 +1,6 @@
 import { portfolioProjects } from "@/app/(marketing)/portfolio/_data";
-import Card from "@/app/_components/marketing/Card";
-import CtaButton from "@/app/_components/marketing/CtaButton";
+import Card from "@/app/(marketing)/_components/Card";
+import CtaButton from "@/app/(marketing)/_components/CtaButton";
 export type PortfolioGridProps = {
   onlyHighlighted?: boolean;
 };

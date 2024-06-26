@@ -1,14 +1,14 @@
 import Image from "next/image";
-import Section from "@/app/_components/marketing/Section";
-import H1 from "@/app/_components/marketing/H1";
-import BodyText from "@/app/_components/marketing/BodyText";
-import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
-import H2 from "@/app/_components/marketing/H2";
-import H4 from "@/app/_components/marketing/H4";
-import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
-import TextLink from "@/app/_components/marketing/TextLink";
-import UL from "@/app/_components/marketing/UL";
-import LI from "@/app/_components/marketing/LI";
+import Section from "@/app/(marketing)/_components/Section";
+import H1 from "@/app/(marketing)/_components/H1";
+import BodyText from "@/app/(marketing)/_components/BodyText";
+import BodyParagraph from "@/app/(marketing)/_components/BodyParagrah";
+import H2 from "@/app/(marketing)/_components/H2";
+import H4 from "@/app/(marketing)/_components/H4";
+import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
+import TextLink from "@/app/(marketing)/_components/TextLink";
+import UL from "@/app/(marketing)/_components/UL";
+import LI from "@/app/(marketing)/_components/LI";
 
 export default function AboutPage() {
   return (

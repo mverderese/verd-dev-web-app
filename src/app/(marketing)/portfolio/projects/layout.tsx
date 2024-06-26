@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { PrimarySecondaryCta } from "@/app/_components/marketing/PrimarySecondaryCta";
+import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecondaryCta";
 
 export type PortfolioProjectLayoutProps = Readonly<{
   children: React.ReactNode;
@@ -13,7 +13,7 @@ export default function PortfolioProjectLayout({ children }: PortfolioProjectLay
         <a href="/portfolio">
           <Image
             src="/icons/feather/chevron-left.svg"
-            className="inline align-top fill-gray-200 hover:fill-gray-100"
+            className="inline align-top fill-pampas hover:fill-gray-50"
             height={20}
             width={28}
             alt="chevron-left"

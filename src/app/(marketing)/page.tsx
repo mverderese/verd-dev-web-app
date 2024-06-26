@@ -1,12 +1,12 @@
 import { GITHUB_REPO_URL, JOB_TITLE, MY_NAME, RESUME_URL, TAGLINE } from "@/app/constants";
 import Image from "next/image";
-import Section from "@/app/_components/marketing/Section";
-import H1 from "@/app/_components/marketing/H1";
-import H2 from "@/app/_components/marketing/H2";
-import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
-import Card from "@/app/_components/marketing/Card";
+import Section from "@/app/(marketing)/_components/Section";
+import H1 from "@/app/(marketing)/_components/H1";
+import H2 from "@/app/(marketing)/_components/H2";
+import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
+import Card from "@/app/(marketing)/_components/Card";
 import React from "react";
-import { PrimarySecondaryCta } from "@/app/_components/marketing/PrimarySecondaryCta";
+import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecondaryCta";
 
 export default function Home() {
   return (
@@ -17,14 +17,14 @@ export default function Home() {
             <Image src="/mike-headshot.jpg" alt="Image" className="rounded-full" height={200} width={200} />
           </div>
 
-          <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-4">{MY_NAME}</h6>
+          <h6 className="font-medium text-river-bed text-lg md:text-2xl  mb-4">{MY_NAME}</h6>
           <H1>{JOB_TITLE}</H1>
-          <p className="font-normal text-gray-600 text-md md:text-xl mb-8">{TAGLINE}</p>
+          <p className="font-normal text-river-bed text-md md:text-xl mb-8">{TAGLINE}</p>
           <PrimarySecondaryCta
             primaryText="About me"
             primaryLink="/about"
             secondaryText="Get in touch"
-            secondaryLink="https://app.reclaim.ai/m/mike-verderese"
+            secondaryLink="https://app.reclaim.ai/m/mike-verderese/flexible-quick-meeting"
             secondaryLinkNewTab
           />
         </div>

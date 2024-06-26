@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import React from "react";
 import "../globals.css";
-import PrelineScript from "@/app/_components/shared/PrelineScript";
-import MarketingNavbar from "@/app/_components/marketing/MarketingNavbar";
+import PrelineScript from "@/app/_components/PrelineScript";
+import MarketingNavbar from "@/app/(marketing)/_components/MarketingNavbar";
 import { IS_INDEXABLE, JOB_TITLE, MY_NAME, SITE_DESCRIPTION } from "@/app/constants";
+import { DM_Sans } from "next/font/google";
+import classNames from "classnames";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const appEnv = process.env.NEXT_PUBLIC_APP_ENV;
@@ -30,6 +32,11 @@ export const metadata: Metadata = {
   },
 };
 
+const dmSansFont = DM_Sans({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export default function MarketingLayout({
   children,
 }: Readonly<{
@@ -37,7 +44,7 @@ export default function MarketingLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-gray-100">
+      <body className={classNames("bg-gray-50", dmSansFont.className)}>
         <MarketingNavbar />
         <main>{children}</main>
       </body>

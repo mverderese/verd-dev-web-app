@@ -1,7 +1,7 @@
-import Section from "@/app/_components/marketing/Section";
-import H1 from "@/app/_components/marketing/H1";
-import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
-import BodyText from "@/app/_components/marketing/BodyText";
+import Section from "@/app/(marketing)/_components/Section";
+import H1 from "@/app/(marketing)/_components/H1";
+import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
+import BodyText from "@/app/(marketing)/_components/BodyText";
 
 export default function PortfolioPage() {
   return (

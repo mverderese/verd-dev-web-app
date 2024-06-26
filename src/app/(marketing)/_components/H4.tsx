@@ -7,5 +7,9 @@ export type H4Props = {
 };
 
 export default function H4({ children, narrowBottom }: H4Props) {
-  return <h4 className={classNames("font-medium text-gray-700 text-xl", { "mb-4": !narrowBottom })}>{children}</h4>;
+  return (
+    <h4 className={classNames("font-medium text-gray-700 text-lg sm:text-xl", { "mb-4": !narrowBottom })}>
+      {children}
+    </h4>
+  );
 }

@@ -1,4 +1,4 @@
-import CtaButton from "@/app/_components/marketing/CtaButton";
+import CtaButton from "@/app/(marketing)/_components/CtaButton";
 import React from "react";
 
 export type PrimarySecondaryCta = {

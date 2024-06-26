@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Section from "@/app/_components/marketing/Section";
+import Section from "@/app/(marketing)/_components/Section";
 import classNames from "classnames";
 
 export type ScreenshotPanelProps = {

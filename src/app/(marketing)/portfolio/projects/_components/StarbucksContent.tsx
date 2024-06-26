@@ -1,7 +1,7 @@
 import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/ScreenshotPanel";
-import BodyText from "@/app/_components/marketing/BodyText";
-import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
-import H2 from "@/app/_components/marketing/H2";
+import BodyText from "@/app/(marketing)/_components/BodyText";
+import BodyParagraph from "@/app/(marketing)/_components/BodyParagrah";
+import H2 from "@/app/(marketing)/_components/H2";
 
 export default function StarbucksContent() {
   return (
