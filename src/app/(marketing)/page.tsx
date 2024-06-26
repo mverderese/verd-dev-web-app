@@ -1,11 +1,11 @@
 import { GITHUB_REPO_URL, JOB_TITLE, MY_NAME, RESUME_URL, TAGLINE } from "@/app/constants";
 import Image from "next/image";
-import Section from "@/app/_components/marketing/Section";
-import H2 from "@/app/_components/marketing/H2";
-import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
-import Card from "@/app/_components/marketing/Card";
+import Section from "@/app/(marketing)/_components/Section";
+import H2 from "@/app/(marketing)/_components/H2";
+import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
+import Card from "@/app/(marketing)/_components/Card";
 import React from "react";
-import { PrimarySecondaryCta } from "@/app/_components/marketing/PrimarySecondaryCta";
+import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecondaryCta";
 
 export default function Home() {
   return (
@@ -25,11 +25,12 @@ export default function Home() {
           <div className="pt-3">
             <div className="text-slate-300 text-md font-normal">{TAGLINE}</div>
           </div>
+
           <PrimarySecondaryCta
             primaryText="Learn more"
             primaryLink="/about"
             secondaryText="Get in touch"
-            secondaryLink="https://app.reclaim.ai/m/mike-verderese"
+            secondaryLink="https://app.reclaim.ai/m/mike-verderese/flexible-quick-meeting"
             secondaryLinkNewTab
           />
         </div>

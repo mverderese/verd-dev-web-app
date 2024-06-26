@@ -1,11 +1,11 @@
-import Section from "@/app/_components/marketing/Section";
-import BodyText from "@/app/_components/marketing/BodyText";
-import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
+import Section from "@/app/(marketing)/_components/Section";
+import BodyText from "@/app/(marketing)/_components/BodyText";
+import BodyParagraph from "@/app/(marketing)/_components/BodyParagrah";
 import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/ScreenshotPanel";
-import H2 from "@/app/_components/marketing/H2";
-import TextLink from "@/app/_components/marketing/TextLink";
-import LI from "@/app/_components/marketing/LI";
-import UL from "@/app/_components/marketing/UL";
+import H2 from "@/app/(marketing)/_components/H2";
+import TextLink from "@/app/(marketing)/_components/TextLink";
+import LI from "@/app/(marketing)/_components/LI";
+import UL from "@/app/(marketing)/_components/UL";
 
 export default function OdinContent() {
   return (
@@ -33,7 +33,19 @@ export default function OdinContent() {
         </BodyText>
       </ScreenshotPanel>
       <Section darkBg>
-        <H2>A Founder&apos;s Many Hats</H2>
+        <div className="flex justify-center">
+          <iframe
+            className="aspect-video w-full lg:max-w-screen-lg"
+            src="https://www.youtube.com/embed/hTFARRzFJ9o?si=2IGubaqSdbr2k0Np"
+            title="YouTube video player - Workforce Visibility with Odin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      </Section>
+      <Section>
+        <H2>C-Level Executive at a Successful Startup</H2>
         <BodyText>
           <BodyParagraph>
             Over the course of four years, my role as Co-Founder & CTO was constantly evolving. In the early days,
@@ -70,8 +82,7 @@ export default function OdinContent() {
           </BodyParagraph>
         </BodyText>
       </Section>
-      {/*<ScreenshotPanel image={"/mac-2t-turnstile.png"} reverse twoThirdsText>*/}
-      <ScreenshotPanel image={"/turnstile-and-wall-reader.png"} reverse twoThirdsText>
+      <ScreenshotPanel image={"/turnstile-and-wall-reader.png"} reverse twoThirdsText darkBg>
         <H2>Automated Access Control and Compliance</H2>
         <BodyText>
           <BodyParagraph>
@@ -111,18 +122,6 @@ export default function OdinContent() {
           </UL>
         </BodyText>
       </ScreenshotPanel>
-      <Section darkBg>
-        <div className="flex justify-center">
-          <iframe
-            className="aspect-video w-full lg:max-w-screen-lg"
-            src="https://www.youtube.com/embed/hTFARRzFJ9o?si=2IGubaqSdbr2k0Np"
-            title="YouTube video player - Workforce Visibility with Odin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-      </Section>
     </>
   );
 }

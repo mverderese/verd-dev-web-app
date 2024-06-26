@@ -2,9 +2,11 @@ import { ReactElement } from "react";
 
 export type PortfolioProject = {
   title: string;
-  year: number;
+  startYear: number;
+  endYear?: number;
   jobTitle: string;
   subtitle: string;
+  summary: string;
   image: string;
   slug?: string;
   externalLink?: string;

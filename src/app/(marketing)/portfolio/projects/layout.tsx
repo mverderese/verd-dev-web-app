@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { PrimarySecondaryCta } from "@/app/_components/marketing/PrimarySecondaryCta";
+import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecondaryCta";
 
 export type PortfolioProjectLayoutProps = Readonly<{
   children: React.ReactNode;

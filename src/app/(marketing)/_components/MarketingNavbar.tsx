@@ -1,7 +1,7 @@
 import React from "react";
 import { RESUME_URL } from "@/app/constants";
-import GithubButton from "@/app/_components/shared/GithubButton";
-import MenuItem from "@/app/_components/marketing/MenuItem";
+import MenuItem from "@/app/(marketing)/_components/MenuItem";
+import GithubButton from "@/app/_components/GithubButton";
 
 export default function MarketingNavbar() {
   return (
@@ -16,7 +16,7 @@ export default function MarketingNavbar() {
             href="/"
             aria-label="Brand"
           >
-            V
+            MV
           </a>
           <a
             className="flex-none text-2xl text-wheatfield font-semibold min-w-[60px] font-archivo hidden sm:block"

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import React from "react";
 import "../globals.css";
-import PrelineScript from "@/app/_components/shared/PrelineScript";
-import MarketingNavbar from "@/app/_components/marketing/MarketingNavbar";
+import PrelineScript from "@/app/_components/PrelineScript";
+import MarketingNavbar from "@/app/(marketing)/_components/MarketingNavbar";
 import { IS_INDEXABLE, JOB_TITLE, MY_NAME, SITE_DESCRIPTION } from "@/app/constants";
 import localFont from "next/font/local";
-import { Archivo_Black } from "next/font/google";
+import { Archivo_Black, DM_Sans } from "next/font/google";
 import classNames from "classnames";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -41,13 +41,18 @@ const akiraExpandedFont = localFont({
 
 const archivoBlackFont = Archivo_Black({ weight: "400", variable: "--font-archivo-black", subsets: ["latin"] });
 
+const dmSansFont = DM_Sans({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export default function MarketingLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={classNames(akiraExpandedFont.variable, archivoBlackFont.variable)}>
+    <html lang="en" className={classNames(akiraExpandedFont.variable, archivoBlackFont.variable, dmSansFont.className)}>
       <body className={classNames("bg-gray-100")}>
         <MarketingNavbar />
         <main>{children}</main>

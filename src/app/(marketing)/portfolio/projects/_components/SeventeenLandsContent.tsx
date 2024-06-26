@@ -1,7 +1,7 @@
 import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/ScreenshotPanel";
-import BodyText from "@/app/_components/marketing/BodyText";
-import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
-import TextLink from "@/app/_components/marketing/TextLink";
+import BodyText from "@/app/(marketing)/_components/BodyText";
+import BodyParagraph from "@/app/(marketing)/_components/BodyParagrah";
+import TextLink from "@/app/(marketing)/_components/TextLink";
 
 export default function SeventeenLandsContent() {
   return (
