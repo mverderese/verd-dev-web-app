@@ -13,7 +13,7 @@ import LI from "@/app/(marketing)/_components/LI";
 export default function AboutPage() {
   return (
     <>
-      <Section>
+      <Section bgOverride="bg-astral">
         <div className="flex flex-wrap">
           <div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-6 ">
             <Image src="/mike-headshot-2.jpg" alt="Image" height={500} width={500} />
@@ -22,14 +22,18 @@ export default function AboutPage() {
             <H1>Hey, I&apos;m Mike</H1>
             <BodyText>
               <BodyParagraph>
-                Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about
-                developing products that enhance global well-being. My experience spans healthcare, construction,
-                ecommerce, and social industries. I excel in leading every phase of product development, from ideation
-                to deployment and growth, and my strong communication skills help bridge gaps between engineers,
-                designers, product managers, stakeholders, and customers.
+                <span className="text-wheatfield">
+                  Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about
+                  developing products that enhance global well-being. My experience spans healthcare, construction,
+                  ecommerce, and social industries. I excel in leading every phase of product development, from ideation
+                  to deployment and growth, and my strong communication skills help bridge gaps between engineers,
+                  designers, product managers, stakeholders, and customers.
+                </span>
               </BodyParagraph>
-              <H2 marginOverride="mt-2 mb-4">Technical Skills</H2>
-              <UL>
+              <H2 marginOverride="mt-2 mb-4" additionalClassNames="text-wheatfield">
+                Technical Skills
+              </H2>
+              <UL additionalClassNames="text-wheatfield">
                 <LI title={"Languages"}>TypeScript/Javascript, Python, PostgreSQL, GraphQL, HTML/CSS, Bash</LI>
                 <LI title={"Frameworks"}>
                   Node.js, React, Next.js, Express, Prisma, OpenAPI/Swagger, Flask, React Native
