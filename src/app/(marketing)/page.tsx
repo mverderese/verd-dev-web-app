@@ -1,10 +1,14 @@
-import { JOB_TITLE, MY_NAME, TAGLINE } from "@/app/constants";
+import { JOB_TITLE, MY_NAME, RESUME_URL, TAGLINE } from "@/app/constants";
 import Image from "next/image";
 import Section from "@/app/(marketing)/_components/Section";
 import H2 from "@/app/(marketing)/_components/H2";
 import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
 import React from "react";
 import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecondaryCta";
+import UL from "@/app/(marketing)/_components/UL";
+import LI from "@/app/(marketing)/_components/LI";
+import BodyText from "@/app/(marketing)/_components/BodyText";
+import CtaButton from "@/app/(marketing)/_components/CtaButton";
 
 export default function Home() {
   return (
@@ -26,14 +30,55 @@ export default function Home() {
           </div>
 
           <PrimarySecondaryCta
-            primaryText="Learn more"
-            primaryLink="/about"
+            primaryText="Resume"
+            primaryLink={RESUME_URL}
+            primaryLinkNewTab
             secondaryText="Get in touch"
             secondaryLink="https://app.reclaim.ai/m/mike-verderese/flexible-quick-meeting"
             secondaryLinkNewTab
           />
         </div>
       </Section>
+      <Section bgOverride="bg-calypso">
+        <div className="flex flex-col items-start lg:flex-row lg:flex-wrap">
+          <div className="lg:basis-1/2 lg:px-4">
+            <H2 marginOverride="mt-2 mb-4" additionalClassNames="text-white font-dm-sans-semibold">
+              Technical Skills
+            </H2>
+            <BodyText>
+              <UL additionalClassNames="text-white">
+                <LI title={"Languages"}>TypeScript/Javascript, Python, PostgreSQL, GraphQL, HTML/CSS, Bash</LI>
+                <LI title={"Frameworks"}>
+                  Node.js, React, Next.js, Express, Prisma, OpenAPI/Swagger, Flask, React Native
+                </LI>
+                <LI title={"Platforms"}>GitHub Actions, Terraform, GCP, AWS, Docker, Datadog, Looker, Segment, GA4</LI>
+                <LI title={"Team Management & Collaboration"}>GitHub, Shortcut, Jira, Asana, Figma</LI>
+              </UL>
+            </BodyText>
+          </div>
+          <div className="lg:basis-1/2 lg:px-4 mt-12 lg:mt-0">
+            <H2 marginOverride="mb-4" additionalClassNames="text-white font-dm-sans-semibold">
+              Leadership Skills
+            </H2>
+            <BodyText>
+              <UL additionalClassNames="text-white">
+                <LI title={"Skill 1"}>Explanation of skill 1 that is long enough that it takes up two lines</LI>
+                <LI title={"Skill 2"}>Explanation of skill 2 that is long enough that it takes up two lines</LI>
+                <LI title={"Skill 3"}>Explanation of skill 3 that is long enough that it takes up two lines</LI>
+                <LI title={"Skill 4"}>Explanation of skill 4 that is long enough that it takes up two lines</LI>
+              </UL>
+            </BodyText>
+          </div>
+        </div>
+        <div className="text-center">
+          <div className="flex justify-center pt-12">
+            <CtaButton widthOverride="w-[250px]" link={"/about"}>
+              Learn more about me
+            </CtaButton>
+          </div>
+        </div>
+      </Section>
+
       {/*<Section darkBg>*/}
       {/*  <div className="grid grid-cols-1 md:grid-cols-2 lg:px-40 gap-6">*/}
       {/*    <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL} newTab>*/}
@@ -44,8 +89,8 @@ export default function Home() {
       {/*    </Card>*/}
       {/*  </div>*/}
       {/*</Section>*/}
-      <Section bgOverride="bg-calypso">
-        <div className="container max-w-screen-xl mx-auto px-4 text-center">
+      <Section bgOverride="bg-astral">
+        <div className="container max-w-screen-xl mx-auto px-4 ">
           <H2 marginOverride="mb-7 lg:mb-12" additionalClassNames="text-white">
             Portfolio
           </H2>

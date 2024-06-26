@@ -18,15 +18,16 @@ export default function OdinContent() {
             <TextLink link="https://useodin.com/" newTab>
               Odin
             </TextLink>{" "}
-            in March of 2020, our goal was to develop software that replaces manual, paper-based processes for tracking
-            training and certifications. This ensures that every worker on site is properly trained and certified,
-            enhancing overall safety. Despite the challenges of a global pandemic, economic downturn, and a construction
-            slowdown, we successfully bootstrapped the company, generating over $1 million in revenue in our first year.
-            This growth was led by the usage of Odin at Hudson Yards, the largest privately-funded construction project
-            in the world.
+            in March of 2020, our goal was to develop software that replaced manual, paper-based processes for tracking
+            training and certifications, enhancing overall safety and reducing insurance costs of construction projects.
+            Despite the challenges of a global pandemic, economic downturn, and a construction slowdown, we successfully
+            bootstrapped the company, generating over $1 million in revenue in our first year. This growth was led by
+            the usage of Odin at Hudson Yards, the largest privately-funded construction project in the world. We
+            successfully raised a $3 million seed round led by First Round Capital, enabling us to expand our team and
+            customer base.
           </BodyParagraph>
           <H4 additionalClassNames="font-dm-sans-semibold mb-2" narrowBottom>
-            By the Numbers:
+            Odin&apos;s Metrics After 4 Years:
           </H4>
           <UL additionalClassNames="mb-6 text-pretty">
             <LI>12% Q/Q revenue growth</LI>
@@ -38,7 +39,7 @@ export default function OdinContent() {
       </ScreenshotPanel>
       <Section darkBg>
         <div className="flex justify-center">
-          <H2 additionalClassNames="mb-9">See the Value of Odin</H2>
+          <H2 additionalClassNames="mb-9">See Odin in Action</H2>
         </div>
         <div className="flex justify-center">
           <iframe
@@ -98,13 +99,11 @@ export default function OdinContent() {
         <H2>A Highly-Sophisticated Easy-to-Use Platform</H2>
         <BodyText>
           <BodyParagraph>
-            My responsibilities as CTO spanned a wide range of areas, but my true passion at Odin and throughout my
-            career has always been building products. The Odin platform required integration with external vendors and
-            physical hardware, such as turnstiles and cameras, while delivering a user-friendly experience on both web
-            and mobile apps. This ensured that only qualified workers were allowed on site, significantly enhancing
-            overall project safety. Our tech stack consisted of multiple seamlessly integrated services, providing a
-            robust platform that was easy to develop, test, and deploy with GitHub Actions to our Kubernetes clusters in
-            Google Cloud:
+            The Odin platform required integration with external vendors and physical hardware, such as turnstiles and
+            cameras, while delivering a user-friendly experience on both web and mobile apps. This ensured that only
+            qualified workers were allowed on site, significantly enhancing overall project safety. Our tech stack
+            consisted of multiple seamlessly integrated services, providing a robust platform that was easy to develop,
+            test, and deploy with GitHub Actions to our Kubernetes clusters in Google Cloud:
           </BodyParagraph>
           <UL additionalClassNames="mb-6">
             <LI title={"Web App"}>

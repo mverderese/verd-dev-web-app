@@ -7,8 +7,6 @@ import H2 from "@/app/(marketing)/_components/H2";
 import H4 from "@/app/(marketing)/_components/H4";
 import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
 import TextLink from "@/app/(marketing)/_components/TextLink";
-import UL from "@/app/(marketing)/_components/UL";
-import LI from "@/app/(marketing)/_components/LI";
 
 export default function AboutPage() {
   return (
@@ -30,17 +28,6 @@ export default function AboutPage() {
                   designers, product managers, stakeholders, and customers.
                 </span>
               </BodyParagraph>
-              <H2 marginOverride="mt-2 mb-4" additionalClassNames="text-white">
-                Technical Skills
-              </H2>
-              <UL additionalClassNames="text-white">
-                <LI title={"Languages"}>TypeScript/Javascript, Python, PostgreSQL, GraphQL, HTML/CSS, Bash</LI>
-                <LI title={"Frameworks"}>
-                  Node.js, React, Next.js, Express, Prisma, OpenAPI/Swagger, Flask, React Native
-                </LI>
-                <LI title={"Platforms"}>GitHub Actions, Terraform, GCP, AWS, Docker, Datadog, Looker, Segment, GA4</LI>
-                <LI title={"Team Management & Collaboration"}>GitHub, Shortcut, Jira, Asana, Figma</LI>
-              </UL>
             </BodyText>
           </div>
         </div>
