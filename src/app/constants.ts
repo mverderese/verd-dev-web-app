@@ -1,6 +1,6 @@
 export const MY_NAME = "Mike Verderese";
 export const JOB_TITLE = "Software Engineering Leader";
-export const TAGLINE = "I take software visions and make them real";
+export const TAGLINE = "I transform software visions into reality.";
 export const SITE_DESCRIPTION =
   "Mike Verderese's portfolio website: a showcase of 10+ years of software engineering leadership and product development.";
 export const GITHUB_REPO_URL = "https://github.com/mverderese/verd-dev-web-app";
