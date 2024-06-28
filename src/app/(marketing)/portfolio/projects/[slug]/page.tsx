@@ -1,5 +1,5 @@
 import { portfolioProjects } from "@/app/(marketing)/portfolio/_data";
-import H1 from "@/app/_components/marketing/H1";
+import H1 from "@/app/(marketing)/_components/H1";
 import ProjectHeroPanel from "@/app/(marketing)/portfolio/projects/_components/ProjectHeroPanel";
 
 export type ProjectPageProps = {

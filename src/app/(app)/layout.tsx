@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import React from "react";
 import "../globals.css";
-import PrelineScript from "@/app/_components/shared/PrelineScript";
-import AppHeader from "@/app/_components/app/AppHeader";
-import AppSidebar from "@/app/_components/app/AppSidebar";
 import { APP_TITLE, IS_INDEXABLE } from "@/app/constants";
+import AppHeader from "./_components/AppHeader";
+import AppSidebar from "./_components/AppSidebar";
+import PrelineScript from "../_components/PrelineScript";
 
 export const metadata: Metadata = {
   title: APP_TITLE,

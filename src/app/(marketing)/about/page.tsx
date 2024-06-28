@@ -1,42 +1,39 @@
 import Image from "next/image";
-import Section from "@/app/_components/marketing/Section";
-import H1 from "@/app/_components/marketing/H1";
-import BodyText from "@/app/_components/marketing/BodyText";
-import BodyParagraph from "@/app/_components/marketing/BodyParagrah";
-import H2 from "@/app/_components/marketing/H2";
-import H4 from "@/app/_components/marketing/H4";
-import PortfolioGrid from "@/app/_components/marketing/PortfolioGrid";
-import TextLink from "@/app/_components/marketing/TextLink";
-import UL from "@/app/_components/marketing/UL";
-import LI from "@/app/_components/marketing/LI";
+import Section from "@/app/(marketing)/_components/Section";
+import H1 from "@/app/(marketing)/_components/H1";
+import BodyText from "@/app/(marketing)/_components/BodyText";
+import BodyParagraph from "@/app/(marketing)/_components/BodyParagrah";
+import H2 from "@/app/(marketing)/_components/H2";
+import H4 from "@/app/(marketing)/_components/H4";
+import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
+import TextLink from "@/app/(marketing)/_components/TextLink";
 
 export default function AboutPage() {
   return (
     <>
-      <Section>
+      <Section bgOverride="bg-astral">
         <div className="flex flex-wrap">
           <div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-6 ">
-            <Image src="/mike-headshot-2.jpg" alt="Image" height={500} width={500} />
+            <Image
+              className="sm:max-h-80 object-contain"
+              src="/mike-headshot-2.jpg"
+              alt="Image"
+              height={500}
+              width={500}
+            />
           </div>
           <div className="basis-full lg:basis-2/3 ">
-            <H1>Hey, I&apos;m Mike</H1>
+            <H1 additionalClassNames="text-white sm:mt-0.5">Hey, I&apos;m Mike</H1>
             <BodyText>
-              <BodyParagraph>
-                Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about
-                developing products that enhance global well-being. My experience spans healthcare, construction,
-                ecommerce, and social industries. I excel in leading every phase of product development, from ideation
-                to deployment and growth, and my strong communication skills help bridge gaps between engineers,
-                designers, product managers, stakeholders, and customers.
+              <BodyParagraph additionalClassNames="text-white">
+                <span>
+                  Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about
+                  developing products that enhance global well-being. My experience spans healthcare, construction,
+                  ecommerce, and social industries. I excel in leading every phase of product development, from ideation
+                  to deployment and growth, and my strong communication skills help bridge gaps between engineers,
+                  designers, product managers, stakeholders, and customers.
+                </span>
               </BodyParagraph>
-              <H2 marginOverride="mt-2 mb-4">Technical Skills</H2>
-              <UL>
-                <LI title={"Languages"}>TypeScript/Javascript, Python, PostgreSQL, GraphQL, HTML/CSS, Bash</LI>
-                <LI title={"Frameworks"}>
-                  Node.js, React, Next.js, Express, Prisma, OpenAPI/Swagger, Flask, React Native
-                </LI>
-                <LI title={"Platforms"}>GitHub Actions, Terraform, GCP, AWS, Docker, Datadog, Looker, Segment, GA4</LI>
-                <LI title={"Team Management & Collaboration"}>GitHub, Shortcut, Jira, Asana, Figma</LI>
-              </UL>
             </BodyText>
           </div>
         </div>
@@ -45,8 +42,8 @@ export default function AboutPage() {
         <div className="flex flex-wrap-reverse lg:flex-wrap">
           <div className="basis-full lg:basis-2/3 ">
             <H2>Rutgers University</H2>
-            <H4>Bachelor of Science, Computer Science</H4>
-            <BodyText>
+            <H4 additionalClassNames="font-dm-sans-semibold">Bachelor of Science, Computer Science</H4>
+            <BodyText additionalClassNames="">
               <BodyParagraph>
                 After discovering my passion for programming in high school, I pursued a Computer&nbsp;Science degree at
                 Rutgers&nbsp;University. I focused on courses that enhanced my product development skills, such as
@@ -59,7 +56,13 @@ export default function AboutPage() {
             </BodyText>
           </div>
           <div className="basis-full lg:basis-1/3 pb-6 lg:pb-0 lg:pt-3 lg:pr-6 max-w-80 mx-auto">
-            <Image src="/icons/rutgers-seal.svg" alt="Image" height={500} width={500} />
+            <Image
+              src="/icons/rutgers-seal.svg"
+              alt="Image"
+              height={500}
+              width={500}
+              className="sm:max-h-80 object-contain"
+            />
           </div>
         </div>
       </Section>
@@ -75,22 +78,20 @@ export default function AboutPage() {
               grew to tens of thousands of users. Eventually, we were acquired by Mark Cuban Companies.
             </BodyParagraph>
             <BodyParagraph>
-              Since my early days of building companies out of dorm rooms and apartments, I’ve brought my passion for
-              product development, resourcefulness, and strong work ethic to every role. Over the past decade, I’ve
-              worked with companies of all sizes, from pre-seed startups to multi-billion-dollar corporations. Notably,
-              I led a team of four engineers to rebuild the entire{" "}
+              Over the past decade, I’ve worked with companies of all sizes, from pre-seed startups to
+              multi-billion-dollar corporations. Notably, I worked with a team of four engineers to rebuild the entire{" "}
               <TextLink link="/portfolio/projects/starbucks">Starbucks&nbsp;Ecommerce&nbsp;Store</TextLink> in three
-              months, generating over $100 million in holiday revenue. Following that, I joined{" "}
-              <TextLink link="/portfolio/projects/renew">Renew</TextLink> as their first software engineer, where I
-              built the API and DevOps process for the Medicare Plan Finder and Customer Success platforms, while
-              mentoring and leading other engineers.
+              months, generating over $100 million in holiday revenue. Following that, I joined the founding team of{" "}
+              <TextLink link="/portfolio/projects/renew">Renew</TextLink>, where I built the API and DevOps process for
+              the Medicare Plan Finder and Customer Success platforms, while mentoring and leading other engineers.
             </BodyParagraph>
             <BodyParagraph>
-              In 2020, I returned to the founder seat, teaming up with two close colleagues to create{" "}
-              <TextLink link="/portfolio/projects/odin">Odin</TextLink>, a premier workforce management and visibility
-              platform for construction. Despite the global pandemic, economic downturn, and construction slowdown, we
-              secured funding from top VCs like First Round and Fifth Wall, expanded our team, and landed numerous
-              construction projects. Today, Odin manages over 20,000 workers across 700 contractors nationwide.
+              In 2020, I co-founded <TextLink link="/portfolio/projects/odin">Odin</TextLink>, a workforce management
+              and visibility platform for construction, bootstrapping the company to $1 million in revenue in the first
+              year. I lead the development of a software platform that integrates with external vendors and physical
+              hardware, such as turnstiles and cameras, while delivering a user-friendly experience on both web and
+              mobile apps.Today, Odin manages over 20,000 workers across 700 contractors nationwide, while growing 12%
+              per quarter.
             </BodyParagraph>
             <BodyParagraph>
               Currently, I am the Head of Engineering at Red Krypton, a design, development, and marketing agency. We
@@ -122,8 +123,10 @@ export default function AboutPage() {
         </BodyText>
       </Section>
       <Section narrowTop narrowBottom></Section>
-      <Section>
-        <H2 marginOverride="mb-8">Some of My Work</H2>
+      <Section bgOverride="bg-astral">
+        <H2 marginOverride="mb-8" additionalClassNames="text-white">
+          Some of My Work
+        </H2>
         <PortfolioGrid onlyHighlighted />
       </Section>
     </>
