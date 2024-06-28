@@ -10,22 +10,27 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        akira: ["var(--font-akira-expanded)"],
+        archivo: ["var(--font-archivo-black)"],
+        "dm-sans-semibold": ["var(--font-dm-sans-semibold)"],
+      },
+      colors: {
+        // https://color.adobe.com/astral-shades-color-theme-54738f1b-396f-43b3-b6d2-1f5927c860e0
+        calypso: "#2F6282",
+        astral: "#3C7DA6",
+        wheatfield: "#F2E8C9",
+        gray: colors.gray,
+        white: colors.white,
+        slate: colors.slate,
+        red: colors.red,
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      colors: {
-        white: colors.white,
-        black: colors.black,
-        gray: colors.gray,
-        slate: colors.slate,
-        "blue-stone": "#025159",
-        "robins-egg-blue": "#04BFBF",
-        pampas: "#F4F1ED",
-        "river-bed": "#4B5563",
-      },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("preline/plugin")],
+  plugins: [require("@tailwindcss/forms"), require("preline/plugin"), require("@designbycode/tailwindcss-text-stroke")],
 };
 export default config;

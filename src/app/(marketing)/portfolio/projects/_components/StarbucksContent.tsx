@@ -1,7 +1,8 @@
 import ScreenshotPanel from "@/app/(marketing)/portfolio/projects/_components/ScreenshotPanel";
 import BodyText from "@/app/(marketing)/_components/BodyText";
 import BodyParagraph from "@/app/(marketing)/_components/BodyParagrah";
-import H2 from "@/app/(marketing)/_components/H2";
+import LI from "@/app/(marketing)/_components/LI";
+import UL from "@/app/(marketing)/_components/UL";
 
 export default function StarbucksContent() {
   return (
@@ -9,21 +10,34 @@ export default function StarbucksContent() {
       <ScreenshotPanel image={"/screenshots/starbucks-coffee-grid-desktop.jpg"}>
         <BodyText>
           <BodyParagraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ornare lectus sit amet est placerat in. Cursus risus at ultrices mi tempus. Faucibus
-            pulvinar elementum integer enim neque volutpat ac tincidunt. Tincidunt lobortis feugiat vivamus at augue. Ac
-            auctor augue mauris augue neque gravida.
+            For years, Starbucks operated an Ecommerce store on an early version of Salesforce Commerce Cloud (formerly
+            Demandware) that proved sluggish, prone to errors, and lacked mobile compatibility. The company was
+            preparing to launch a new product, Verismo, by displaying these products in-store to drive online sales,
+            eliminating the need for customers to purchase in-store and carry out. Our team was responsible for
+            rebuilding the entire site from scratch in React in three months, while leveraging the existing hosting
+            capabilities of Demandware. In that time, I was responsible for:
           </BodyParagraph>
-        </BodyText>
-      </ScreenshotPanel>
-      <ScreenshotPanel image={"/screenshots/starbucks-coffee-grid-mobile.jpg"} twoThirdsText reverse darkBg>
-        <H2>A Mobile-first Experience</H2>
-        <BodyText>
+          <UL additionalClassNames="mb-6">
+            <LI title={"React Frontend Architecture"}>
+              Designed the overall structure of the React web application and Redux store with server-side rendering,
+              user account token management, and asynchronous cart interactions.
+            </LI>
+            <LI title={"Hosting in Demandware"}>
+              Created an automated service that would pre-render every page of the React application to static HTML and
+              upload it to custom pages in Demandware via the Admin API. This allowed us to leverage the existing
+              hosting capabilities that had already been through a security audit, allowing us to hit the deadline of
+              the holiday season.
+            </LI>
+            <LI title={"Team Coordination"}>
+              Coordinated between our team and various stakeholders across the Starbucks organization to ensure a
+              seamless launch of hundreds of coffee, tea, drinkware, and gift products.
+            </LI>
+          </UL>
           <BodyParagraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ornare lectus sit amet est placerat in. Cursus risus at ultrices mi tempus. Faucibus
-            pulvinar elementum integer enim neque volutpat ac tincidunt. Tincidunt lobortis feugiat vivamus at augue. Ac
-            auctor augue mauris augue neque gravida.
+            We successfully launched the new version of the e-commerce store in early November, just in time for the
+            holiday season. The updated site ensured that the Verismo, along with all of Starbucks&apos; other products,
+            was available for online shoppers. During this period, the online store was automatically displayed to any
+            Starbucks customer connecting to in-store Wi-Fi, generating over $100 million in revenue.
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>

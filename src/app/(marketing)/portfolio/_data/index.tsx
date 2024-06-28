@@ -24,7 +24,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     title: "Great Many",
-    startYear: 2024,
+    startYear: 2023,
     subtitle: "Your Home for Hair Growth",
     jobTitle: "Head of Engineering",
     summary:
@@ -38,12 +38,13 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     title: "Renew",
     startYear: 2017,
-    endYear: 2019,
+    endYear: 2020,
     subtitle: "Retirement With a Smile",
     jobTitle: "Senior Software Engineer",
     summary: "Led the design and implementation of the API and DevOps platforms for a healthcare startup.",
     image: "/icons/renew-logo.png",
     slug: "renew",
+    highlighted: true,
     content: <RenewContent />,
   },
   {
@@ -56,7 +57,6 @@ export const portfolioProjects: PortfolioProject[] = [
       "Redesigned and rebuilt the entire ecommerce store in three months, generating $100M in revenue during the holiday season.",
     image: "/icons/starbucks-logo-icon.webp",
     slug: "starbucks",
-    highlighted: true,
     content: <StarbucksContent />,
   },
   {
@@ -77,7 +77,7 @@ export const portfolioProjects: PortfolioProject[] = [
     subtitle: "Responsible Drinking App",
     jobTitle: "Co-Founder & CTO",
     summary:
-      "Founded a responsible drinking app while attending college-full time, which garnered national viral media attention.",
+      "Founded a responsible drinking app while attending college full-time, which garnered national viral media attention.",
     image: "/icons/shots-igot-logo.jpeg",
     slug: "shots-igot",
     content: <ShotsIGotContent />,
@@ -86,11 +86,19 @@ export const portfolioProjects: PortfolioProject[] = [
     title: "17Lands",
     startYear: 2023,
     subtitle: "Unlock Your Magic: The Gathering Data",
-    jobTitle: "Volunteer Software Engineer",
+    jobTitle: "Software Engineer",
     summary: "Led the creation of a scalable architecture and development process for a team of new developers.",
     image: "/icons/mtg-logo.png",
     slug: "17-lands",
     externalLink: "https://www.17lands.com/",
     content: <SeventeenLandsContent />,
+  },
+  {
+    title: "mikeverderese.com",
+    startYear: 2023,
+    subtitle: "Showcase of Modern Web Development",
+    jobTitle: "Lead Software Engineer",
+    image: "/icons/feather/github.svg",
+    externalLink: "https://github.com/mverderese/verd-dev-web-app",
   },
 ];

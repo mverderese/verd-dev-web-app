@@ -13,11 +13,11 @@ export type CardProps = {
 export default function Card({ image, title, children, link, newTab }: CardProps) {
   return (
     <a href={link} target={newTab ? "_blank" : ""}>
-      <div className="bg-white px-8 py-10 rounded-md hover:bg-gray-50 text-left">
+      <div className="bg-white px-8 py-10 rounded-md hover:bg-gray-100 text-left">
         <div className="w-20 flex justify-center mb-8">
           <Image src={image} height={100} width={100} alt={`Card icon for ${title}`} />
         </div>
-        <H4>{title}</H4>
+        <H4 additionalClassNames="font-dm-sans-semibold">{title}</H4>
         <BodyText additionalClassNames="text-lg md:text-lg">{children}</BodyText>
       </div>
     </a>
