@@ -14,10 +14,16 @@ export default function AboutPage() {
       <Section bgOverride="bg-astral">
         <div className="flex flex-wrap">
           <div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-6 ">
-            <Image src="/mike-headshot-2.jpg" alt="Image" height={500} width={500} />
+            <Image
+              className="sm:max-h-80 object-contain"
+              src="/mike-headshot-2.jpg"
+              alt="Image"
+              height={500}
+              width={500}
+            />
           </div>
           <div className="basis-full lg:basis-2/3 ">
-            <H1 additionalClassNames="text-white">Hey, I&apos;m Mike</H1>
+            <H1 additionalClassNames="text-white sm:mt-0.5">Hey, I&apos;m Mike</H1>
             <BodyText>
               <BodyParagraph additionalClassNames="text-white">
                 <span>
@@ -37,7 +43,7 @@ export default function AboutPage() {
           <div className="basis-full lg:basis-2/3 ">
             <H2>Rutgers University</H2>
             <H4 additionalClassNames="font-dm-sans-semibold">Bachelor of Science, Computer Science</H4>
-            <BodyText>
+            <BodyText additionalClassNames="">
               <BodyParagraph>
                 After discovering my passion for programming in high school, I pursued a Computer&nbsp;Science degree at
                 Rutgers&nbsp;University. I focused on courses that enhanced my product development skills, such as
@@ -50,7 +56,13 @@ export default function AboutPage() {
             </BodyText>
           </div>
           <div className="basis-full lg:basis-1/3 pb-6 lg:pb-0 lg:pt-3 lg:pr-6 max-w-80 mx-auto">
-            <Image src="/icons/rutgers-seal.svg" alt="Image" height={500} width={500} />
+            <Image
+              src="/icons/rutgers-seal.svg"
+              alt="Image"
+              height={500}
+              width={500}
+              className="sm:max-h-80 object-contain"
+            />
           </div>
         </div>
       </Section>
@@ -66,22 +78,20 @@ export default function AboutPage() {
               grew to tens of thousands of users. Eventually, we were acquired by Mark Cuban Companies.
             </BodyParagraph>
             <BodyParagraph>
-              Since my early days of building companies out of dorm rooms and apartments, I’ve brought my passion for
-              product development, resourcefulness, and strong work ethic to every role. Over the past decade, I’ve
-              worked with companies of all sizes, from pre-seed startups to multi-billion-dollar corporations. Notably,
-              I led a team of four engineers to rebuild the entire{" "}
+              Over the past decade, I’ve worked with companies of all sizes, from pre-seed startups to
+              multi-billion-dollar corporations. Notably, I worked with a team of four engineers to rebuild the entire{" "}
               <TextLink link="/portfolio/projects/starbucks">Starbucks&nbsp;Ecommerce&nbsp;Store</TextLink> in three
-              months, generating over $100 million in holiday revenue. Following that, I joined{" "}
-              <TextLink link="/portfolio/projects/renew">Renew</TextLink> as their first software engineer, where I
-              built the API and DevOps process for the Medicare Plan Finder and Customer Success platforms, while
-              mentoring and leading other engineers.
+              months, generating over $100 million in holiday revenue. Following that, I joined the founding team of{" "}
+              <TextLink link="/portfolio/projects/renew">Renew</TextLink>, where I built the API and DevOps process for
+              the Medicare Plan Finder and Customer Success platforms, while mentoring and leading other engineers.
             </BodyParagraph>
             <BodyParagraph>
-              In 2020, I returned to the founder seat, teaming up with two close colleagues to create{" "}
-              <TextLink link="/portfolio/projects/odin">Odin</TextLink>, a premier workforce management and visibility
-              platform for construction. Despite the global pandemic, economic downturn, and construction slowdown, we
-              secured funding from top VCs like First Round and Fifth Wall, expanded our team, and landed numerous
-              construction projects. Today, Odin manages over 20,000 workers across 700 contractors nationwide.
+              In 2020, I co-founded <TextLink link="/portfolio/projects/odin">Odin</TextLink>, a workforce management
+              and visibility platform for construction, bootstrapping the company to $1 million in revenue in the first
+              year. I lead the development of a software platform that integrates with external vendors and physical
+              hardware, such as turnstiles and cameras, while delivering a user-friendly experience on both web and
+              mobile apps.Today, Odin manages over 20,000 workers across 700 contractors nationwide, while growing 12%
+              per quarter.
             </BodyParagraph>
             <BodyParagraph>
               Currently, I am the Head of Engineering at Red Krypton, a design, development, and marketing agency. We

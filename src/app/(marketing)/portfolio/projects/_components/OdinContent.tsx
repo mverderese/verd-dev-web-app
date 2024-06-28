@@ -54,44 +54,22 @@ export default function OdinContent() {
       </Section>
       <Section>
         <H2>CTO at a High-Growth Startup</H2>
-        <H4 additionalClassNames="italic ">
-          <span className="text-red-600">
-            This section needs to be condensed and focus more on leadership and engineering{" "}
-          </span>
-        </H4>
         <BodyText>
           <BodyParagraph>
-            Over the course of four years, my role as Co-Founder & CTO was constantly evolving. In the early days,
-            building the MVP of our platform was the top priority. Our Head of Product and I would talk to prospective
-            customers and learn as much as we could about an industry we knew little about. I then worked with our
-            engineers, leading the architectural design of the platform and tirelessly writing code and iterating until
-            we were ready to launch on our first site.
+            Over the course of four years, my role as Co-Founder & CTO was constantly evolving. In the early days, I led
+            a team of four engineers to build a software platform in six months. This platform could onboard workers,
+            track certifications, integrate with turnstile and badge printing systems, and provide custom workforce
+            reports. We launched the product at Hudson Yards, managing over 2,000 workers per day. Gathering user
+            feedback and iterating on the product quickly for customers who were not accustomed to using technology was
+            critical for adoption.
           </BodyParagraph>
           <BodyParagraph>
-            Once we launched, I took on the role of a one-person customer success team. Traveling from Philadelphia to
-            New York multiple times a week, I worked closely with the site safety team in their trailer, teaching them
-            how to use the product, understanding their daily tasks, and gathering feedback. I reported this feedback to
-            our team, collaborated with them through the evening (as most were based on the West Coast), pushed out new
-            versions, and returned to New York the next day to demonstrate the updates to the onsite team. This
-            iterative process ensured continuous improvement and alignment with our users&apos; needs.
-          </BodyParagraph>
-          <BodyParagraph>
-            As the team grew, we secured seed investment from First Round Capital and other VCs, with the goal of
-            boosting revenue by any means necessary. Within nine months, the team doubled in size, and I assumed roles
-            as a people manager, tech leader, and operations manager. We continuously added features, improved internal
-            engineering efficiencies, and onboarded new construction sites, requiring coordination with stakeholders,
-            hardware installation vendors, and our customer success team. During this period, I facilitated the
-            advancement of several engineers from mid-level to senior roles. Additionally, I spearheaded our effort to
-            achieve SOC 2 Type 1 compliance, enabling us to attract larger customers with stringent cybersecurity
-            requirements.
-          </BodyParagraph>
-          <BodyParagraph>
-            When the tech downturn of 2023 hit, Odin was not immune. The strategy shifted from growth to cutting burn
-            rapidly. We faced the tough decision to lay off several employees while maintaining the same customer base.
-            My responsibilities expanded as I took on building hardware units myself when possible, performing on-site
-            installations and support, leading sales calls with prospective customers, and continuing to lead our
-            engineering team. This forced us to return to our early, scrappy approach to business. Despite the
-            challenges, in the last 12 months of my tenure, Odin achieved a 12% quarter-over-quarter growth in revenue.
+            As the team and our customer base grew, we secured seed investment from First Round Capital and doubled the
+            team size within nine months. I was responsible for providing the technical strategy for the entire company,
+            managing a team of eight engineers, and leading the design of the platform. During this period, I advanced
+            several engineers from mid-level to senior roles. Additionally, I spearheaded our effort to achieve SOC 2
+            Type 1 compliance, attracting larger customers with stringent cybersecurity requirements. In the last 12
+            months of my tenure, Odin achieved a 12% quarter-over-quarter growth in revenue.
           </BodyParagraph>
         </BodyText>
       </Section>
