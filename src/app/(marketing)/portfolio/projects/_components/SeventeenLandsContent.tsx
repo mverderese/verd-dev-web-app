@@ -21,10 +21,12 @@ export default function SeventeenLandsContent() {
             In April 2023, I joined this volunteer team with a cohort of eight others, more than doubling the number of
             contributors. I immediately took the lead in organizing and refactoring the codebase, introducing formatting
             and linting tools, and ensuring smooth local development for new contributors by cleaning up the Docker
-            setup and creating contribution guidelines and processes. Once the team was set up for success, we quickly
-            added long-requested features, leading to the launch of a Patreon to help fund AWS costs for running the
-            site. I continue to contribute to this project whenever possible and love seeing the community&apos;s
-            excitement with each new improvement we release.
+            setup and creating contribution guidelines and processes.
+          </BodyParagraph>
+          <BodyParagraph>
+            Once the team was set up for success, we quickly added long-requested features, leading to the launch of a
+            Patreon to help fund AWS costs for running the site. I continue to contribute to this project whenever
+            possible and love seeing the community&apos;s excitement with each new improvement we release.
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>

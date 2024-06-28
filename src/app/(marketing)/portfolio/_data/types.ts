@@ -6,7 +6,7 @@ export type PortfolioProject = {
   endYear?: number;
   jobTitle: string;
   subtitle: string;
-  summary: string;
+  summary?: string;
   image: string;
   slug?: string;
   externalLink?: string;

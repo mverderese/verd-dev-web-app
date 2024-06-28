@@ -56,12 +56,9 @@ export default function TagContent() {
             story.
           </BodyParagraph>
           <BodyParagraph>
-            In 2015, our journey with Tag came to an end. Despite our best efforts and significant traction, we couldn’t
-            surpass the dominance of major players like Snapchat. Nonetheless, we built an incredible product that I’m
-            extremely proud of, and our investors recognized its value. We sold the app to Mark Cuban Companies,
-            enabling the integration of our technology into their portfolio. During my three years at Tag, I acquired
-            skills that I carry with me to every new endeavor: scrappiness, self-sufficiency, perseverance, and
-            determination.
+            In 2015, we sold the app to Mark Cuban Companies, enabling the integration of our technology into their
+            portfolio. During my three years at Tag, I acquired skills that I carry with me to every new endeavor:
+            scrappiness, self-sufficiency, perseverance, and determination.
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>

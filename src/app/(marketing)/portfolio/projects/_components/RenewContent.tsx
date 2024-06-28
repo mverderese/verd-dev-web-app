@@ -11,12 +11,10 @@ export default function RenewContent() {
       <ScreenshotPanel image={"/screenshots/renew-medicare-plan-finder.png"}>
         <BodyText>
           <BodyParagraph>
-            I was invited by the Co-Founder & CTO to join the founding team of Renew, a Venrock-backed healthcare
-            startup led by the former Co-Founder & CEO of Oscar Health. Renew&apos;s mission was to simplify the
-            transition into retirement, focusing on health, wealth, and time. As the lead backend and DevOps engineer, I
-            was responsible for designing and building the API, as well as the automated infrastructure provisioning and
-            deployment pipeline for the Medicare Plan Finder platform. This involved managing numerous services and
-            integrations, including:
+            Renew&apos;s mission was to simplify the transition into retirement, focusing on health, wealth, and time.
+            As the lead backend and DevOps engineer, I was responsible for designing and building the API, as well as
+            the automated infrastructure provisioning and deployment pipeline for the Medicare Plan Finder platform.
+            This involved managing numerous services and integrations, including:
           </BodyParagraph>
           <UL>
             <LI title={"Platform API"}>

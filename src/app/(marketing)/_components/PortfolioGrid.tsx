@@ -17,7 +17,8 @@ export default function PortfolioGrid({ onlyHighlighted }: PortfolioGridProps) {
                 image={project.image}
                 title={onlyHighlighted ? project.title : `${project.title}`}
                 key={project.title}
-                link={`/portfolio/projects/${project.slug}`}
+                link={project.slug ? `/portfolio/projects/${project.slug}` : project.externalLink}
+                newTab={!project.slug}
               >
                 {project.subtitle}
                 <br />

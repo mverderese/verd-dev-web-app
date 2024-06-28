@@ -52,7 +52,7 @@ export default function Home() {
                   Node.js, React, Next.js, Express, Prisma, OpenAPI/Swagger, Flask, React Native
                 </LI>
                 <LI title={"Platforms"}>GitHub Actions, Terraform, GCP, AWS, Docker, Datadog, Looker, Segment, GA4</LI>
-                <LI title={"Team Management & Collaboration"}>GitHub, Shortcut, Jira, Asana, Figma</LI>
+                <LI title={"Collaboration & Project Management"}>GitHub, Shortcut, Jira, Asana, Figma</LI>
               </UL>
             </BodyText>
           </div>
@@ -62,10 +62,19 @@ export default function Home() {
             </H2>
             <BodyText>
               <UL additionalClassNames="text-white">
-                <LI title={"Skill 1"}>Explanation of skill 1 that is long enough that it takes up two lines</LI>
-                <LI title={"Skill 2"}>Explanation of skill 2 that is long enough that it takes up two lines</LI>
-                <LI title={"Skill 3"}>Explanation of skill 3 that is long enough that it takes up two lines</LI>
-                <LI title={"Skill 4"}>Explanation of skill 4 that is long enough that it takes up two lines</LI>
+                <LI title={"Technical Strategy"}>
+                  Align company objectives and key results with the technical capabilities of the product and team to
+                  drive success.
+                </LI>
+                <LI title={"Team Management"}>
+                  Mentor and motivate team members, incorporating input from internal and external parties to make
+                  informed decisions. Provide constructive feedback and support professional growth within their roles
+                  and careers.
+                </LI>
+                <LI title={"Translating Technical Requirements"}>
+                  Facilitate ongoing communication between customers, leadership stakeholders, and product and
+                  engineering teams. Lead technical architecture and design efforts within the engineering team.
+                </LI>
               </UL>
             </BodyText>
           </div>

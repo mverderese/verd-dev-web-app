@@ -66,9 +66,9 @@ export default function OdinContent() {
           <BodyParagraph>
             As the team and our customer base grew, we secured seed investment from First Round Capital and doubled the
             team size within nine months. I was responsible for providing the technical strategy for the entire company,
-            managing a team of eight engineers, and leading the design of the platform. During this period, I advanced
-            several engineers from mid-level to senior roles. Additionally, I spearheaded our effort to achieve SOC 2
-            Type 1 compliance, attracting larger customers with stringent cybersecurity requirements. In the last 12
+            managing a team of engineers, and leading the design of the platform. During this period, I advanced several
+            engineers from mid-level to senior and leadership roles. Additionally, I spearheaded our effort to achieve
+            SOC&nbsp;2 compliance, attracting larger customers with stringent cybersecurity requirements. In the last 12
             months of my tenure, Odin achieved a 12% quarter-over-quarter growth in revenue.
           </BodyParagraph>
         </BodyText>
