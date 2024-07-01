@@ -88,9 +88,9 @@ export default function AboutPage() {
             <BodyParagraph>
               In 2020, I co-founded <TextLink link="/portfolio/projects/odin">Odin</TextLink>, a workforce management
               and visibility platform for construction, bootstrapping the company to $1 million in revenue in the first
-              year. I lead the development of a software platform that integrates with external vendors and physical
+              year. I led the development of a software platform that integrates with external vendors and physical
               hardware, such as turnstiles and cameras, while delivering a user-friendly experience on both web and
-              mobile apps.Today, Odin manages over 20,000 workers across 700 contractors nationwide, while growing 12%
+              mobile apps. Today, Odin manages over 20,000 workers across 700 contractors nationwide, while growing 12%
               per quarter.
             </BodyParagraph>
             <BodyParagraph>
