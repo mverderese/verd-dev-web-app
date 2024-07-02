@@ -8,6 +8,7 @@ export type PrimarySecondaryCta = {
   secondaryText: string;
   secondaryLink: string;
   secondaryLinkNewTab?: boolean;
+  secondaryFirst?: boolean;
 };
 
 export function PrimarySecondaryCta({
@@ -17,14 +18,25 @@ export function PrimarySecondaryCta({
   secondaryText,
   secondaryLink,
   secondaryLinkNewTab,
+  secondaryFirst,
 }: PrimarySecondaryCta) {
   const buttonClassNames = "my-2";
   return (
     <div className="flex text-center items-center content-between max-h-24 flex-row justify-center mt-6">
-      <CtaButton additionalClassNames={buttonClassNames} link={primaryLink} newTab={primaryLinkNewTab}>
+      <CtaButton
+        additionalClassNames={buttonClassNames}
+        inverted={secondaryFirst}
+        link={primaryLink}
+        newTab={primaryLinkNewTab}
+      >
         {primaryText}
       </CtaButton>
-      <CtaButton additionalClassNames={buttonClassNames} inverted link={secondaryLink} newTab={secondaryLinkNewTab}>
+      <CtaButton
+        additionalClassNames={buttonClassNames}
+        inverted={!secondaryFirst}
+        link={secondaryLink}
+        newTab={secondaryLinkNewTab}
+      >
         {secondaryText}
       </CtaButton>
     </div>

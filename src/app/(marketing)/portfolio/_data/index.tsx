@@ -94,7 +94,7 @@ export const portfolioProjects: PortfolioProject[] = [
     content: <SeventeenLandsContent />,
   },
   {
-    title: "mikeverderese.com",
+    title: "Personal Site",
     startYear: 2023,
     subtitle: "Showcase of Modern Web Development",
     jobTitle: "Lead Software Engineer",
