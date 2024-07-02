@@ -13,7 +13,7 @@ export default function Scripts() {
       {isProdNodeEnv && gtmMeasurementId && (
         <>
           <Script async src="https://www.googletagmanager.com/gtag/js?id=${gtmMeasurementId}"></Script>
-          <Script id="gtm">
+          <Script id="gtm" strategy="beforeInteractive">
             {`
               <!-- Google tag (gtag.js) -->
               window.dataLayer = window.dataLayer || [];
@@ -24,8 +24,8 @@ export default function Scripts() {
           </Script>
         </>
       )}
-      {isProdNodeEnv && gtmMeasurementId && (
-        <Script id="hotjar">
+      {isProdNodeEnv && hotjarSiteId && (
+        <Script id="hotjar" strategy="beforeInteractive">
           {`
             <!-- Hotjar tracking code -->
               (function(h,o,t,j,a,r){
