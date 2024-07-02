@@ -5,6 +5,7 @@ import { APP_TITLE, IS_INDEXABLE } from "@/app/constants";
 import AppHeader from "./_components/AppHeader";
 import AppSidebar from "./_components/AppSidebar";
 import PrelineScript from "../_components/PrelineScript";
+import Scripts from "../_components/Scripts";
 
 export const metadata: Metadata = {
   title: APP_TITLE,
@@ -32,6 +33,7 @@ export default function AppLayout({
         {children}
       </body>
       <PrelineScript />
+      <Scripts />
     </html>
   );
 }

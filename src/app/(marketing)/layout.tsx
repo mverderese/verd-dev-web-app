@@ -7,6 +7,7 @@ import { IS_INDEXABLE, JOB_TITLE, MY_NAME, SITE_DESCRIPTION } from "@/app/consta
 import localFont from "next/font/local";
 import { Archivo_Black, DM_Sans } from "next/font/google";
 import classNames from "classnames";
+import Scripts from "@/app/_components/Scripts";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const appEnv = process.env.NEXT_PUBLIC_APP_ENV;
@@ -72,6 +73,7 @@ export default function MarketingLayout({
         <main>{children}</main>
       </body>
       <PrelineScript />
+      <Scripts />
     </html>
   );
 }
