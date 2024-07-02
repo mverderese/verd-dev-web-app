@@ -8,16 +8,16 @@ import localFont from "next/font/local";
 import { Archivo_Black, DM_Sans } from "next/font/google";
 import classNames from "classnames";
 import Scripts from "@/app/_components/Scripts";
+import { titleForEnv } from "@/app/_util";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-const appEnv = process.env.NEXT_PUBLIC_APP_ENV;
 
 export const metadata: Metadata = {
   metadataBase: baseUrl ? new URL(baseUrl) : null,
   alternates: {
     canonical: "/",
   },
-  title: `${appEnv !== "prod" ? `[${(appEnv ?? "unknown").toUpperCase()}] ` : ""}${MY_NAME} | ${JOB_TITLE}`,
+  title: titleForEnv(`${MY_NAME} | ${JOB_TITLE}`),
   description: SITE_DESCRIPTION,
   robots: {
     index: IS_INDEXABLE,

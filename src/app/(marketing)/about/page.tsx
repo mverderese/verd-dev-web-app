@@ -7,6 +7,13 @@ import H2 from "@/app/(marketing)/_components/H2";
 import H4 from "@/app/(marketing)/_components/H4";
 import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
 import TextLink from "@/app/(marketing)/_components/TextLink";
+import type { Metadata } from "next";
+import { MY_NAME } from "@/app/constants";
+import { titleForEnv } from "@/app/_util";
+
+export const metadata: Metadata = {
+  title: titleForEnv(`About | ${MY_NAME}`),
+};
 
 export default function AboutPage() {
   return (

@@ -2,6 +2,13 @@ import Section from "@/app/(marketing)/_components/Section";
 import H1 from "@/app/(marketing)/_components/H1";
 import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
 import BodyText from "@/app/(marketing)/_components/BodyText";
+import type { Metadata } from "next";
+import { titleForEnv } from "@/app/_util";
+import { MY_NAME } from "@/app/constants";
+
+export const metadata: Metadata = {
+  title: titleForEnv(`Portfolio | ${MY_NAME}`),
+};
 
 export default function PortfolioPage() {
   return (
