@@ -30,10 +30,10 @@ export default function OdinContent() {
             Odin&apos;s Metrics After 4 Years:
           </H4>
           <UL additionalClassNames="mb-6 text-pretty">
-            <LI>12% Q/Q revenue growth</LI>
-            <LI>20,000+ Workers onboarded</LI>
-            <LI>700+ Contractors managed</LI>
-            <LI>6,000,000+ Labor hours tracked</LI>
+            <LI narrow>12% Q/Q revenue growth</LI>
+            <LI narrow>20,000+ Workers onboarded</LI>
+            <LI narrow>700+ Contractors managed</LI>
+            <LI narrow>6,000,000+ Labor hours tracked</LI>
           </UL>
         </BodyText>
       </ScreenshotPanel>

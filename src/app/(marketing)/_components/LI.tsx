@@ -1,17 +1,19 @@
 import { ReactNode } from "react";
+import classNames from "classnames";
 
 export type LIProps = {
   children: ReactNode;
   title?: string;
+  narrow?: boolean;
 };
-export default function LI({ children, title }: LIProps) {
+export default function LI({ children, title, narrow }: LIProps) {
   const TitleSpan = () => {
     if (!title) return null;
-    return <span className="font-dm-sans-semibold">{title}: </span>;
+    return <p className="font-roboto-medium text-[22px] mb-2">{title}</p>;
   };
 
   return (
-    <li className="mb-2">
+    <li className={classNames("text-[16px]", narrow ? "mb-1" : "mb-4")}>
       <TitleSpan />
       {children}
     </li>

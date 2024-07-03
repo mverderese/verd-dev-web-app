@@ -15,7 +15,7 @@ export default function PortfolioPage() {
     <>
       <Section bgOverride="bg-astral">
         <div className="container max-w-screen-xl mx-auto px-4">
-          <H1 additionalClassNames="text-white">Portfolio</H1>
+          <H1 additionalClassNames="mb-3 lg:mb-8">Portfolio</H1>
           <BodyText additionalClassNames="text-wheatfield">
             I&apos;ve been passionately building products for over a decade, and each one has its own unique story. From
             initial concepts and early prototypes to fully developed solutions, I&apos;ve dedicated myself to crafting

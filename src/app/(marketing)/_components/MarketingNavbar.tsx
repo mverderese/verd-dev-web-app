@@ -12,18 +12,11 @@ export default function MarketingNavbar() {
       >
         <div className="flex items-center justify-between">
           <a
-            className="flex-none text-2xl text-wheatfield font-semibold min-w-[240px] font-archivo sm:hidden"
+            className="flex-none text-2xl text-wheatfield font-semibold min-w-[60px] font-archivo hover:opacity-60"
             href="/"
             aria-label="Brand"
           >
             MV
-          </a>
-          <a
-            className="flex-none text-2xl text-wheatfield font-semibold min-w-[60px] font-archivo hidden sm:block"
-            href="/"
-            aria-label="Brand"
-          >
-            MIKE VERDERESE
           </a>
           <div className="sm:hidden">
             <button
@@ -71,7 +64,7 @@ export default function MarketingNavbar() {
           id="navbar-collapse-with-animation"
           className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block sm:transition-none sm:duration-0"
         >
-          <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
+          <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7 font-roboto-medium text-[16px]">
             <MenuItem title={"About"} link="/about" />
             <MenuItem title={"Portfolio"} link="/portfolio" />
             {/*<MenuItem title={APP_TITLE} link="/app" />*/}

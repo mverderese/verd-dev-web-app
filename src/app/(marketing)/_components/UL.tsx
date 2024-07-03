@@ -7,5 +7,5 @@ export type ULProps = {
 };
 
 export default function UL({ children, additionalClassNames }: ULProps) {
-  return <ul className={classNames("list-disc ml-4", additionalClassNames)}>{children}</ul>;
+  return <ul className={classNames(additionalClassNames)}>{children}</ul>;
 }
