@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import BodyText from "@/app/(marketing)/_components/BodyText";
 import H4 from "@/app/(marketing)/_components/H4";
 import Image from "next/image";
 
@@ -18,7 +17,7 @@ export default function Card({ image, title, children, link, newTab }: CardProps
           <Image src={image} height={100} width={100} alt={`Card icon for ${title}`} />
         </div>
         <H4 additionalClassNames="font-dm-sans-semibold">{title}</H4>
-        <BodyText additionalClassNames="text-lg md:text-lg">{children}</BodyText>
+        <div className="font-normal text-gray-700 text-lg md:text-[18px] text-left text-pretty">{children}</div>
       </div>
     </a>
   );

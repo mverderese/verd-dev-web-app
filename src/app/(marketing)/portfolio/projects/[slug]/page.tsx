@@ -7,6 +7,7 @@ import { MY_NAME } from "@/app/constants";
 import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecondaryCta";
 import React from "react";
 import CtaButton from "@/app/(marketing)/_components/CtaButton";
+import Section from "@/app/(marketing)/_components/Section";
 
 export type ProjectPageProps = {
   params: { slug: string };
@@ -44,12 +45,12 @@ export default function ProjectPage({ params: { slug } }: ProjectPageProps) {
     if (previousProject && nextProject) {
       return (
         <PrimarySecondaryCta
-          primaryText={previousProject.title}
+          primaryText="Previous project"
           primaryLink={
             previousProject.slug ? `/portfolio/projects/${previousProject.slug}` : previousProject.externalLink ?? ""
           }
           primaryLinkNewTab={!previousProject.slug}
-          secondaryText={nextProject.title}
+          secondaryText="Next project"
           secondaryLink={nextProject.slug ? `/portfolio/projects/${nextProject.slug}` : nextProject.externalLink ?? ""}
           secondaryLinkNewTab={!nextProject.slug}
           secondaryFirst
@@ -57,23 +58,33 @@ export default function ProjectPage({ params: { slug } }: ProjectPageProps) {
       );
     } else if (nextProject) {
       return (
-        <CtaButton
-          link={nextProject.slug ? `/portfolio/projects/${nextProject.slug}` : nextProject.externalLink ?? ""}
-          newTab={!nextProject.slug}
-        >
-          {nextProject.title}
-        </CtaButton>
+        <div className="text-center">
+          <div className="flex justify-center my-12">
+            <CtaButton
+              link={nextProject.slug ? `/portfolio/projects/${nextProject.slug}` : nextProject.externalLink ?? ""}
+              newTab={!nextProject.slug}
+            >
+              Next project
+            </CtaButton>
+          </div>
+        </div>
       );
     } else if (previousProject) {
       return (
-        <CtaButton
-          link={
-            previousProject.slug ? `/portfolio/projects/${previousProject.slug}` : previousProject.externalLink ?? ""
-          }
-          newTab={!previousProject.slug}
-        >
-          {previousProject.title}
-        </CtaButton>
+        <div className="text-center">
+          <div className="flex justify-center my-12">
+            <CtaButton
+              link={
+                previousProject.slug
+                  ? `/portfolio/projects/${previousProject.slug}`
+                  : previousProject.externalLink ?? ""
+              }
+              newTab={!previousProject.slug}
+            >
+              Previous project
+            </CtaButton>
+          </div>
+        </div>
       );
     } else {
       return null;
@@ -84,11 +95,9 @@ export default function ProjectPage({ params: { slug } }: ProjectPageProps) {
     <>
       <ProjectHeroPanel project={project} />
       {project.content}
-      <div className="text-center">
-        <div className="flex justify-center my-12">
-          <BottomButtons />
-        </div>
-      </div>
+      <Section bgOverride="bg-astral" additionalClassNames="my-12" narrowTop narrowBottom>
+        <BottomButtons />
+      </Section>
     </>
   );
 }
