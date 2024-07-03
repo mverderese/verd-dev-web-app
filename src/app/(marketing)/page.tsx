@@ -8,6 +8,7 @@ import UL from "@/app/(marketing)/_components/UL";
 import LI from "@/app/(marketing)/_components/LI";
 import BodyText from "@/app/(marketing)/_components/BodyText";
 import H1 from "@/app/(marketing)/_components/H1";
+import CtaButton from "@/app/(marketing)/_components/CtaButton";
 
 export default function Home() {
   return (
@@ -69,13 +70,13 @@ export default function Home() {
             </BodyText>
           </div>
         </div>
-        {/*<div className="text-center">*/}
-        {/*  <div className="flex justify-center pt-12">*/}
-        {/*    <CtaButton widthOverride="w-[250px]" link={"/about"}>*/}
-        {/*      Learn more about me*/}
-        {/*    </CtaButton>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
+        <div className="text-center">
+          <div className="flex justify-center pt-12">
+            <CtaButton link={"/about"} inverted darkBg>
+              About me
+            </CtaButton>
+          </div>
+        </div>
       </Section>
 
       {/*<Section darkBg>*/}

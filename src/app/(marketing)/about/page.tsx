@@ -30,7 +30,7 @@ export default function AboutPage() {
             />
           </div>
           <div className="basis-full lg:basis-2/3 ">
-            <H1 additionalClassNames="text-white sm:mt-0.5">Hey, I&apos;m Mike</H1>
+            <H1 additionalClassNames="text-white sm:mt-0.5 lg:mt-[18px] mb-3 lg:mb-8">Hey, I&apos;m Mike</H1>
             <BodyText>
               <BodyParagraph additionalClassNames="text-white">
                 <span>

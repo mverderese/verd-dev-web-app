@@ -9,7 +9,7 @@ export type LIProps = {
 export default function LI({ children, title, narrow }: LIProps) {
   const TitleSpan = () => {
     if (!title) return null;
-    return <p className="font-roboto-medium text-[22px] mb-2">{title}</p>;
+    return <p className="font-roboto-medium text-[20px] sm:text-[22px] mb-2">{title}</p>;
   };
 
   return (
