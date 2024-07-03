@@ -20,7 +20,7 @@ export default function AboutPage() {
     <>
       <Section bgOverride="bg-astral">
         <div className="flex flex-wrap">
-          <div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-6 ">
+          <div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-9 lg:max-w-72 ">
             <Image
               className="sm:max-h-80 object-contain"
               src="/mike-headshot-2.jpg"
@@ -45,40 +45,15 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section darkBg>
-        <div className="flex flex-wrap-reverse lg:flex-wrap">
-          <div className="basis-full lg:basis-2/3 ">
-            <H2>Rutgers University</H2>
-            <H4 additionalClassNames="font-dm-sans-semibold">Bachelor of Science, Computer Science</H4>
-            <BodyText additionalClassNames="">
-              <BodyParagraph>
-                After discovering my passion for programming in high school, I pursued a Computer&nbsp;Science degree at
-                Rutgers&nbsp;University. I focused on courses that enhanced my product development skills, such as
-                Software&nbsp;Methodology, Internet&nbsp;Technology, and Databases, along with the core CS curriculum.
-                During my senior year, a friend and I created a responsible drinking app called{" "}
-                <TextLink link="/portfolio/projects/shots-igot">Shots&nbsp;iGot</TextLink> at the
-                Princeton&nbsp;Hackathon, which gained nearly 10,000 users and national media attention, igniting my
-                passion for entrepreneurship.
-              </BodyParagraph>
-            </BodyText>
-          </div>
-          <div className="basis-full lg:basis-1/3 pb-6 lg:pb-0 lg:pt-3 lg:pr-6 max-w-80 mx-auto">
-            <Image
-              src="/icons/rutgers-seal.svg"
-              alt="Image"
-              height={500}
-              width={500}
-              className="sm:max-h-80 object-contain"
-            />
-          </div>
-        </div>
-      </Section>
       <Section>
         <div className="">
           <H2>Diving Into the Startup World</H2>
           <BodyText>
             <BodyParagraph>
-              Right after graduating, I teamed up with three co-founders to create{" "}
+              During my senior year, a friend and I created a responsible drinking app called{" "}
+              <TextLink link="/portfolio/projects/shots-igot">Shots&nbsp;iGot</TextLink> at the
+              Princeton&nbsp;Hackathon, which gained nearly 10,000 users and national media attention, igniting my
+              passion for entrepreneurship. After graduating, I teamed up with three co-founders to create{" "}
               <TextLink link="/portfolio/projects/tag">Tag</TextLink>, a location-based social app for meetups. We
               rented an apartment in New York, developed an MVP, and secured funding from investors like Tim Draper,
               Eduardo Saverin, and Mark Cuban. We expanded our team, launched a campus ambassador program, and quickly
@@ -111,6 +86,30 @@ export default function AboutPage() {
         </div>
       </Section>
       <Section darkBg>
+        <div className="flex flex-wrap-reverse lg:flex-wrap">
+          <div className="basis-full lg:basis-2/3 ">
+            <H2>Rutgers University</H2>
+            <H4 additionalClassNames="font-dm-sans-semibold">Bachelor of Science, Computer Science</H4>
+            <BodyText additionalClassNames="">
+              <BodyParagraph>
+                After discovering my passion for programming in high school, I pursued a Computer&nbsp;Science degree at
+                Rutgers&nbsp;University. I focused on courses that enhanced my product development skills, such as
+                Software&nbsp;Methodology, Internet&nbsp;Technology, and Databases, along with the core CS curriculum.
+              </BodyParagraph>
+            </BodyText>
+          </div>
+          <div className="basis-full lg:basis-1/3 pb-6 lg:pb-0 lg:pt-3 lg:pr-6 max-w-56 mx-auto">
+            <Image
+              src="/icons/rutgers-seal.svg"
+              alt="Image"
+              height={500}
+              width={500}
+              className="sm:max-h-80 object-contain"
+            />
+          </div>
+        </div>
+      </Section>
+      <Section>
         <H2>Life is an Ongoing Adventure</H2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-9 mb-12">
           <Image src="/hiking.jpeg" alt="Hiking" height={500} width={500} />

@@ -1,19 +1,19 @@
-# Verd Dev Web App
+# Verderese Web App
 
-Portfolio website for Mike Verderese / Verderese Development. This project is meant to serve two main purposes:
+Portfolio website for Mike Verderese / Verderese Development LLC. This project is meant to serve two main purposes:
 
-1. Provide the source code for the Verderese Development web application.
+1. Provide the source code for the web application.
 2. Showcase the development process and best practices for a modern web application.
 
-This web application can be viewed in three different environments. Private environments require a Google Login, which is managed by the Google Cloud OAuth Consent and Identity-Aware Proxy services.
+In addition to the local environment, deployments occur automatically to the three remove environments based on pushes to specific branches or the creation of tags with specific patters. The ability to push to these branches and tags are controlled through GitHub's settings, ensure only people with the correct access can create remote deployments to each environment. Private environments require a Google login, which is managed by the Google Cloud OAuth Consent and Identity-Aware Proxy services.
 
 **Note:** Because IAP and OAuth are not fully supported by Terraform outside a Google Cloud organization, The OAuth Consent and IAP permissions are managed manually through the console.
 
-| Environment | URL                            | Public? |
-| ----------- | ------------------------------ | ------- |
-| Development | https://dev.mikeverderese.com/ | ❌      |
-| Staging     | https://stg.mikeverderese.com/ | ❌      |
-| Production  | https://mikeverderese.com/     | ✅      |
+| Environment | URL                            | Deployment        | Public? |
+| ----------- | ------------------------------ | ----------------- | ------- |
+| Development | https://dev.mikeverderese.com/ | Push to `develop` | ❌      |
+| Staging     | https://stg.mikeverderese.com/ | Push to `main`    | ❌      |
+| Production  | https://mikeverderese.com/     | Tag with `v*`     | ✅      |
 
 ## Local Development
 
@@ -114,7 +114,7 @@ Wherever possible, try to keep your pull requests small, and keep distinct chang
 
 ### External Resources
 
-[Git 50/72: the rule of well formed Git commit messages](https://www.midori-global.com/blog/2018/04/02/git-50-72-rule)
+[Git 50/72: the rule of well-formed Git commit messages](https://www.midori-global.com/blog/2018/04/02/git-50-72-rule)
 
 [The Art of the Commit](http://alistapart.com/article/the-art-of-the-commit)
 
@@ -128,9 +128,9 @@ The infrastructure for this project is managed via [Terraform](https://www.terra
 
 If you have cloned this project and are setting up a new GCP project to host the web application, you will need to make a few manual changes.
 
-1. Ensure the Google Cloud CLI is installed on your machine. [Homebrew](https://formulae.brew.sh/cask/google-cloud-sdk) is the easiest way to install on a Mac. Otherwise, follow the instructions in the [Install the gcloud CLI guide](https://cloud.google.com/sdk/docs/install)
+1. Ensure the Google Cloud CLI is installed on your machine. [Homebrew](https://formulae.brew.sh/cask/google-cloud-sdk) is the easiest way to install on a Mac. Otherwise, follow the instructions in the [gcloud CLI Installation Guide](https://cloud.google.com/sdk/docs/install)
 2. Create a [GCP Billing Account](https://console.cloud.google.com/billing/). If this is your first time doing this, you should be eligible for the $300 in free credit.
-3. Ensure Terraform is installed on your machine. [Homebrew](https://formulae.brew.sh/formula/terraform) is the easiest way to install on a Mac. Otherwise, follow the instructions in the [Install Terraform guide](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+3. Ensure Terraform is installed on your machine. [Homebrew](https://formulae.brew.sh/formula/terraform) is the easiest way to install on a Mac. Otherwise, follow the instructions in the [Terraform Installation guide](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 4. Log in to the Google Cloud CLI and set the application default credentials.
    ```bash
    gcloud auth login

@@ -5,7 +5,7 @@ import PrelineScript from "@/app/_components/PrelineScript";
 import MarketingNavbar from "@/app/(marketing)/_components/MarketingNavbar";
 import { IS_INDEXABLE, JOB_TITLE, MY_NAME, SITE_DESCRIPTION } from "@/app/constants";
 import localFont from "next/font/local";
-import { Archivo_Black, DM_Sans } from "next/font/google";
+import { Archivo_Black, DM_Sans, Roboto } from "next/font/google";
 import classNames from "classnames";
 import Scripts from "@/app/_components/Scripts";
 import { titleForEnv } from "@/app/_util";
@@ -40,11 +40,20 @@ const akiraExpandedFont = localFont({
   variable: "--font-akira-expanded",
 });
 
-const archivoBlackFont = Archivo_Black({ weight: "400", variable: "--font-archivo-black", subsets: ["latin"] });
+const archivoBlackFont = Archivo_Black({
+  weight: "400",
+  variable: "--font-archivo-black",
+  subsets: ["latin"],
+});
 
-const dmSansFont = DM_Sans({
+const robotoRegularFont = Roboto({
+  subsets: ["latin"],
+  weight: "300",
+});
+const robotoMediumFont = Roboto({
   subsets: ["latin"],
   weight: "400",
+  variable: "--font-roboto-medium",
 });
 
 const dmSansSemiBoldFont = DM_Sans({
@@ -64,8 +73,9 @@ export default function MarketingLayout({
       className={classNames(
         akiraExpandedFont.variable,
         archivoBlackFont.variable,
-        dmSansFont.className,
+        robotoRegularFont.className,
         dmSansSemiBoldFont.variable,
+        robotoMediumFont.variable,
       )}
     >
       <body className={classNames("bg-astral")}>

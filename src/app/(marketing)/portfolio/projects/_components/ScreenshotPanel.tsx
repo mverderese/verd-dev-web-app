@@ -36,7 +36,7 @@ export default function ScreenshotPanel({
           )}
         >
           <Image
-            className={classNames("object-contain", { "max-h-[600px]": twoThirdsText })}
+            className={classNames("object-contain rounded-lg", { "max-h-[600px]": twoThirdsText })}
             src={image}
             alt="Screenshot"
             height={800}

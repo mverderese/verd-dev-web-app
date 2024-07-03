@@ -7,8 +7,6 @@ export type H1Props = {
 };
 export default function H1({ children, additionalClassNames }: H1Props) {
   return (
-    <h1 className={classNames("font-normal text-5xl md:text-7xl leading-none mb-3 lg:mb-8", additionalClassNames)}>
-      {children}
-    </h1>
+    <h1 className={classNames("text-white text-4xl md:text-[72px] font-archivo", additionalClassNames)}>{children}</h1>
   );
 }

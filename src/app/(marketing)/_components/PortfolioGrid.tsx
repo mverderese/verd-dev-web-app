@@ -7,7 +7,7 @@ export type PortfolioGridProps = {
 export default function PortfolioGrid({ onlyHighlighted }: PortfolioGridProps) {
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 flex-col">
         {portfolioProjects
           .filter((p) => (onlyHighlighted ? p.highlighted : true))
           // .sort((p1, p2) => (onlyHighlighted ? 0 : p2.startYear - p1.startYear))
@@ -32,7 +32,9 @@ export default function PortfolioGrid({ onlyHighlighted }: PortfolioGridProps) {
       {onlyHighlighted ? (
         <div className="text-center">
           <div className="flex justify-center pt-12">
-            <CtaButton link={"/portfolio"}>See all</CtaButton>
+            <CtaButton inverted link={"/portfolio"}>
+              See all work
+            </CtaButton>
           </div>
         </div>
       ) : null}

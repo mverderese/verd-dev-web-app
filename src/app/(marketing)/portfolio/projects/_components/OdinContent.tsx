@@ -30,10 +30,10 @@ export default function OdinContent() {
             Odin&apos;s Metrics After 4 Years:
           </H4>
           <UL additionalClassNames="mb-6 text-pretty">
-            <LI>12% Q/Q revenue growth</LI>
-            <LI>20,000+ Workers onboarded</LI>
-            <LI>700+ Contractors managed</LI>
-            <LI>6,000,000+ Labor hours tracked</LI>
+            <LI narrow>12% Q/Q revenue growth</LI>
+            <LI narrow>20,000+ Workers onboarded</LI>
+            <LI narrow>700+ Contractors managed</LI>
+            <LI narrow>6,000,000+ Labor hours tracked</LI>
           </UL>
         </BodyText>
       </ScreenshotPanel>
@@ -65,11 +65,13 @@ export default function OdinContent() {
           </BodyParagraph>
           <BodyParagraph>
             As the team and our customer base grew, we secured seed investment from First Round Capital and doubled the
-            team size within nine months. I was responsible for providing the technical strategy for the entire company,
-            managing a team of engineers, and leading the design of the platform. During this period, I advanced several
-            engineers from mid-level to senior and leadership roles. Additionally, I spearheaded our effort to achieve
-            SOC&nbsp;2 compliance, attracting larger customers with stringent cybersecurity requirements. In the last 12
-            months of my tenure, Odin achieved a 12% quarter-over-quarter growth in revenue.
+            team size within nine months. I led the technical strategy for the entire company, managing a team of
+            engineers, and leading the design of the platform. During this period, I advanced several engineers from
+            mid-level to senior and leadership roles by giving them the opportunities to lead projects and teams, while
+            regularly checking in with them and providing guidance through the process. Additionally, I spearheaded our
+            effort to achieve SOC&nbsp;2 compliance, attracting larger customers with stringent cybersecurity
+            requirements. In the last 12 months of my tenure, Odin achieved a 12% quarter-over-quarter growth in
+            revenue.
           </BodyParagraph>
         </BodyText>
       </Section>

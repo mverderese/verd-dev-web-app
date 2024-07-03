@@ -28,7 +28,7 @@ export default function ProjectPage({ params: { slug } }: ProjectPageProps) {
     return (
       <div className="text-center">
         <div className="flex justify-center my-12">
-          <H1>
+          <H1 additionalClassNames="mb-3 lg:mb-8">
             It does&apos;t look like <br />
             that project exists!
           </H1>

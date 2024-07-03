@@ -14,6 +14,7 @@ const config: Config = {
         akira: ["var(--font-akira-expanded)"],
         archivo: ["var(--font-archivo-black)"],
         "dm-sans-semibold": ["var(--font-dm-sans-semibold)"],
+        "roboto-medium": ["var(--font-roboto-medium)"],
       },
       colors: {
         // https://color.adobe.com/astral-shades-color-theme-54738f1b-396f-43b3-b6d2-1f5927c860e0

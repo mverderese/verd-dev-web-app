@@ -12,9 +12,9 @@ export default function RenewContent() {
         <BodyText>
           <BodyParagraph>
             Renew&apos;s mission was to simplify the transition into retirement, focusing on health, wealth, and time.
-            As the lead backend and DevOps engineer, I was responsible for designing and building the API, as well as
-            the automated infrastructure provisioning and deployment pipeline for the Medicare Plan Finder platform.
-            This involved managing numerous services and integrations, including:
+            As the lead backend and DevOps engineer, I designed and built the API, as well as the automated
+            infrastructure provisioning and deployment pipeline for the Medicare Plan Finder platform. This involved
+            managing numerous services and integrations, including:
           </BodyParagraph>
           <UL>
             <LI title={"Platform API"}>
@@ -41,10 +41,10 @@ export default function RenewContent() {
             As our team and customer base grew, so did our need for new customer features and internal platforms.
             Prospective customers could enter their list of prescription drugs and indicate the benefits that mattered
             most to them. The site would then provide plan recommendations and offer cost and benefit comparisons across
-            multiple plans. Despite these powerful online features, many people still preferred speaking to a person
-            before making a final decision. To streamline this process, I led a team to build a Customer Success
-            platform that integrated InContact Softphone and Salesforce. This integration allowed agents and Medicare
-            brokers to focus on assisting users and closing sales, rather than juggling multiple platforms.
+            multiple plans. Along with powerful self-serve features, we also built the flexibility to speak to customer
+            success before making a final decision. I led a team to build a Customer Success platform that integrated
+            InContact Softphone and Salesforce. This integration allowed agents and Medicare brokers to focus on
+            assisting users and closing sales, rather than juggling multiple platforms.
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>

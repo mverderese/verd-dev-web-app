@@ -1,36 +1,30 @@
-import { JOB_TITLE, MY_NAME, RESUME_URL, TAGLINE } from "@/app/constants";
+import { JOB_TITLE, MY_NAME, RESUME_URL } from "@/app/constants";
 import Image from "next/image";
 import Section from "@/app/(marketing)/_components/Section";
-import H2 from "@/app/(marketing)/_components/H2";
 import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
 import React from "react";
 import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecondaryCta";
 import UL from "@/app/(marketing)/_components/UL";
 import LI from "@/app/(marketing)/_components/LI";
 import BodyText from "@/app/(marketing)/_components/BodyText";
-import CtaButton from "@/app/(marketing)/_components/CtaButton";
+import H1 from "@/app/(marketing)/_components/H1";
 
 export default function Home() {
   return (
     <>
       <Section additionalClassNames="pt-2" bgOverride="bg-astral" narrowTop>
-        <div className="text-left sm:text-center">
+        <div className="text-center">
           <div className="flex justify-center mb-8">
             <Image src="/mike-headshot.jpg" alt="Image" className="rounded-full" height={200} width={200} />
           </div>
 
-          <h1 className="text-white text-4xl md:text-5xl font-extrabold font-akira leading-10 ">{MY_NAME}</h1>
-          <div className="pt-2 pb-1">
-            <h2 className="text-2xl sm:text-3xl font-extrabold font-akira  text-astral text-stroke-[1px] text-stroke-white">
-              {JOB_TITLE}
-            </h2>
-          </div>
-          <div className="pt-3">
-            <div className="text-slate-300 text-md font-normal">{TAGLINE}</div>
+          <H1 additionalClassNames="mt-9 sm:mt-12">{MY_NAME}</H1>
+          <div className="pt-3 sm:pt-8 pb-1">
+            <h2 className="text-2xl sm:text-[32px] font text-white">{JOB_TITLE}</h2>
           </div>
 
           <PrimarySecondaryCta
-            primaryText="Resume"
+            primaryText="See my resume"
             primaryLink={RESUME_URL}
             primaryLinkNewTab
             secondaryText="Get in touch"
@@ -42,9 +36,7 @@ export default function Home() {
       <Section bgOverride="bg-calypso">
         <div className="flex flex-col items-start lg:flex-row lg:flex-wrap">
           <div className="lg:basis-1/2 lg:px-4">
-            <H2 marginOverride="mt-2 mb-4" additionalClassNames="text-white font-dm-sans-semibold">
-              Technical Skills
-            </H2>
+            <h2 className="text-white font-archivo mt-2 mb-4 text-3xl">Technical Skills</h2>
             <BodyText>
               <UL additionalClassNames="text-white">
                 <LI title={"Languages"}>TypeScript/Javascript, Python, PostgreSQL, GraphQL, HTML/CSS, Bash</LI>
@@ -57,9 +49,7 @@ export default function Home() {
             </BodyText>
           </div>
           <div className="lg:basis-1/2 lg:px-4 mt-12 lg:mt-0">
-            <H2 marginOverride="mb-4" additionalClassNames="text-white font-dm-sans-semibold">
-              Leadership Skills
-            </H2>
+            <h2 className="text-white font-archivo mt-2 mb-4 text-3xl">Leadership Skills</h2>
             <BodyText>
               <UL additionalClassNames="text-white">
                 <LI title={"Technical Strategy"}>
@@ -79,13 +69,13 @@ export default function Home() {
             </BodyText>
           </div>
         </div>
-        <div className="text-center">
-          <div className="flex justify-center pt-12">
-            <CtaButton widthOverride="w-[250px]" link={"/about"}>
-              Learn more about me
-            </CtaButton>
-          </div>
-        </div>
+        {/*<div className="text-center">*/}
+        {/*  <div className="flex justify-center pt-12">*/}
+        {/*    <CtaButton widthOverride="w-[250px]" link={"/about"}>*/}
+        {/*      Learn more about me*/}
+        {/*    </CtaButton>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </Section>
 
       {/*<Section darkBg>*/}
@@ -100,9 +90,7 @@ export default function Home() {
       {/*</Section>*/}
       <Section bgOverride="bg-astral">
         <div className="container max-w-screen-xl mx-auto px-4 ">
-          <H2 marginOverride="mb-7 lg:mb-12" additionalClassNames="text-white">
-            Portfolio
-          </H2>
+          <h2 className="font-archivo mb-7 lg:mb-12 text-3xl text-white">Portfolio</h2>
           <PortfolioGrid onlyHighlighted />
         </div>
       </Section>
