@@ -56,9 +56,9 @@ export default function TagContent() {
             story.
           </BodyParagraph>
           <BodyParagraph>
-            In 2015, we sold the app to Mark Cuban Companies, enabling the integration of our technology into their
-            portfolio. During my three years at Tag, I acquired skills that I carry with me to every new endeavor:
-            scrappiness, self-sufficiency, perseverance, and determination.
+            In 2015, we sold the app to Mark Cuban Companies, integrating of our technology into their portfolio. During
+            my three years at Tag, I acquired skills that I carry with me to every new endeavor: scrappiness,
+            self-sufficiency, perseverance, and determination.
           </BodyParagraph>
         </BodyText>
       </ScreenshotPanel>

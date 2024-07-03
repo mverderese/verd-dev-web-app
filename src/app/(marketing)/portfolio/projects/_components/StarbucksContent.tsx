@@ -13,9 +13,9 @@ export default function StarbucksContent() {
             For years, Starbucks operated an Ecommerce store on an early version of Salesforce Commerce Cloud (formerly
             Demandware) that proved sluggish, prone to errors, and lacked mobile compatibility. The company was
             preparing to launch a new product, Verismo, by displaying these products in-store to drive online sales,
-            eliminating the need for customers to purchase in-store and carry out. Our team was responsible for
-            rebuilding the entire site from scratch in React in three months, while leveraging the existing hosting
-            capabilities of Demandware. In that time, I was responsible for:
+            eliminating the need for customers to purchase in-store and carry out. We rebuilt the entire site from
+            scratch in React in three months, while leveraging the existing hosting capabilities of Demandware. In that
+            time, I was responsible for:
           </BodyParagraph>
           <UL additionalClassNames="mb-6">
             <LI title={"React Frontend Architecture"}>
