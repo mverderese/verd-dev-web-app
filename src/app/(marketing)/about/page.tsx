@@ -20,30 +20,30 @@ export default function AboutPage() {
     <>
       <Section bgOverride="bg-astral">
         <div className="flex flex-wrap">
-          <div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-9 lg:max-w-72 ">
-            <Image
-              className="sm:max-h-80 object-contain"
-              src="/mike-headshot-2.jpg"
-              alt="Image"
-              height={500}
-              width={500}
-            />
-          </div>
-          <div className="basis-full lg:basis-2/3 ">
-            <H1 additionalClassNames="text-white sm:mt-0.5 lg:mt-[18px] mb-3 lg:mb-8">Hey, I&apos;m Mike</H1>
-            <BodyText>
-              <BodyParagraph additionalClassNames="text-white">
-                <span>
-                  Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about
-                  developing products that enhance global well-being. My experience spans healthcare, construction,
-                  ecommerce, and social industries. I excel in leading every phase of product development, from ideation
-                  to deployment and growth, and my strong communication skills help bridge gaps between engineers,
-                  designers, product managers, stakeholders, and customers.
-                </span>
-              </BodyParagraph>
-            </BodyText>
-          </div>
+          {/*<div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-9 lg:max-w-72 ">*/}
+          {/*  <Image*/}
+          {/*    className="sm:max-h-80 object-contain"*/}
+          {/*    src="/mike-headshot-2.jpg"*/}
+          {/*    alt="Image"*/}
+          {/*    height={500}*/}
+          {/*    width={500}*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<div className="basis-full lg:basis-2/3 ">*/}
+          <H1 additionalClassNames="text-white sm:mt-0.5 lg:mt-[18px] mb-3 lg:mb-8">Hey, I&apos;m Mike</H1>
+          <BodyText>
+            <BodyParagraph additionalClassNames="text-white">
+              <span>
+                Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about
+                developing products that enhance global well-being. My experience spans healthcare, construction,
+                ecommerce, and social industries. I excel in leading every phase of product development, from ideation
+                to deployment and growth, and my strong communication skills help bridge gaps between engineers,
+                designers, product managers, stakeholders, and customers.
+              </span>
+            </BodyParagraph>
+          </BodyText>
         </div>
+        {/*</div>*/}
       </Section>
       <Section>
         <div className="">

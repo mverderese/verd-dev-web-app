@@ -27,14 +27,12 @@ export default function ProjectHeroPanel({ children, project }: ProjectPageConta
                 alt={`${project.title} logo`}
               />
             </div>
-            <H1 additionalClassNames="mb-3 lg:mb-8">{project.title}</H1>
-            <H2 marginOverride="mb-3 sm:mb-5">
-              <span className="text-white">
-                {project.jobTitle}
-                <br className="sm:hidden" /> ({project.startYear} - {project.endYear ?? "Present"})
-              </span>
+            <H1 additionalClassNames="leading-none">{project.title}</H1>
+            <H2 marginOverride="mt-2 mb-7 sm:mb-11 mb-3 sm:mb-5 text-white">
+              {project.jobTitle}
+              <br className="sm:hidden" /> ({project.startYear} - {project.endYear ?? "Present"})
             </H2>
-            <H4 narrowBottom>
+            <H4>
               <span className="text-wheatfield">{project.summary}</span>
             </H4>
           </div>
