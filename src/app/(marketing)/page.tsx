@@ -19,10 +19,8 @@ export default function Home() {
             <Image src="/mike-headshot.jpg" alt="Image" className="rounded-full" height={200} width={200} />
           </div>
 
-          <H1 additionalClassNames="mt-9 sm:mt-12">{MY_NAME}</H1>
-          <div className="pt-3 sm:pt-8 pb-1">
-            <h2 className="text-2xl sm:text-[32px] font text-white">{JOB_TITLE}</h2>
-          </div>
+          <H1 additionalClassNames="mt-9 sm:mt-12 leading-none">{MY_NAME}</H1>
+          <h2 className="text-2xl sm:text-[32px] font text-white mt-2 mb-7 sm:mb-11">{JOB_TITLE}</h2>
 
           <PrimarySecondaryCta
             primaryText="See my resume"
