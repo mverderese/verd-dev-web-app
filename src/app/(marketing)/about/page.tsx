@@ -10,6 +10,7 @@ import TextLink from "@/app/(marketing)/_components/TextLink";
 import type { Metadata } from "next";
 import { MY_NAME } from "@/app/constants";
 import { titleForEnv } from "@/app/_util";
+import React from "react";
 
 export const metadata: Metadata = {
   title: titleForEnv(`About | ${MY_NAME}`),
@@ -33,13 +34,13 @@ export default function AboutPage() {
           <H1 additionalClassNames="text-white sm:mt-0.5 lg:mt-[18px] mb-3 lg:mb-8">Hey, I&apos;m Mike</H1>
           <BodyText>
             <BodyParagraph additionalClassNames="text-white">
-              <span>
-                Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about
-                developing products that enhance global well-being. My experience spans healthcare, construction,
-                ecommerce, and social industries. I excel in leading every phase of product development, from ideation
-                to deployment and growth, and my strong communication skills help bridge gaps between engineers,
-                designers, product managers, stakeholders, and customers.
-              </span>
+              With over a decade of experience in system architecture design, technical strategy, backend and DevOps
+              engineering, and people management, I have successfully navigated the unique challenges of both startups
+              and large enterprises. My expertise spans various industries including healthcare, construction,
+              e-commerce, and social sectors. I excel in tailoring my skillset to meet the specific needs and
+              requirements of each company, ensuring scalable and efficient solutions. From the agility needed in
+              startup environments to the structured processes of large organizations, I bring a versatile approach to
+              driving product development and team success.
             </BodyParagraph>
           </BodyText>
         </div>
@@ -47,23 +48,25 @@ export default function AboutPage() {
       </Section>
       <Section>
         <div className="">
-          <H2>Diving Into the Startup World</H2>
+          <H2>Navigating the Challenges of Startups and Enterprises</H2>
           <BodyText>
             <BodyParagraph>
               During my senior year, a friend and I created a responsible drinking app called{" "}
               <TextLink link="/portfolio/projects/shots-igot">Shots&nbsp;iGot</TextLink> at the
-              Princeton&nbsp;Hackathon, which gained nearly 10,000 users and national media attention, igniting my
-              passion for entrepreneurship. After graduating, I teamed up with three co-founders to create{" "}
-              <TextLink link="/portfolio/projects/tag">Tag</TextLink>, a location-based social app for meetups. We
-              rented an apartment in New York, developed an MVP, and secured funding from investors like Tim Draper,
-              Eduardo Saverin, and Mark Cuban. We expanded our team, launched a campus ambassador program, and quickly
-              grew to tens of thousands of users. Eventually, we were acquired by Mark Cuban Companies.
+              Princeton&nbsp;Hackathon, which gained nearly 10,000 users in less than three months and national media
+              attention, igniting my passion for entrepreneurship. After graduating, I teamed up with three co-founders
+              to create <TextLink link="/portfolio/projects/tag">Tag</TextLink>, a location-based social app for
+              meetups, which was run from our New York apartment. We developed an MVP and secured funding from notable
+              investors including Tim Draper, Eduardo Saverin, and Mark Cuban. We expanded our team, launched a campus
+              ambassador program, grew to tens of thousands of users within six months of launch. Eventually, we were
+              acquired by Mark Cuban Companies.
             </BodyParagraph>
             <BodyParagraph>
-              Over the past decade, I’ve worked with companies of all sizes, from pre-seed startups to
-              multi-billion-dollar corporations. Notably, I worked with a team of four engineers to rebuild the entire{" "}
+              After gaining valuable experience in early-stage startups, I successfully transitioned to leading
+              initiatives in multi-billion-dollar corporations. Notably, I rebuilt the entire{" "}
               <TextLink link="/portfolio/projects/starbucks">Starbucks&nbsp;Ecommerce&nbsp;Store</TextLink> in three
-              months, generating over $100 million in holiday revenue. Following that, I joined the founding team of{" "}
+              months, while collaborating with a team of four engineers, generating over $100 million in holiday
+              revenue. From that success, I was recruited to join the founding team of{" "}
               <TextLink link="/portfolio/projects/renew">Renew</TextLink>, where I built the API and DevOps process for
               the Medicare Plan Finder and Customer Success platforms, while mentoring and leading other engineers.
             </BodyParagraph>

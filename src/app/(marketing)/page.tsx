@@ -9,6 +9,7 @@ import LI from "@/app/(marketing)/_components/LI";
 import BodyText from "@/app/(marketing)/_components/BodyText";
 import H1 from "@/app/(marketing)/_components/H1";
 import CtaButton from "@/app/(marketing)/_components/CtaButton";
+import BodyParagraph from "@/app/(marketing)/_components/BodyParagrah";
 
 export default function Home() {
   return (
@@ -32,8 +33,44 @@ export default function Home() {
           />
         </div>
       </Section>
+
       <Section bgOverride="bg-calypso">
+        <BodyText additionalClassNames="sm:mb-7">
+          <BodyParagraph additionalClassNames="text-white">
+            Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about developing
+            products that enhance global well-being. My experience spans healthcare, construction, ecommerce, and social
+            industries.
+          </BodyParagraph>
+          <BodyParagraph additionalClassNames="text-white">
+            I excel in leading every phase of product development, from ideation to deployment and growth, and my strong
+            communication skills help bridge gaps between engineers, designers, product managers, stakeholders, and
+            customers. I consistently lead teams to deliver high-quality products on time, even with minimal resources
+            and evolving requirements.
+          </BodyParagraph>
+        </BodyText>
         <div className="flex flex-col items-start lg:flex-row lg:flex-wrap">
+          <div className="lg:basis-1/2 lg:px-4 mt-5 lg:mt-0">
+            <h2 className="text-white font-archivo mt-2 mb-4 text-3xl">Leadership Skills</h2>
+            <BodyText>
+              <UL additionalClassNames="text-white">
+                <LI title={"Technical Strategy"}>
+                  Align company Objectives and Key Results (OKRs) with the product&apos;s technical capabilities and the
+                  team&apos;s strengths to drive success.
+                </LI>
+                <LI title={"Team Management"}>
+                  Mentor and motivate team members, incorporating input from internal and external parties to make
+                  informed decisions. Provide constructive feedback and support professional growth within their roles
+                  and careers.
+                </LI>
+                <LI title={"Translating Technical Requirements"}>
+                  Facilitate continuous communication between customers, leadership, stakeholders, and product and
+                  engineering teams to maximise alignment and engagement with the product delivery process. Lead
+                  technical architecture and design efforts within the engineering team to achieve successful product
+                  deliverables.
+                </LI>
+              </UL>
+            </BodyText>
+          </div>
           <div className="lg:basis-1/2 lg:px-4">
             <h2 className="text-white font-archivo mt-2 mb-4 text-3xl">Technical Skills</h2>
             <BodyText>
@@ -47,26 +84,6 @@ export default function Home() {
               </UL>
             </BodyText>
           </div>
-          <div className="lg:basis-1/2 lg:px-4 mt-12 lg:mt-0">
-            <h2 className="text-white font-archivo mt-2 mb-4 text-3xl">Leadership Skills</h2>
-            <BodyText>
-              <UL additionalClassNames="text-white">
-                <LI title={"Technical Strategy"}>
-                  Align company objectives and key results with the technical capabilities of the product and team to
-                  drive success.
-                </LI>
-                <LI title={"Team Management"}>
-                  Mentor and motivate team members, incorporating input from internal and external parties to make
-                  informed decisions. Provide constructive feedback and support professional growth within their roles
-                  and careers.
-                </LI>
-                <LI title={"Translating Technical Requirements"}>
-                  Facilitate ongoing communication between customers, leadership stakeholders, and product and
-                  engineering teams. Lead technical architecture and design efforts within the engineering team.
-                </LI>
-              </UL>
-            </BodyText>
-          </div>
         </div>
         <div className="text-center">
           <div className="flex justify-center pt-12">
@@ -76,7 +93,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-
       {/*<Section darkBg>*/}
       {/*  <div className="grid grid-cols-1 md:grid-cols-2 lg:px-40 gap-6">*/}
       {/*    <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL} newTab>*/}

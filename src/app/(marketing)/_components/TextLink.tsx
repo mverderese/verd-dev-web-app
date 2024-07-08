@@ -5,7 +5,7 @@ export type TextLinkProps = {
 };
 export default function TextLink({ link, children, newTab }: TextLinkProps) {
   return (
-    <a className="underline font-semibold" href={link} target={newTab ? "_blank" : ""}>
+    <a className="underline font-dm-sans-semibold" href={link} target={newTab ? "_blank" : ""}>
       {children}
     </a>
   );
