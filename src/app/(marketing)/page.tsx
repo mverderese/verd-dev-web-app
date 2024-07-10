@@ -37,9 +37,9 @@ export default function Home() {
       <Section bgOverride="bg-calypso">
         <BodyText additionalClassNames="sm:mb-7">
           <BodyParagraph additionalClassNames="text-white">
-            Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader passionate about developing
-            products that enhance global well-being. My experience spans healthcare, construction, ecommerce, and social
-            industries.
+            Born in Jersey and now based in Philadelphia, I am a Software Engineering Leader and Individual Contributor
+            passionate about developing products that enhance global well-being. My experience spans healthcare,
+            construction, ecommerce, and social industries.
           </BodyParagraph>
           <BodyParagraph additionalClassNames="text-white">
             I excel in leading every phase of product development, from ideation to deployment and growth, and my strong
