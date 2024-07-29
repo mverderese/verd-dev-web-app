@@ -121,8 +121,10 @@ resource "google_sql_database_instance" "postgres_db_instance" {
   region              = var.region
   root_password       = google_secret_manager_secret_version.db_root_password_secret_version.secret_data
 
+
   settings {
-    activation_policy           = "ALWAYS"
+    #     activation_policy           = "ALWAYS"
+    activation_policy           = "NEVER"
     availability_type           = "ZONAL"
     connector_enforcement       = "NOT_REQUIRED"
     deletion_protection_enabled = false

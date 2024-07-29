@@ -13,8 +13,9 @@ variable "zone" {
 }
 
 variable "environments" {
-  type    = list(string)
-  default = ["dev", "stg", "prod"]
+  type = list(string)
+  #   default = ["dev", "stg", "prod"]
+  default = ["prod"]
 }
 
 variable "oauth_client_ids" {

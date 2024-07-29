@@ -5,9 +5,9 @@ name: Build and Deploy Web App to Cloud Run
 on:
   push:
     branches:
-      - develop
-      - main
-      - test/*
+  #      - develop
+  #      - main
+  #      - test/*
   release:
     types:
       - released
