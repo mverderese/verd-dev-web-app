@@ -1,9 +1,8 @@
-import { JOB_TITLE, MY_NAME, RESUME_URL } from "@/app/constants";
+import { JOB_TITLE, MY_NAME } from "@/app/constants";
 import Image from "next/image";
 import Section from "@/app/(marketing)/_components/Section";
 import PortfolioGrid from "@/app/(marketing)/_components/PortfolioGrid";
 import React from "react";
-import { PrimarySecondaryCta } from "@/app/(marketing)/_components/PrimarySecondaryCta";
 import UL from "@/app/(marketing)/_components/UL";
 import LI from "@/app/(marketing)/_components/LI";
 import BodyText from "@/app/(marketing)/_components/BodyText";
@@ -23,14 +22,13 @@ export default function Home() {
           <H1 additionalClassNames="mt-9 sm:mt-12 leading-none">{MY_NAME}</H1>
           <h2 className="text-2xl sm:text-[32px] font text-white mt-2 mb-7 sm:mb-11">{JOB_TITLE}</h2>
 
-          <PrimarySecondaryCta
-            primaryText="See my resume"
-            primaryLink={RESUME_URL}
-            primaryLinkNewTab
-            secondaryText="Get in touch"
-            secondaryLink="https://app.reclaim.ai/m/mike-verderese/flexible-quick-meeting"
-            secondaryLinkNewTab
-          />
+          <div className="text-center">
+            <div className="flex justify-center pt-12">
+              <CtaButton link={"https://app.reclaim.ai/m/mike-verderese/flexible-quick-meeting"} newTab>
+                Get in touch
+              </CtaButton>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -93,16 +91,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      {/*<Section darkBg>*/}
-      {/*  <div className="grid grid-cols-1 md:grid-cols-2 lg:px-40 gap-6">*/}
-      {/*    <Card image="/icons/feather/clipboard.svg" title="Resume" link={RESUME_URL} newTab>*/}
-      {/*      Learn more about my work experience.*/}
-      {/*    </Card>*/}
-      {/*    <Card image="/icons/feather/github.svg" title="Github" link={GITHUB_REPO_URL} newTab>*/}
-      {/*      See the source code of this website.*/}
-      {/*    </Card>*/}
-      {/*  </div>*/}
-      {/*</Section>*/}
       <Section bgOverride="bg-astral">
         <div className="container max-w-screen-xl mx-auto px-4 ">
           <h2 className="font-archivo mb-7 lg:mb-12 text-3xl text-white">Portfolio</h2>
