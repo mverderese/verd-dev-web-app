@@ -21,16 +21,6 @@ export default function AboutPage() {
     <>
       <Section bgOverride="bg-astral">
         <div className="flex flex-wrap">
-          {/*<div className="basis-full lg:basis-1/3 pb-9 lg:pb-0 lg:pt-3 lg:pr-9 lg:max-w-72 ">*/}
-          {/*  <Image*/}
-          {/*    className="sm:max-h-80 object-contain"*/}
-          {/*    src="/mike-headshot-2.jpg"*/}
-          {/*    alt="Image"*/}
-          {/*    height={500}*/}
-          {/*    width={500}*/}
-          {/*  />*/}
-          {/*</div>*/}
-          {/*<div className="basis-full lg:basis-2/3 ">*/}
           <H1 additionalClassNames="text-white sm:mt-0.5 lg:mt-[18px] mb-3 lg:mb-8">Hey, I&apos;m Mike</H1>
           <BodyText>
             <BodyParagraph additionalClassNames="text-white">
@@ -75,15 +65,23 @@ export default function AboutPage() {
               and visibility platform for construction, bootstrapping the company to $1 million in revenue in the first
               year. I led the development of a software platform that integrates with external vendors and physical
               hardware, such as turnstiles and cameras, while delivering a user-friendly experience on both web and
-              mobile apps. Today, Odin manages over 20,000 workers across 700 contractors nationwide, while growing 12%
-              per quarter.
+              mobile apps. Today, Odin manages over 20,000 workers across 700 contractors nationwide.
             </BodyParagraph>
             <BodyParagraph>
-              Currently, I am the Head of Engineering at Red Krypton, a design, development, and marketing agency. We
-              help companies build and scale their technology, grow their audience, and boost profitability. One such
-              project involved working with <TextLink link="/portfolio/projects/great-many">Great Many</TextLink>, a
-              hair restoration company, from their founding, developing a custom booking flow for their PRP service and
-              a seamless telehealth experience for prescription products.
+              Following Odin, I became the Head of Engineering at Red Krypton, a design, development, and marketing
+              agency. We helped companies build and scale their technology, grow their audience, and boost
+              profitability. One such project involved working with{" "}
+              <TextLink link="/portfolio/projects/great-many">Great Many</TextLink>, a hair restoration company, from
+              their founding, developing a custom booking flow for their PRP service and a seamless telehealth
+              experience for prescription products.
+            </BodyParagraph>
+            <BodyParagraph>
+              Currently, I am the Technical Lead for the backend team of{" "}
+              <TextLink link="https://www.hubspot.com/products/artificial-intelligence/breeze-copilot" newTab>
+                Breeze Copilot
+              </TextLink>
+              , HubSpot&apos;s AI companion. We help customers of HubSpot increase their productivity by providing
+              tailored insights and assistance right where they need it.
             </BodyParagraph>
           </BodyText>
         </div>
