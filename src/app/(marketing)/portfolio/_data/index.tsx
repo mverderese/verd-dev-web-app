@@ -9,6 +9,18 @@ import TagContent from "@/app/(marketing)/portfolio/projects/_components/TagCont
 
 export const portfolioProjects: PortfolioProject[] = [
   {
+    title: "HubSpot",
+    startYear: 2024,
+    subtitle: "Breeze Copilot",
+    jobTitle: "Technical Lead II",
+    summary:
+      "Leading backend development of an AI companion to assist with your tasks everywhere you work across HubSpot",
+    image: "/icons/hubspot-logo.jpeg",
+    // slug: "hubspot",
+    externalLink: "https://www.hubspot.com/products/artificial-intelligence/breeze-copilot",
+    highlighted: true,
+  },
+  {
     title: "Odin",
     startYear: 2020,
     endYear: 2024,
@@ -25,6 +37,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     title: "Great Many",
     startYear: 2023,
+    endYear: 2024,
     subtitle: "Your Home for Hair Growth",
     jobTitle: "Head of Engineering",
     summary:
@@ -44,7 +57,6 @@ export const portfolioProjects: PortfolioProject[] = [
     summary: "Led the design and implementation of the API and DevOps platforms for a healthcare startup.",
     image: "/icons/renew-logo.png",
     slug: "renew",
-    highlighted: true,
     content: <RenewContent />,
   },
   {
