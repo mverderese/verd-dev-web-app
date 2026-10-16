@@ -1,1 +1,8 @@
-.next
+build
+.react-router
+playwright-report
+test-results
+package-lock.json
+.idea
+ops
+.local

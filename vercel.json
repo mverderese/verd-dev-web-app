@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "build/client",
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/portfolio", "destination": "/work", "permanent": true },
+    { "source": "/portfolio/projects/tag", "destination": "/work", "permanent": true },
+    { "source": "/portfolio/projects/shots-igot", "destination": "/work", "permanent": true },
+    { "source": "/portfolio/projects/17-lands", "destination": "/work", "permanent": true },
+    { "source": "/portfolio/projects/:slug", "destination": "/work/:slug", "permanent": true },
+    { "source": "/app", "destination": "/", "permanent": true },
+    {
+      "source": "/resume",
+      "destination": "https://storage.googleapis.com/verderese-development-public-files/Mike_Verderese_Resume.pdf",
+      "permanent": false
+    }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/__spa-fallback.html" }]
+}
