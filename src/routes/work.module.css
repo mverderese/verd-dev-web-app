@@ -33,7 +33,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-5) var(--space-8);
-  padding-top: 4.5rem;
+  padding-top: var(--space-band-lg);
 }
 
 .earlierLabel {

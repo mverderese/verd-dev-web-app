@@ -44,12 +44,12 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
-  padding-bottom: 5rem;
+  padding-bottom: var(--space-band-xl);
 }
 
 .serviceList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
   column-gap: var(--space-6);
   border-top: var(--rule-thin) solid var(--color-ink);
 }
@@ -77,13 +77,19 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  padding-block: 4.5rem;
+  padding-block: var(--space-band-lg);
 }
 
 .processList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.25rem), 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-4);
+}
+
+@media (min-width: 60rem) {
+  .processList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .step {
@@ -111,7 +117,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-6) var(--space-9);
-  padding-block: 5rem;
+  padding-block: var(--space-band-xl);
 }
 
 .clientsLabel {
@@ -153,7 +159,7 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: var(--space-6);
-  padding-block: 4.5rem 5.5rem;
+  padding-block: var(--space-band-lg) 5.5rem;
 }
 
 .contactCopy {
