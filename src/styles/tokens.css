@@ -1,0 +1,107 @@
+/*
+ * Design tokens for the Grotesk brand. Components reference these custom
+ * properties only; raw color and size values do not appear anywhere else.
+ */
+:root {
+  color-scheme: light dark;
+
+  /* Color: light */
+  --color-bg: #ffffff;
+  --color-panel: #f3f4f4;
+  --color-ink: #0f1111;
+  --color-text: #2a2e30;
+  --color-text-secondary: #3d4244;
+  --color-muted: #5e6366;
+  --color-rule: #e3e5e6;
+  --color-accent: #1e6b45;
+  --color-accent-text: #1e6b45;
+  --color-on-accent: #ffffff;
+  --color-on-accent-muted: #cfe3d7;
+  --color-inverse-bg: #0f1111;
+  --color-inverse-text: #ffffff;
+  --color-inverse-muted: #d5d9da;
+  --color-inverse-accent: #9fd3b4;
+
+  /* Type */
+  --font-sans: "Schibsted Grotesk Variable", "Schibsted Grotesk", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --text-label: 0.8125rem; /* 13px */
+  --text-small: 0.9375rem; /* 15px */
+  --text-body: 1.0625rem; /* 17px */
+  --text-lead: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem);
+  --text-h3: 1.3125rem;
+  --text-h2: 1.75rem;
+  --text-card-title: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+  --text-section: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+  --text-display: clamp(2.75rem, 1.6rem + 5vw, 5.75rem);
+  --text-display-xl: clamp(3.25rem, 1.8rem + 6.5vw, 7rem);
+
+  --leading-tight: 0.98;
+  --leading-snug: 1.15;
+  --leading-body: 1.55;
+
+  --tracking-display: -0.045em;
+  --tracking-heading: -0.025em;
+
+  /* Space and layout */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-9: 4rem;
+  --space-section: clamp(3.5rem, 2rem + 6vw, 7rem);
+
+  --container-max: 78rem;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+
+  --rule-thin: 1px;
+  --rule-thick: 2px;
+  --tap-target: 2.75rem;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --duration-fast: 150ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #0f1111;
+    --color-panel: #171a1b;
+    --color-ink: #f2f4f4;
+    --color-text: #dfe3e4;
+    --color-text-secondary: #c3c9cb;
+    --color-muted: #9aa2a5;
+    --color-rule: #2a2f31;
+    --color-accent-text: #9fd3b4;
+    --color-inverse-bg: #f2f4f4;
+    --color-inverse-text: #0f1111;
+    --color-inverse-muted: #3d4244;
+    --color-inverse-accent: #1e6b45;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #0f1111;
+  --color-panel: #171a1b;
+  --color-ink: #f2f4f4;
+  --color-text: #dfe3e4;
+  --color-text-secondary: #c3c9cb;
+  --color-muted: #9aa2a5;
+  --color-rule: #2a2f31;
+  --color-accent-text: #9fd3b4;
+  --color-inverse-bg: #f2f4f4;
+  --color-inverse-text: #0f1111;
+  --color-inverse-muted: #3d4244;
+  --color-inverse-accent: #1e6b45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+  }
+}

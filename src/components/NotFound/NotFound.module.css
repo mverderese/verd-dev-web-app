@@ -1,0 +1,18 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-block: var(--space-section);
+}
+
+.title {
+  font-size: var(--text-display);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+}
+
+.detail {
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+}

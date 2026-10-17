@@ -1,0 +1,15 @@
+.label {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.accent {
+  color: var(--color-accent-text);
+}

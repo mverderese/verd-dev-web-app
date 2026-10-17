@@ -271,3 +271,9 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+# React Router
+/.react-router/
+
+# Playwright
+/test-results/
+/playwright-report/
