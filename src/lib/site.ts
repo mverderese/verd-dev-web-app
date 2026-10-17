@@ -1,11 +1,9 @@
 export const site = {
   name: "Mike Verderese",
-  company: "Verderese Development LLC",
-  companyShort: "Verderese Development",
   title: "AI Engineering Leader",
   tagline: "I build and lead the teams behind AI products.",
   description:
-    "Mike Verderese leads the Breeze AI Platform team at HubSpot and advises teams on putting AI into production through Verderese Development.",
+    "Mike Verderese leads the Breeze AI Platform team at HubSpot and advises teams on putting AI into production.",
   location: "Asbury Park, NJ",
   links: {
     bookCall: "https://app.reclaim.ai/m/mike-verderese/flexible-quick-meeting",

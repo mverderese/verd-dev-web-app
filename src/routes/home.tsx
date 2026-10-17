@@ -26,8 +26,7 @@ export default function Home() {
               {site.tagline}
             </h1>
             <p className={styles.lead}>
-              I lead the Breeze AI Platform team at HubSpot. Through {site.companyShort}, I also take on a few outside
-              projects.
+              I lead the Breeze AI Platform team at HubSpot. I also take on a few outside projects.
             </p>
             <ButtonGroup>
               <ButtonLink href={site.links.bookCall} fullWidthOnMobile>
@@ -60,7 +59,7 @@ export default function Home() {
             </p>
           </article>
           <article className={styles.nowItem}>
-            <Label tone="accent">{site.companyShort}</Label>
+            <Label tone="accent">Consulting</Label>
             <h3 className={styles.nowTitle}>
               <Link to="/consulting">Advice from someone who ships AI in production.</Link>
             </h3>
@@ -98,7 +97,7 @@ export default function Home() {
       </Container>
 
       <CtaBand
-        eyebrow={site.companyShort}
+        eyebrow="Consulting"
         heading="Building with AI? Let's talk it through."
         actions={
           <ButtonGroup>
