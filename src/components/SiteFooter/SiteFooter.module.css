@@ -20,5 +20,8 @@
 }
 
 .links a {
+  display: inline-block;
+  padding-block: var(--space-3);
+  margin-block: calc(-1 * var(--space-3));
   color: inherit;
 }

@@ -2,10 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  padding-block: clamp(2.5rem, 1.5rem + 4vw, 5.5rem) var(--space-9);
+  padding-block: clamp(2.5rem, 1.5rem + 4vw, 5.5rem) var(--space-band);
 }
 
 .breadcrumb {
+  align-self: flex-start;
+  padding-block: var(--space-3);
+  margin-block: calc(-1 * var(--space-3));
   color: var(--color-muted);
   font-family: var(--font-mono);
   font-size: var(--text-label);
@@ -36,14 +39,14 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
-  padding-block: var(--space-9);
+  padding-block: var(--space-band);
 }
 
 .body {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-8) 5rem;
-  padding-block: 4.5rem;
+  padding-block: var(--space-band-lg);
 }
 
 .aside {
@@ -62,6 +65,12 @@
   flex-direction: column;
   gap: var(--space-2);
   font-size: var(--text-small);
+}
+
+.links a {
+  display: inline-block;
+  padding-block: var(--space-2);
+  margin-block: calc(-1 * var(--space-2));
 }
 
 .content {

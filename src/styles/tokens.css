@@ -55,6 +55,10 @@
   --space-8: 3rem;
   --space-9: 4rem;
   --space-section: clamp(3.5rem, 2rem + 6vw, 7rem);
+  /* Padding between stacked content bands; shrinks on phones, full size from ~1280px. */
+  --space-band: clamp(2.5rem, 1rem + 5vw, 4rem);
+  --space-band-lg: clamp(3rem, 1rem + 5vw, 4.5rem);
+  --space-band-xl: clamp(3rem, 1rem + 5vw, 5rem);
 
   --container-max: 78rem;
   --gutter: clamp(1.25rem, 5vw, 4rem);
