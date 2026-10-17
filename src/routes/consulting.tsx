@@ -5,7 +5,7 @@ import { Label } from "~/components/Label/Label";
 import { Mark } from "~/components/Mark/Mark";
 import { clients, process, services } from "~/content/profile";
 import { pageMeta } from "~/lib/meta";
-import { mailto, site } from "~/lib/site";
+import { site } from "~/lib/site";
 import styles from "./consulting.module.css";
 
 export const meta: Route.MetaFunction = () =>
@@ -93,9 +93,6 @@ export default function Consulting() {
           <ButtonGroup>
             <ButtonLink href={site.links.bookCall} fullWidthOnMobile>
               Book a call
-            </ButtonLink>
-            <ButtonLink href={mailto} variant="secondary" fullWidthOnMobile>
-              {site.email}
             </ButtonLink>
           </ButtonGroup>
         </Container>

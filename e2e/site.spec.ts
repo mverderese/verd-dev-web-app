@@ -28,6 +28,12 @@ for (const { path, heading } of pages) {
       expect(errors).toEqual([]);
     });
 
+    test("does not publish an email address", async ({ page }) => {
+      await page.goto(path);
+      await expect(page.locator('a[href^="mailto:"]')).toHaveCount(0);
+      expect(await page.content()).not.toMatch(/[\w.+-]+@[\w-]+\.[\w.]+/);
+    });
+
     test("has no serious accessibility violations", async ({ page }) => {
       await page.goto(path);
       await page.getByRole("heading", { level: 1 }).waitFor();

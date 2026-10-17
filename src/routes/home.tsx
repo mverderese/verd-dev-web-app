@@ -8,7 +8,7 @@ import { ProjectCardGrid } from "~/components/ProjectCard/ProjectCard";
 import { highlightedCaseStudies } from "~/content/caseStudies";
 import { strengths } from "~/content/profile";
 import { pageMeta } from "~/lib/meta";
-import { mailto, site } from "~/lib/site";
+import { site } from "~/lib/site";
 import styles from "./home.module.css";
 
 export const meta: Route.MetaFunction = () => pageMeta({ path: "/" });
@@ -101,9 +101,6 @@ export default function Home() {
           <ButtonGroup>
             <ButtonLink href={site.links.bookCall} variant="inverse" fullWidthOnMobile>
               Book a call
-            </ButtonLink>
-            <ButtonLink href={mailto} variant="inverseOutline" fullWidthOnMobile>
-              {site.email}
             </ButtonLink>
           </ButtonGroup>
         }

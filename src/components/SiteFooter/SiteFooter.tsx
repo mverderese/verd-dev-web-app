@@ -1,5 +1,5 @@
 import { Container } from "~/components/Container/Container";
-import { mailto, site } from "~/lib/site";
+import { site } from "~/lib/site";
 import styles from "./SiteFooter.module.css";
 
 export function SiteFooter() {
@@ -11,7 +11,9 @@ export function SiteFooter() {
         </p>
         <ul className={styles.links}>
           <li>
-            <a href={mailto}>{site.email}</a>
+            <a href={site.links.bookCall} target="_blank" rel="noopener noreferrer">
+              Book a call
+            </a>
           </li>
           <li>
             <a href={site.links.linkedIn} target="_blank" rel="noopener noreferrer">
