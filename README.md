@@ -10,15 +10,15 @@ Merges into `main` deploy to production on Vercel, and `develop` deploys the dev
 
 ## Architecture
 
-| Concern       | Choice                                                                                                    |
-| ------------- | --------------------------------------------------------------------------------------------------------- |
-| Framework     | [React Router 7](https://reactrouter.com/) in framework mode, with every route prerendered to static HTML |
-| Language      | TypeScript in `strict` mode, with `noUncheckedIndexedAccess` and `verbatimModuleSyntax`                   |
-| Content       | Typed data modules validated with [Zod](https://zod.dev/) at build time (`src/content`)                   |
-| Styling       | Hand-built components with CSS Modules, driven by design tokens (`src/styles/tokens.css`), light and dark |
-| Fonts         | Schibsted Grotesk and IBM Plex Mono, self-hosted via Fontsource                                           |
-| Quality gates | ESLint (`strictTypeChecked`, jsx-a11y), Prettier, Vitest + Testing Library, Playwright + axe              |
-| Hosting       | Vercel, serving `build/client` with redirects and a SPA fallback (`vercel.json`)                          |
+| Concern       | Choice                                                                                                         |
+| ------------- | -------------------------------------------------------------------------------------------------------------- |
+| Framework     | [React Router 7](https://reactrouter.com/) in framework mode, with every route prerendered to static HTML      |
+| Language      | TypeScript in `strict` mode, with `noUncheckedIndexedAccess` and `verbatimModuleSyntax`                        |
+| Content       | Typed data modules validated with [Zod](https://zod.dev/) at build time (`src/content`)                        |
+| Styling       | Hand-built components with CSS Modules, driven by design tokens (`src/styles/tokens.css`), light and dark      |
+| Fonts         | Schibsted Grotesk and IBM Plex Mono, self-hosted via Fontsource                                                |
+| Quality gates | ESLint (`strictTypeChecked`, jsx-a11y), Prettier, Vitest + Testing Library, Playwright + axe                   |
+| Hosting       | Vercel, serving `build/client` with redirects (`vercel.json`) and a custom 404 page (`react-router.config.ts`) |
 
 ```
 src/
