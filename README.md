@@ -6,7 +6,7 @@ Personal site for Mike Verderese. This project serves two purposes:
 2. A small, readable example of how I like to build web applications: typed end to end, componentized, tested, and
    free of heavyweight UI kits.
 
-Merges into `main` deploy automatically to Vercel.
+Merges into `main` deploy to production on Vercel, and `develop` deploys the dev site. Other branches get preview deployments.
 
 ## Architecture
 
