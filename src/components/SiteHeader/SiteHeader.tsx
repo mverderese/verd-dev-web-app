@@ -2,6 +2,7 @@ import { useEffect, useId, useState } from "react";
 import { Link, NavLink } from "react-router";
 import { Container } from "~/components/Container/Container";
 import { Mark } from "~/components/Mark/Mark";
+import { SmartLink } from "~/components/SmartLink/SmartLink";
 import { site } from "~/lib/site";
 import styles from "./SiteHeader.module.css";
 
@@ -72,15 +73,10 @@ export function SiteHeader() {
               </li>
             ))}
             <li>
-              <a
-                href={site.links.resume}
-                className={`${styles.link} ${styles.outlined}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <SmartLink href={site.links.resume} className={`${styles.link} ${styles.outlined}`}>
                 Resume <span aria-hidden="true">↗</span>
                 <span className="visually-hidden">(PDF, opens in a new tab)</span>
-              </a>
+              </SmartLink>
             </li>
           </ul>
         </nav>

@@ -1,4 +1,5 @@
 import { Container } from "~/components/Container/Container";
+import { SmartLink } from "~/components/SmartLink/SmartLink";
 import { site } from "~/lib/site";
 import styles from "./SiteFooter.module.css";
 
@@ -7,23 +8,17 @@ export function SiteFooter() {
     <footer className={styles.footer}>
       <Container className={styles.inner}>
         <p>
-          © {new Date().getFullYear()} {site.company}
+          © {__BUILD_YEAR__} {site.company}
         </p>
         <ul className={styles.links}>
           <li>
-            <a href={site.links.bookCall} target="_blank" rel="noopener noreferrer">
-              Book a call
-            </a>
+            <SmartLink href={site.links.bookCall}>Book a call</SmartLink>
           </li>
           <li>
-            <a href={site.links.linkedIn} target="_blank" rel="noopener noreferrer">
-              LinkedIn
-            </a>
+            <SmartLink href={site.links.linkedIn}>LinkedIn</SmartLink>
           </li>
           <li>
-            <a href={site.links.github} target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
+            <SmartLink href={site.links.github}>GitHub</SmartLink>
           </li>
         </ul>
       </Container>

@@ -1,5 +1,5 @@
 // Serves the prerendered build the way Vercel does: exact file, then
-// `<path>/index.html`, then the SPA fallback with a 404 status.
+// `<path>/index.html`, then the root 404.html with a 404 status.
 import { createReadStream } from "node:fs";
 import { stat } from "node:fs/promises";
 import { createServer } from "node:http";
@@ -23,19 +23,32 @@ const types = {
 };
 
 async function resolveFile(pathname) {
-  const safe = normalize(decodeURIComponent(pathname)).replace(/^(\.\.[/\\])+/, "");
+  const safe = normalize(pathname).replace(/^(\.\.[/\\])+/, "");
   for (const candidate of [join(root, safe), join(root, safe, "index.html")]) {
     const info = await stat(candidate).catch(() => undefined);
     if (info?.isFile()) return { file: candidate, status: 200 };
   }
-  return { file: join(root, "__spa-fallback.html"), status: 404 };
+  return { file: join(root, "404.html"), status: 404 };
 }
 
 createServer(async (req, res) => {
-  const { pathname } = new URL(req.url ?? "/", "http://localhost");
+  let pathname;
+  try {
+    pathname = decodeURIComponent(new URL(req.url ?? "/", "http://localhost").pathname);
+  } catch {
+    res.writeHead(400).end("Bad request");
+    return;
+  }
   const { file, status } = await resolveFile(pathname);
-  res.writeHead(status, { "Content-Type": types[extname(file)] ?? "application/octet-stream" });
-  createReadStream(file).pipe(res);
+  createReadStream(file)
+    .on("open", () => {
+      res.writeHead(status, { "Content-Type": types[extname(file)] ?? "application/octet-stream" });
+    })
+    .on("error", () => {
+      if (!res.headersSent) res.writeHead(500);
+      res.end();
+    })
+    .pipe(res);
 }).listen(port, () => {
   console.log(`Serving ${root} at http://localhost:${port}`);
 });

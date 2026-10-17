@@ -5,13 +5,16 @@ import { Container } from "~/components/Container/Container";
 import { CtaBand } from "~/components/CtaBand/CtaBand";
 import { Label } from "~/components/Label/Label";
 import { ProjectCardGrid } from "~/components/ProjectCard/ProjectCard";
-import { highlightedCaseStudies } from "~/content/caseStudies";
+import { findCaseStudy, highlightedCaseStudies } from "~/content/caseStudies";
 import { strengths } from "~/content/profile";
+import { formatYears } from "~/lib/format";
 import { pageMeta } from "~/lib/meta";
 import { site } from "~/lib/site";
 import styles from "./home.module.css";
 
 export const meta: Route.MetaFunction = () => pageMeta({ path: "/" });
+
+const hubspot = findCaseStudy("hubspot");
 
 export default function Home() {
   return (
@@ -49,7 +52,7 @@ export default function Home() {
             01 / Now
           </Label>
           <article className={styles.nowItem}>
-            <Label tone="accent">HubSpot · 2024 –</Label>
+            <Label tone="accent">HubSpot{hubspot ? ` · ${formatYears(hubspot.years)}` : null}</Label>
             <h3 className={styles.nowTitle}>Staff Engineering Manager, Breeze AI Platform</h3>
             <p className={styles.secondary}>
               I lead the team behind the platform that backs nearly all of HubSpot&apos;s customer-facing AI agents,

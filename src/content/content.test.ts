@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
+import vercelConfig from "../../vercel.json";
 import { caseStudies, findCaseStudy, highlightedCaseStudies, nextCaseStudy } from "./caseStudies";
-import { earlierWork } from "./earlierWork";
 import { caseStudySchema } from "./schema";
 
 describe("case studies", () => {
@@ -25,9 +25,21 @@ describe("case studies", () => {
     if (last) expect(nextCaseStudy(last.slug).slug).toBe(caseStudies[0]?.slug);
   });
 
-  it("does not reuse a legacy slug from the earlier-work list", () => {
-    const legacy = earlierWork.flatMap(({ legacySlug }) => (legacySlug ? [legacySlug] : []));
-    expect(legacy.some((slug) => findCaseStudy(slug))).toBe(false);
+  it("keeps legacy portfolio URLs pointing at live pages", () => {
+    const legacyPrefix = "/portfolio/projects/";
+    const retired = vercelConfig.redirects.filter(
+      ({ source }) => source.startsWith(legacyPrefix) && source !== `${legacyPrefix}:slug`,
+    );
+    // Retired projects go to /work and must not shadow a live case study.
+    for (const { source, destination } of retired) {
+      expect(destination).toBe("/work");
+      expect(findCaseStudy(source.slice(legacyPrefix.length))).toBeUndefined();
+    }
+    expect(vercelConfig.redirects).toContainEqual({
+      source: `${legacyPrefix}:slug`,
+      destination: "/work/:slug",
+      permanent: true,
+    });
   });
 });
 

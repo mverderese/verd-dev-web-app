@@ -9,7 +9,7 @@ import { NotFound } from "~/components/NotFound/NotFound";
 import { SmartLink } from "~/components/SmartLink/SmartLink";
 import { TagList } from "~/components/TagList/TagList";
 import { findCaseStudy, nextCaseStudy } from "~/content/caseStudies";
-import { pageMeta } from "~/lib/meta";
+import { notFoundMeta, pageMeta } from "~/lib/meta";
 import styles from "./case-study.module.css";
 
 // Content is bundled and typed, so the page reads it directly rather than
@@ -18,7 +18,7 @@ export const meta: Route.MetaFunction = ({ params }) => {
   const study = findCaseStudy(params.slug);
   return study
     ? pageMeta({ title: study.name, description: study.intro, path: `/work/${study.slug}` })
-    : [{ name: "robots", content: "noindex" }];
+    : notFoundMeta();
 };
 
 export default function CaseStudyPage({ params }: Route.ComponentProps) {

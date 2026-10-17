@@ -4,6 +4,8 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [reactRouter()],
+  // Fixed at build time so prerendered HTML and the hydrated client always agree.
+  define: { __BUILD_YEAR__: JSON.stringify(new Date().getFullYear()) },
   resolve: {
     alias: { "~": fileURLToPath(new URL("./src", import.meta.url)) },
   },

@@ -1,9 +1,10 @@
 import { z } from "zod";
+import { isSitePath } from "../lib/href";
 
 const nonEmpty = z.string().trim().min(1);
 const year = z.number().int().min(2000).max(2100);
 const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Slugs are lowercase kebab-case");
-const sitePath = z.string().startsWith("/");
+const sitePath = z.string().refine(isSitePath, "Must be a site path such as /work");
 const href = z.union([z.url(), sitePath]);
 
 export const yearRangeSchema = z
@@ -90,8 +91,6 @@ export const earlierWorkSchema = z.array(
     name: nonEmpty,
     description: nonEmpty,
     years: yearRangeSchema,
-    /** Old case-study slug, kept so legacy URLs can redirect. */
-    legacySlug: slug.optional(),
     href: href.optional(),
     linkLabel: nonEmpty.optional(),
   }),

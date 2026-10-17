@@ -14,6 +14,11 @@ type PageMetaInput = {
 export const titleForEnv = (title: string) =>
   env.appEnv === "prod" ? title : `[${env.appEnv.toUpperCase()}] ${title}`;
 
+export const notFoundMeta = (): MetaDescriptor[] => [
+  { title: titleForEnv(`Not found | ${site.name}`) },
+  { name: "robots", content: "noindex" },
+];
+
 export function pageMeta({ title, description = site.description, path }: PageMetaInput): MetaDescriptor[] {
   const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.title}`;
   const url = `${env.baseUrl}${path}`;

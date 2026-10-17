@@ -55,9 +55,18 @@ test("navigates from the home page to a case study and on to the next", async ({
   await expect(page).toHaveURL(/\/work\/odin$/);
 });
 
-test("shows the not-found page for unknown paths", async ({ page }) => {
-  await page.goto("/work/not-a-real-project");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("That page isn't here.");
+test("shows the not-found page with a 404 status for unknown paths", async ({ page }) => {
+  for (const path of ["/not-a-real-page", "/work/not-a-real-project"]) {
+    const response = await page.goto(path);
+    expect(response?.status()).toBe(404);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("That page isn't here.");
+    await expect(page).toHaveTitle(/Not found \| Mike Verderese/);
+  }
+});
+
+test("rejects malformed URLs without taking the server down", async ({ request }) => {
+  expect((await request.get("/%E0%A4%A")).status()).toBe(400);
+  expect((await request.get("/")).status()).toBe(200);
 });
 
 test("mobile menu opens and navigates", async ({ page, isMobile }) => {

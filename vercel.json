@@ -16,6 +16,5 @@
       "destination": "https://storage.googleapis.com/verderese-development-public-files/Mike_Verderese_Resume.pdf",
       "permanent": false
     }
-  ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/__spa-fallback.html" }]
+  ]
 }

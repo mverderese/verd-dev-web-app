@@ -1,5 +1,9 @@
 /** Copy shared by the home, consulting and about pages. */
 
+import { formatYears } from "~/lib/format";
+import { findCaseStudy } from "./caseStudies";
+import { earlierWork } from "./earlierWork";
+
 export const strengths = [
   {
     title: "Agent platforms",
@@ -47,13 +51,27 @@ export const clients = [
   { name: "Distrix", body: "Leasing and tenant-verification platform for landlords and brokerages." },
 ] as const;
 
+function caseStudyYears(slug: string): string {
+  const study = findCaseStudy(slug);
+  if (!study) throw new Error(`Timeline references unknown case study "${slug}"`);
+  return formatYears(study.years);
+}
+
+function earlierWorkYears(name: string): string {
+  const item = earlierWork.find((work) => work.name === name);
+  if (!item) throw new Error(`Timeline references unknown earlier work "${name}"`);
+  return formatYears(item.years);
+}
+
+/** About-page timeline. Years come from the case studies so they can't drift. */
 export const timeline = [
-  { name: "HubSpot", years: "2024 –" },
-  { name: "Red Krypton", years: "2023 – 24" },
-  { name: "Odin", years: "2020 – 24" },
-  { name: "Renew", years: "2017 – 20" },
-  { name: "Starbucks", years: "2016" },
-  { name: "Tag", years: "2013 – 15" },
+  { name: "HubSpot", years: caseStudyYears("hubspot") },
+  // Red Krypton was the agency behind the Great Many engagement.
+  { name: "Red Krypton", years: caseStudyYears("great-many") },
+  { name: "Odin", years: caseStudyYears("odin") },
+  { name: "Renew", years: caseStudyYears("renew") },
+  { name: "Starbucks", years: caseStudyYears("starbucks") },
+  { name: "Tag", years: earlierWorkYears("Tag") },
   { name: "Rutgers, B.S. Computer Science", years: "Education" },
 ] as const;
 
