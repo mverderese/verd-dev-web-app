@@ -1,4 +1,4 @@
-# Verderese Web App
+# Personal Site
 
 Personal site for Mike Verderese. This project serves two purposes:
 
