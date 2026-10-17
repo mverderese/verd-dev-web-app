@@ -51,12 +51,11 @@ The site is fully static today (`ssr: false` in `react-router.config.ts`). To ad
    ```bash
    nodenv install -s
    ```
-2. Copy `.env.local.example` to `.env.local` and fill in any values you need. Everything is optional locally.
-3. Install dependencies (this also installs the Git pre-commit hooks that run lint):
+2. Install dependencies (this also installs the Git pre-commit hooks that run lint):
    ```bash
    npm install
    ```
-4. Start the dev server at http://localhost:5173:
+3. Start the dev server at http://localhost:5173:
    ```bash
    npm run dev
    ```
@@ -75,15 +74,18 @@ The site is fully static today (`ssr: false` in `react-router.config.ts`). To ad
 
 Run `npx playwright install chromium` once before the first `test:e2e`.
 
-### Environment variables
+### Environments
 
-| Variable                 | Purpose                                            |
-| ------------------------ | -------------------------------------------------- |
-| `VITE_BASE_URL`          | Origin used for canonical and Open Graph URLs      |
-| `VITE_GA_MEASUREMENT_ID` | Google Analytics, loaded only in production builds |
-| `VITE_HOTJAR_SITE_ID`    | Hotjar, loaded only in production builds           |
+There are no env vars to configure. `vite.config.ts` derives the environment and base URL from Vercel's build variables:
 
-Per-environment values live in `ops/env/`.
+| Environment | When                          | Base URL                    |
+| ----------- | ----------------------------- | --------------------------- |
+| `prod`      | Vercel production             | `https://mikeverderese.com` |
+| `dev`       | Vercel preview of `develop`   | The deployment's Vercel URL |
+| `preview`   | Other Vercel preview branches | The deployment's Vercel URL |
+| `local`     | Anywhere else                 | `http://localhost:5173`     |
+
+Analytics is Vercel Web Analytics, loaded on every Vercel deployment. Turn it on in the project's Analytics settings.
 
 ## Design
 
