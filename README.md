@@ -1,6 +1,6 @@
 # Verderese Web App
 
-Personal site for Mike Verderese and Verderese Development LLC. This project serves two purposes:
+Personal site for Mike Verderese. This project serves two purposes:
 
 1. The source code for [mikeverderese.com](https://mikeverderese.com/).
 2. A small, readable example of how I like to build web applications: typed end to end, componentized, tested, and

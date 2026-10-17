@@ -12,7 +12,7 @@ export const meta: Route.MetaFunction = () =>
   pageMeta({
     title: "Consulting",
     description:
-      "Through Verderese Development, Mike Verderese helps teams plan, build and scale AI products: fixed-scope audits, advisory and hands-on builds.",
+      "Mike Verderese helps teams plan, build and scale AI products: fixed-scope audits, advisory and hands-on builds.",
     path: "/consulting",
   });
 
@@ -23,14 +23,14 @@ export default function Consulting() {
         <p className={styles.company}>
           <Mark size="md" />
           <span className={styles.companyText}>
-            <span className={styles.companyName}>{site.companyShort}</span>
-            <Label as="span">LLC · {site.location}</Label>
+            <span className={styles.companyName}>{site.name}</span>
+            <Label as="span">Consulting · {site.location}</Label>
           </span>
         </p>
         <h1 className={styles.title}>Advice from someone who ships AI in production.</h1>
         <p className={styles.lead}>
-          Through {site.companyShort}, I help teams plan, build and scale AI products. My day job is running an AI
-          platform at HubSpot, so the advice comes from production, not slides.
+          I help teams plan, build and scale AI products. My day job is running an AI platform at HubSpot, so the advice
+          comes from production, not slides.
         </p>
       </Container>
 

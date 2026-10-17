@@ -6,11 +6,11 @@ type MarkProps = {
   inverted?: boolean;
 };
 
-/** The Verderese Development "vd" mark. Decorative: pair it with visible text. */
+/** The "mv" mark. Decorative: pair it with visible text. */
 export function Mark({ size = "sm", inverted = false }: MarkProps) {
   return (
     <span aria-hidden="true" className={`${styles.mark} ${styles[size]} ${inverted ? styles.inverted : ""}`}>
-      vd
+      mv
     </span>
   );
 }

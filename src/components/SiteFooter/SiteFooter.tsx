@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className={styles.footer}>
       <Container className={styles.inner}>
         <p>
-          © {__BUILD_YEAR__} {site.company}
+          © {__BUILD_YEAR__} {site.name}
         </p>
         <ul className={styles.links}>
           <li>

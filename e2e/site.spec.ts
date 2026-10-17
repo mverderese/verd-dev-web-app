@@ -24,7 +24,7 @@ for (const { path, heading } of pages) {
 
       await page.goto(path);
       await expect(page.getByRole("heading", { level: 1 })).toHaveText(heading);
-      await expect(page.getByRole("contentinfo")).toContainText("Verderese Development LLC");
+      await expect(page.getByRole("contentinfo")).toContainText("Mike Verderese");
       expect(errors).toEqual([]);
     });
 
