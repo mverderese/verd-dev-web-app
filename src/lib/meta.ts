@@ -10,7 +10,7 @@ type PageMetaInput = {
   path: string;
 };
 
-/** Prefixes non-production titles with the environment, e.g. "[STG] About". */
+/** Prefixes non-production titles with the environment, e.g. "[PREVIEW] About". */
 export const titleForEnv = (title: string) =>
   env.appEnv === "prod" ? title : `[${env.appEnv.toUpperCase()}] ${title}`;
 

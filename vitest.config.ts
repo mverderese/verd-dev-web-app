@@ -5,7 +5,7 @@ export default defineConfig({
   resolve: {
     alias: { "~": fileURLToPath(new URL("./src", import.meta.url)) },
   },
-  define: { __BUILD_YEAR__: JSON.stringify(new Date().getFullYear()) },
+  define: { __BUILD_YEAR__: JSON.stringify(new Date().getFullYear()), __APP_ENV__: JSON.stringify("local") },
   test: {
     environment: "jsdom",
     include: ["src/**/*.test.{ts,tsx}"],
