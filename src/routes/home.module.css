@@ -129,7 +129,7 @@
 }
 
 .strength:first-child {
-  border-top-color: var(--color-accent);
+  border-top-color: var(--color-accent-text);
 }
 
 .strengthTitle {
