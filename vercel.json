@@ -3,6 +3,7 @@
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "build/client",
+  "ignoreCommand": "exit 1",
   "trailingSlash": false,
   "redirects": [
     { "source": "/portfolio", "destination": "/work", "permanent": true },
