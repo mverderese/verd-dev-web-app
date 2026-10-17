@@ -26,8 +26,8 @@ export default function Home() {
               {site.tagline}
             </h1>
             <p className={styles.lead}>
-              I lead the Breeze AI Platform team at HubSpot, the platform behind nearly all of its customer-facing AI
-              agents. Through {site.companyShort}, I occasionally advise and build alongside other teams.
+              I lead the Breeze AI Platform team at HubSpot. Through {site.companyShort}, I also take on a few outside
+              projects.
             </p>
             <ButtonGroup>
               <ButtonLink href={site.links.bookCall} fullWidthOnMobile>
@@ -55,17 +55,17 @@ export default function Home() {
             <Label tone="accent">HubSpot{hubspot ? ` · ${formatYears(hubspot.years)}` : null}</Label>
             <h3 className={styles.nowTitle}>Staff Engineering Manager, Breeze AI Platform</h3>
             <p className={styles.secondary}>
-              I lead the team behind the platform that backs nearly all of HubSpot&apos;s customer-facing AI agents,
-              including Breeze Assistant.
+              Agent harnesses, skills and MCP tooling that HubSpot&apos;s product teams build their agents on, including
+              Breeze Assistant.
             </p>
           </article>
           <article className={styles.nowItem}>
             <Label tone="accent">{site.companyShort}</Label>
             <h3 className={styles.nowTitle}>
-              <Link to="/consulting">Advice from someone who builds it.</Link>
+              <Link to="/consulting">Advice from someone who ships AI in production.</Link>
             </h3>
             <p className={styles.secondary}>
-              Selective audits, advisory and hands-on builds for teams putting AI into production.
+              Audits, advisory and hands-on builds for teams putting AI into production.
             </p>
           </article>
         </section>
@@ -84,7 +84,7 @@ export default function Home() {
 
         <section className={styles.strengths} aria-labelledby="strengths-label">
           <Label as="h2" id="strengths-label">
-            03 / What I&apos;m good at
+            03 / Strengths
           </Label>
           <ul className={styles.strengthList}>
             {strengths.map(({ title, body }) => (
@@ -99,7 +99,7 @@ export default function Home() {
 
       <CtaBand
         eyebrow={site.companyShort}
-        heading="Have an AI problem worth solving? Let's talk."
+        heading="Building with AI? Let's talk it through."
         actions={
           <ButtonGroup>
             <ButtonLink href={site.links.bookCall} variant="inverse" fullWidthOnMobile>

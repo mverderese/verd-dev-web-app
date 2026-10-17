@@ -3,7 +3,7 @@ export const site = {
   company: "Verderese Development LLC",
   companyShort: "Verderese Development",
   title: "AI Engineering Leader",
-  tagline: "Engineering leader for AI products, from the platform up.",
+  tagline: "I build and lead the teams behind AI products.",
   description:
     "Mike Verderese leads the Breeze AI Platform team at HubSpot and advises teams on putting AI into production through Verderese Development.",
   location: "Asbury Park, NJ",

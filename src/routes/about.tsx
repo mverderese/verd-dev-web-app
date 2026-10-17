@@ -9,7 +9,7 @@ import styles from "./about.module.css";
 export const meta: Route.MetaFunction = () =>
   pageMeta({
     title: "About",
-    description: `${site.name} is an engineering leader in ${site.location}, building products from hackathon apps to AI platforms at HubSpot scale.`,
+    description: `${site.name} is an engineering leader in ${site.location} who has built products from a hackathon app to HubSpot's AI platform.`,
     path: "/about",
   });
 
@@ -34,18 +34,15 @@ export default function About() {
           <p>
             It started at Rutgers, when a friend and I built Shots iGot at the Princeton Hackathon. Nearly 10,000 people
             used it in three months, and I was hooked on building things people want. After graduating I co-founded Tag,
-            raised from investors including Tim Draper, Eduardo Saverin and Mark Cuban, and sold it to Mark Cuban
+            raised money from investors including Tim Draper, Eduardo Saverin and Mark Cuban, and sold it to Mark Cuban
             Companies.
           </p>
           <p>
-            Since then I&apos;ve rebuilt the Starbucks online store as a consultant, built the API and DevOps platform
-            at Renew, co-founded Odin and bootstrapped it to $1M in its first year, and led engineering at the agency
-            Red Krypton.
+            Since then I&apos;ve rebuilt the Starbucks online store as a consultant and built the API and DevOps
+            platform at Renew. I co-founded Odin and bootstrapped it to $1M in its first year, and led engineering at
+            the agency Red Krypton.
           </p>
-          <p>
-            In 2024 I joined HubSpot to work on Breeze Assistant. Today I lead the team behind the platform that backs
-            nearly all of HubSpot&apos;s customer-facing AI agents.
-          </p>
+          <p>In 2024 I joined HubSpot to work on Breeze Assistant. Today I lead the Breeze AI Platform team.</p>
         </div>
         <aside className={styles.timeline} aria-labelledby="timeline-label">
           <Label as="h2" id="timeline-label">

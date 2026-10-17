@@ -13,7 +13,10 @@ export const strengths = [
     title: "Engineering leadership",
     body: "Hiring, growing engineers to senior and staff, and cross-team technical strategy.",
   },
-  { title: "0 → 1 product", body: "Two-time co-founder and CTO: a $1M bootstrapped first year, and an exit." },
+  {
+    title: "0 → 1 product",
+    body: "Two-time co-founder and CTO. One exit, and one company bootstrapped to $1M in year one.",
+  },
   { title: "Platform & reliability", body: "Cloud infrastructure, CI/CD, and SOC 2 and HIPAA compliance." },
 ] as const;
 
@@ -29,7 +32,7 @@ export const services = [
     body: "Ongoing guidance for founders and engineering leaders: architecture reviews, hiring, process, and a sounding board for hard calls.",
   },
   {
-    label: "Hands-on",
+    label: "Project-based",
     title: "Build",
     body: "I write the code: agents, tool calling, retrieval, evals and the platform underneath, taken all the way to production.",
   },
@@ -41,12 +44,15 @@ export const process = [
     title: "Scoped proposal",
     body: "A short written plan: goals, deliverables, timeline and how we'll measure success.",
   },
-  { title: "The work", body: "Regular check-ins, written updates, and a clean handoff your team can own." },
+  { title: "Delivery", body: "Regular check-ins, written updates, and a clean handoff your team can own." },
 ] as const;
 
 export const clients = [
-  { name: "Starbucks", body: "Rebuilt the ecommerce store in three months, ahead of a $100M holiday season." },
-  { name: "Great Many", body: "Booking, telehealth and a later technical audit for a hair-growth startup." },
+  { name: "Starbucks", body: "Rebuilt the online store in React for the Verismo launch and holiday season." },
+  {
+    name: "Great Many",
+    body: "Booking and telehealth for a hair-growth startup, then a technical audit a year later.",
+  },
   { name: "The Gleamery", body: "Appointment scheduling for a modern dental-care startup." },
   { name: "Distrix", body: "Leasing and tenant-verification platform for landlords and brokerages." },
 ] as const;
