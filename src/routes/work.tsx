@@ -25,7 +25,7 @@ export default function Work() {
         </h1>
         <p className={styles.lead}>
           More than a decade of building products: two startups I co-founded, consulting for brands like Starbucks, and
-          now AI platforms at HubSpot scale.
+          now leading AI platform work at HubSpot.
         </p>
       </header>
 

@@ -14,7 +14,7 @@ export const earlierWork = earlierWorkSchema.parse([
   },
   {
     name: "17Lands",
-    description: "Volunteer engineer: architecture and dev process for Magic: The Gathering analytics.",
+    description: "Volunteer engineer, working on architecture and dev process for Magic: The Gathering analytics.",
     years: { start: 2023 },
     href: "https://www.17lands.com/",
     linkLabel: "17lands.com",

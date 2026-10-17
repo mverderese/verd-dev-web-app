@@ -13,7 +13,7 @@ export const caseStudies: readonly CaseStudy[] = caseStudiesSchema.parse([
     category: "AI platform",
     years: { start: 2024 },
     summary: "The platform behind nearly all of HubSpot's customer-facing AI agents.",
-    headline: "The platform behind HubSpot's AI agents.",
+    headline: "Building the engine under HubSpot's AI agents.",
     intro:
       "I lead the Breeze AI Platform team, which runs the platform that backs nearly all of HubSpot's customer-facing AI agents, including Breeze Assistant.",
     highlighted: true,
@@ -27,12 +27,12 @@ export const caseStudies: readonly CaseStudy[] = caseStudiesSchema.parse([
       {
         dates: "Sep 2024 – Aug 2026",
         title: "Technical Lead II",
-        body: "Breeze Assistant, from a small founding team as it grew into several.",
+        body: "Joined Breeze Assistant as a small founding team and helped grow it into several.",
       },
       {
         dates: "Aug 2026 – Nov 2026",
         title: "Staff Technical Lead",
-        body: "Breeze Engine, the platform behind nearly all customer-facing agents.",
+        body: "Technical lead for Breeze Engine.",
       },
       {
         dates: "Nov 2026 – present",
@@ -62,10 +62,10 @@ export const caseStudies: readonly CaseStudy[] = caseStudiesSchema.parse([
         style: "numbered",
         items: [
           {
-            body: "Technical lead for evolving Breeze Assistant from a chat assistant into a full chief-of-staff agent, the headline AI launch at UNBOUND 2026.",
+            body: "Led the technical work that turned Breeze Assistant from a chat assistant into a chief-of-staff agent, the headline AI launch at UNBOUND 2026.",
           },
           {
-            body: "Run the platform that lets HubSpot product teams and customers bring skills and MCP tools into Breeze.",
+            body: "Built and run the platform that lets HubSpot product teams and customers bring skills and MCP tools into Breeze.",
           },
         ],
       },
@@ -108,12 +108,12 @@ export const caseStudies: readonly CaseStudy[] = caseStudiesSchema.parse([
         type: "prose",
         heading: "Context",
         paragraphs: [
-          "Despite a pandemic, an economic downturn and a construction slowdown, we bootstrapped Odin to more than $1 million in revenue in its first year. That growth was led by Hudson Yards, the largest privately funded construction project in the world. We then raised a $3 million seed round led by First Round Capital.",
+          "Despite launching into a pandemic and a construction slowdown, we bootstrapped Odin to more than $1 million in revenue in its first year. That growth was anchored by Hudson Yards, the largest privately funded construction project in the world. We then raised a $3 million seed round led by First Round Capital.",
         ],
       },
       {
         type: "metrics",
-        heading: "After four years",
+        heading: "By 2024",
         items: [
           { value: "12%", label: "Quarter-over-quarter revenue growth" },
           { value: "20,000+", label: "Workers onboarded" },
@@ -133,7 +133,7 @@ export const caseStudies: readonly CaseStudy[] = caseStudiesSchema.parse([
         type: "prose",
         heading: "My role",
         paragraphs: [
-          "In the early days I led a team of four engineers to build the platform in six months: onboarding workers, tracking certifications, integrating with turnstiles and badge printers, and producing custom workforce reports. We launched at Hudson Yards, managing more than 2,000 workers a day, and iterated quickly with users who weren't used to technology on the job.",
+          "In the early days I led a team of four engineers to build the platform in six months: onboarding workers, tracking certifications, integrating with turnstiles and badge printers, and producing custom workforce reports. We launched at Hudson Yards, managing more than 2,000 workers a day, and iterated quickly with crews who'd never used software on site.",
           "As the company grew, I set technical strategy, doubled the team within nine months of our seed round, and grew several engineers from mid-level into senior and leadership roles. I also led our SOC 2 effort, which opened the door to larger customers with strict security requirements.",
         ],
       },
@@ -166,14 +166,14 @@ export const caseStudies: readonly CaseStudy[] = caseStudiesSchema.parse([
   {
     slug: "great-many",
     name: "Great Many",
-    role: "Head of Engineering, Red Krypton",
+    role: "Head of Engineering",
     engagement: "Agency",
     category: "Health",
     years: { start: 2023, end: 2024 },
-    summary: "Booking and telehealth, built from the ground up for a hair-growth startup.",
-    headline: "A booking and telehealth platform, built from day one.",
+    summary: "Booking and telehealth for a hair-growth startup.",
+    headline: "Booking and telehealth for a hair-growth brand going national.",
     intro:
-      "Great Many is a hair-growth company that brings in-studio treatments, products and prescriptions together in one place. Our agency, Red Krypton, built its entire technical offering from the ground up, and I led the engineering team.",
+      "Great Many is a hair-growth company that brings in-studio treatments, products and prescriptions together in one place. Our agency, Red Krypton, built Great Many's entire technical platform from the ground up, and I led the engineering team.",
     highlighted: true,
     facts: [
       { label: "Role", value: "Head of Engineering" },
@@ -203,14 +203,13 @@ export const caseStudies: readonly CaseStudy[] = caseStudiesSchema.parse([
           {
             body: "Set up the analytics behind conversion, acquisition cost and targeted email and SMS campaigns.",
           },
-          { body: "Worked directly with the client and led the technical team through every request." },
         ],
       },
       {
         type: "prose",
         heading: "Going national",
         paragraphs: [
-          "Great Many started with a brick-and-mortar studio in New York but wanted to serve customers everywhere, with products and prescriptions tailored to each person's hair loss. Integrating an asynchronous telehealth provider, an online compounding pharmacy and customer notifications made the whole purchase seamless and let Great Many market itself across the country.",
+          "Great Many started with a brick-and-mortar studio in New York but wanted to serve customers everywhere, with products and prescriptions tailored to each person's hair loss. Integrating an asynchronous telehealth provider, an online compounding pharmacy and customer notifications let customers buy entirely online, from consult to prescription, and let Great Many market itself across the country.",
         ],
       },
     ],
@@ -273,7 +272,7 @@ export const caseStudies: readonly CaseStudy[] = caseStudiesSchema.parse([
   {
     slug: "starbucks",
     name: "Starbucks",
-    role: "Ecommerce rebuild",
+    role: "Consultant",
     engagement: "Consulting",
     category: "Consulting",
     years: { start: 2016, end: 2016 },
@@ -316,7 +315,7 @@ export const caseStudies: readonly CaseStudy[] = caseStudiesSchema.parse([
         type: "prose",
         heading: "Outcome",
         paragraphs: [
-          "The new store launched in early November, just in time for the holidays. It appeared automatically for anyone on in-store Wi-Fi and generated more than $100 million in revenue that season.",
+          "The new store launched in early November, just in time for the holidays. It became the landing page for anyone on in-store Wi-Fi and generated more than $100 million in revenue that season.",
         ],
       },
     ],

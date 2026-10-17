@@ -27,10 +27,10 @@ export default function Consulting() {
             <Label as="span">LLC · {site.location}</Label>
           </span>
         </p>
-        <h1 className={styles.title}>Advice from someone who builds it.</h1>
+        <h1 className={styles.title}>Advice from someone who ships AI in production.</h1>
         <p className={styles.lead}>
-          Through {site.companyShort}, I occasionally help teams plan, build and scale AI products. My day job is
-          running an AI platform at HubSpot, so the advice comes from production, not slides.
+          Through {site.companyShort}, I help teams plan, build and scale AI products. My day job is running an AI
+          platform at HubSpot, so the advice comes from production, not slides.
         </p>
       </Container>
 
