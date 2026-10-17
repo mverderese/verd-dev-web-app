@@ -6,19 +6,19 @@ Personal site for Mike Verderese. This project serves two purposes:
 2. A small, readable example of how I like to build web applications: typed end to end, componentized, tested, and
    free of heavyweight UI kits.
 
-Merges into `main` deploy automatically to Vercel.
+Merges into `main` deploy to production on Vercel, and `develop` deploys the dev site. Other branches get preview deployments.
 
 ## Architecture
 
-| Concern       | Choice                                                                                                    |
-| ------------- | --------------------------------------------------------------------------------------------------------- |
-| Framework     | [React Router 7](https://reactrouter.com/) in framework mode, with every route prerendered to static HTML |
-| Language      | TypeScript in `strict` mode, with `noUncheckedIndexedAccess` and `verbatimModuleSyntax`                   |
-| Content       | Typed data modules validated with [Zod](https://zod.dev/) at build time (`src/content`)                   |
-| Styling       | Hand-built components with CSS Modules, driven by design tokens (`src/styles/tokens.css`), light and dark |
-| Fonts         | Schibsted Grotesk and IBM Plex Mono, self-hosted via Fontsource                                           |
-| Quality gates | ESLint (`strictTypeChecked`, jsx-a11y), Prettier, Vitest + Testing Library, Playwright + axe              |
-| Hosting       | Vercel, serving `build/client` with redirects and a SPA fallback (`vercel.json`)                          |
+| Concern       | Choice                                                                                                         |
+| ------------- | -------------------------------------------------------------------------------------------------------------- |
+| Framework     | [React Router 7](https://reactrouter.com/) in framework mode, with every route prerendered to static HTML      |
+| Language      | TypeScript in `strict` mode, with `noUncheckedIndexedAccess` and `verbatimModuleSyntax`                        |
+| Content       | Typed data modules validated with [Zod](https://zod.dev/) at build time (`src/content`)                        |
+| Styling       | Hand-built components with CSS Modules, driven by design tokens (`src/styles/tokens.css`), light and dark      |
+| Fonts         | Schibsted Grotesk and IBM Plex Mono, self-hosted via Fontsource                                                |
+| Quality gates | ESLint (`strictTypeChecked`, jsx-a11y), Prettier, Vitest + Testing Library, Playwright + axe                   |
+| Hosting       | Vercel, serving `build/client` with redirects (`vercel.json`) and a custom 404 page (`react-router.config.ts`) |
 
 ```
 src/
@@ -51,12 +51,11 @@ The site is fully static today (`ssr: false` in `react-router.config.ts`). To ad
    ```bash
    nodenv install -s
    ```
-2. Copy `.env.local.example` to `.env.local` and fill in any values you need. Everything is optional locally.
-3. Install dependencies (this also installs the Git pre-commit hooks that run lint):
+2. Install dependencies (this also installs the Git pre-commit hooks that run lint):
    ```bash
    npm install
    ```
-4. Start the dev server at http://localhost:5173:
+3. Start the dev server at http://localhost:5173:
    ```bash
    npm run dev
    ```
@@ -75,15 +74,18 @@ The site is fully static today (`ssr: false` in `react-router.config.ts`). To ad
 
 Run `npx playwright install chromium` once before the first `test:e2e`.
 
-### Environment variables
+### Environments
 
-| Variable                 | Purpose                                            |
-| ------------------------ | -------------------------------------------------- |
-| `VITE_BASE_URL`          | Origin used for canonical and Open Graph URLs      |
-| `VITE_GA_MEASUREMENT_ID` | Google Analytics, loaded only in production builds |
-| `VITE_HOTJAR_SITE_ID`    | Hotjar, loaded only in production builds           |
+There are no env vars to configure. `vite.config.ts` derives the environment and base URL from Vercel's build variables:
 
-Per-environment values live in `ops/env/`.
+| Environment | When                          | Base URL                    |
+| ----------- | ----------------------------- | --------------------------- |
+| `prod`      | Vercel production             | `https://mikeverderese.com` |
+| `dev`       | Vercel preview of `develop`   | The deployment's Vercel URL |
+| `preview`   | Other Vercel preview branches | The deployment's Vercel URL |
+| `local`     | Anywhere else                 | `http://localhost:5173`     |
+
+Analytics is Vercel Web Analytics, loaded on every Vercel deployment. Turn it on in the project's Analytics settings.
 
 ## Design
 

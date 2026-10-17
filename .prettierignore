@@ -4,5 +4,4 @@ playwright-report
 test-results
 package-lock.json
 .idea
-ops
 .local

@@ -9,10 +9,21 @@ const appEnv = () => {
   return "local";
 };
 
+/** Prod is the real domain, Vercel deploys use their own URL, anything else is the local dev server. */
+const baseUrl = () => {
+  if (appEnv() === "prod") return "https://mikeverderese.com";
+  const host = process.env.VERCEL_BRANCH_URL ?? process.env.VERCEL_URL;
+  return host ? `https://${host}` : "http://localhost:5173";
+};
+
 export default defineConfig({
   plugins: [reactRouter()],
   // Fixed at build time so prerendered HTML and the hydrated client always agree.
-  define: { __BUILD_YEAR__: JSON.stringify(new Date().getFullYear()), __APP_ENV__: JSON.stringify(appEnv()) },
+  define: {
+    __BUILD_YEAR__: JSON.stringify(new Date().getFullYear()),
+    __APP_ENV__: JSON.stringify(appEnv()),
+    __BASE_URL__: JSON.stringify(baseUrl()),
+  },
   resolve: {
     alias: { "~": fileURLToPath(new URL("./src", import.meta.url)) },
   },
