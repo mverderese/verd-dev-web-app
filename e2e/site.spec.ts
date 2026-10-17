@@ -2,14 +2,14 @@ import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
 const pages = [
-  { path: "/", heading: "Engineering leader for AI products, from the platform up." },
+  { path: "/", heading: "I build and lead the teams behind AI products." },
   { path: "/work", heading: "Work." },
-  { path: "/work/hubspot", heading: "The platform behind HubSpot's AI agents." },
+  { path: "/work/hubspot", heading: "Building the engine under HubSpot's AI agents." },
   { path: "/work/odin", heading: "Workforce software for the biggest job sites in New York." },
-  { path: "/work/great-many", heading: "A booking and telehealth platform, built from day one." },
+  { path: "/work/great-many", heading: "Booking and telehealth for a hair-growth brand going national." },
   { path: "/work/renew", heading: "The API and infrastructure behind a Medicare plan finder." },
   { path: "/work/starbucks", heading: "A new Starbucks store, in time for the holidays." },
-  { path: "/consulting", heading: "Advice from someone who builds it." },
+  { path: "/consulting", heading: "Advice from someone who ships AI in production." },
   { path: "/about", heading: "Hey, I'm Mike." },
 ];
 
